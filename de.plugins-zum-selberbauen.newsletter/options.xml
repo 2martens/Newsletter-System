@@ -46,6 +46,33 @@
                 <defaultvalue>MAIL_SIGNATURE</defaultvalue>
                 <showorder>2</showorder>
             </option>
+            <option name="message_newsletterSystem_general_sortOrder">
+                <categoryname>message.newsletterSystem.general</categoryname>
+                <optiontype>select</optiontype>
+                <defaultvalue><![CDATA[ASC]]></defaultvalue>
+                <selectoptions>
+                    <![CDATA[ASC:ASC
+DESC:DESC]]>
+                </selectoptions>
+                <showorder>3</showorder>
+            </option>
+            <option name="message_newsletterSystem_general_sortField">
+                <categoryname>message.newsletterSystem.general</categoryname>
+                <optiontype>select</optiontype>
+                <defaultvalue><![CDATA[id]]></defaultvalue>
+                <selectoptions>
+                    <![CDATA[id:wcf.acp.option.message_newsletterSystem_general_sortField.id
+name:wcf.acp.option.message_newsletterSystem_general_sortField.username
+email:wcf.acp.option.message_newsletterSystem_general_sortField.email]]>
+                </selectoptions>
+                <showorder>4</showorder>
+            </option>
+            <option name="message_newsletterSystem_general_items">
+                <categoryname>message.newsletterSystem.general</categoryname>
+                <optiontype>integer</optiontype>
+                <defaultvalue>30</defaultvalue>
+                <showorder>5</showorder>
+            </option>
             <!-- /newsletter options -->
         </options>
     </import>
