@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/groupoptions.xsd">
+    <import>
+        <categories>
+            <category name="admin">
+                <showorder>3</showorder>
+            </category>
+                <category name="admin.content">
+                    <parent>admin</parent>
+                </category>
+                    <!-- newsletterSystem category -->
+                    <category name="admin.content.newsletterSystem">
+                        <parent>admin.content</parent>
+                        <options>module_newsletterSystem</options>
+                    </category>
+                    <!-- /newsletterSystem category -->
+        </categories>
+        <options>
+            <!-- newsletterSystem options -->
+            <option name="admin.content.newsletterSystem.canSeeSubscriberOverview">
+                <categoryname>admin.content.newsletterSystem</categoryname>
+                <optiontype>boolean</optiontype>
+                <defaultvalue>0</defaultvalue>
+                <showorder>1</showorder>
+            </option>
+            <option name="admin.content.newsletterSystem.canEditSubscribers">
+                <categoryname>admin.content.newsletterSystem</categoryname>
+                <optiontype>boolean</optiontype>
+                <defaultvalue>0</defaultvalue>
+                <showorder>2</showorder>
+            </option>
+            <option name="admin.content.newsletterSystem.canSeeNewsletterOverview">
+                <categoryname>admin.content.newsletterSystem</categoryname>
+                <optiontype>boolean</optiontype>
+                <defaultvalue>0</defaultvalue>
+                <showorder>3</showorder>
+            </option>
+            <option name="admin.content.newsletterSystem.canWriteNewsletter">
+                <categoryname>admin.content.newsletterSystem</categoryname>
+                <optiontype>boolean</optiontype>
+                <defaultvalue>0</defaultvalue>
+                <showorder>4</showorder>
+            </option>
+            <option name="admin.content.newsletterSystem.canEditNewsletter">
+                <categoryname>admin.content.newsletterSystem</categoryname>
+                <optiontype>boolean</optiontype>
+                <defaultvalue>0</defaultvalue>
+                <showorder>5</showorder>
+            </option>
+            <!-- /newsletterSystem options -->
+        </options>
+    </import>
+</data>

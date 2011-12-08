@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language languagecode="en" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd">
+    <category name="wcf.acp.option">
+        <!-- module -->
+        <item name="wcf.acp.option.module_newsletterSystem"><![CDATA[]]></item>
+        <item name="wcf.acp.option.module_newsletterSystem.description"><![CDATA[]]></item>
+        <!-- /module -->
+        <!-- categories -->
+        <item name="wcf.acp.option.category.message.newsletterSystem"><![CDATA[]]></item>
+        <item name="wcf.acp.option.category.message.newsletterSystem.description"><![CDATA[]]></item>
+        <item name="wcf.acp.option.category.message.newsletterSystem.general"><![CDATA[]]></item>
+        <item name="wcf.acp.option.category.message.newsletterSystem.general.description"><![CDATA[]]></item>
+        <!-- /categories -->
+    </category>
+    <category name="wcf.acp.menu">
+        <!-- content.* -->
+        <item name="wcf.acp.menu.link.content.newsletterSystem"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newsletterSystem.description"><![CDATA[]]></item>
+        <!-- /content.* -->
+        
+        <!-- newsletterSystem.* -->
+        <item name="wcf.acp.menu.link.content.newsletterSystem.general"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newsletterSystem.general.description"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newsletterSystem.about"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newsletterSystem.about.description"><![CDATA[]]></item>
+        <!-- /newsletterSystem.* -->
+        
+        <!-- newsletterSystem.general.* -->
+        <item name="wcf.acp.menu.link.content.newsletterSystem.subscriberList"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newsletterSystem.subscriberList.description"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newsletterSystem.newsletterList"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newsletterSystem.newsletterList.description"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newsletterSystem.writeNewsletter"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newsletterSystem.writeNewsletter.description"><![CDATA[]]></item>
+        <!-- /newsletterSystem.general.* -->
+        
+        <!-- newsletterSystem.about.* -->
+        <item name="wcf.acp.menu.link.content.newsletterSystem.info"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newsletterSystem.info.description"><![CDATA[]]></item>
+        <!-- /newsletterSystem.about.* -->
+    </category>
+    <category name="wcf.acp.group">
+        <item name="wcf.acp.group.option.admin.content.newsletterSystem"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newsletterSystem.description"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newsletterSystem.canSeeSubscriberOverview"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newsletterSystem.canSeeSubscriberOverview.description"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newsletterSystem.canEditSubscribers"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newsletterSystem.canEditSubscribers.description"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newsletterSystem.canSeeNewsletterOverview"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newsletterSystem.canSeeNewsletterOverview.description"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newsletterSystem.canWriteNewsletter"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newsletterSystem.canWriteNewsletter.description"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newsletterSystem.canEditNewsletter"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newsletterSystem.canEditNewsletter.description"><![CDATA[]]></item>
+    </category>
+</language>
