@@ -59,10 +59,10 @@ DESC:DESC]]>
             <option name="message_newsletterSystem_general_sortField">
                 <categoryname>message.newsletterSystem.general</categoryname>
                 <optiontype>select</optiontype>
-                <defaultvalue><![CDATA[id]]></defaultvalue>
+                <defaultvalue><![CDATA[subscriberID]]></defaultvalue>
                 <selectoptions>
-                    <![CDATA[id:wcf.acp.option.message_newsletterSystem_general_sortField.id
-name:wcf.acp.option.message_newsletterSystem_general_sortField.username
+                    <![CDATA[subscriberID:wcf.acp.option.message_newsletterSystem_general_sortField.subscriberID
+username:wcf.acp.option.message_newsletterSystem_general_sortField.username
 email:wcf.acp.option.message_newsletterSystem_general_sortField.email]]>
                 </selectoptions>
                 <showorder>4</showorder>
