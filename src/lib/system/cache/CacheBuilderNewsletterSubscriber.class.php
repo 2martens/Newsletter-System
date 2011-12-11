@@ -26,9 +26,9 @@ class CacheBuilderNewsletterSubscriber implements CacheBuilder {
         $data = array('subscribers' => array());
         
         //get all subscribers and list them by id
-        $sql = "SELECT subscriberID, userID, email
-        		FROM wcf".WCF_N.'_'.$this->databaseTable." subscribers
-        		ORDER BY subscribers.userID";
+        $sql = 'SELECT subscriberID, userID, email
+        		FROM wcf'.WCF_N.'_'.$this->databaseTable.' subscribers
+        		ORDER BY subscribers.userID';
         $result = WCF::getDB()->sendQuery($sql);
         $subscriberIDs = array();
         while ($row = WCF::getDB()->fetchArray($result)) {

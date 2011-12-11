@@ -10,7 +10,7 @@
 </div>
 
 {if $deleteSubscriber}
-    <p class="success">{lang}wcf.acp.newsletter.subscriber.delete.success{/lang}</p> 
+    <p class="success">{lang}wcf.acp.newsletter.subscriber.delete.success{/lang}</p>
 {/if}
 
 <div class="contentHeader">
@@ -43,7 +43,7 @@
                 <tr class="{cycle values="container-1,container-2"}">
                     <td class="columnIcon">
                         {if $this->user->getPermission('admin.content.newsletterSystem.canEditSubscribers')}
-                            <a href="index.php?action=NewsletterSubscriberDelete&amp;subscriberID={@$subscriber.subscriberID}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/deleteS.png" alt="" title="{lang}wcf.acp.newsletter.subscriber.delete{/lang}" /></a>
+                            <a href="index.php?action=NewsletterSubscriberDelete&amp;subscriberID={@$subscriber.subscriberID}&amp;packageID={@PACKAGE_ID}&amp;t={@SECURITY_TOKEN}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/deleteS.png" alt="" title="{lang}wcf.acp.newsletter.subscriber.delete{/lang}" /></a>
                         {/if}
                         {if $subscriber.additionalButtons|isset}{@$subscriber.additionalButtons}{/if}
                     </td>
