@@ -15,8 +15,8 @@ require_once(WCF_DIR.'lib/page/SortablePage.class.php');
 class NewsletterSubscriberListPage extends SortablePage {
     public $neededPermissions = 'admin.content.newsletterSystem.canSeeSubscriberOverview';
     public $templateName = 'newsletterSubscriberList';
-    public $defaultSortField = MESSAGE_NEWSLETTERSYSTEM_GENERAL_SORTFIELD;
-    public $defaultSortOrder = MESSAGE_NEWSLETTERSYSTEM_GENERAL_SORTORDER;
+    public $defaultSortField = MESSAGE_NEWSLETTERSYSTEM_GENERAL_SORTFIELD_SUBSCRIBER;
+    public $defaultSortOrder = MESSAGE_NEWSLETTERSYSTEM_GENERAL_SORTORDER_SUBSCRIBER;
     public $itemsPerPage = MESSAGE_NEWSLETTERSYSTEM_GENERAL_ITEMS;
     
     /**
@@ -39,8 +39,8 @@ class NewsletterSubscriberListPage extends SortablePage {
     public function validateSortField() {
         parent::validateSortField();
         $allowedSortFields = array(
-            'id',
-            'name',
+            'subscriberID',
+            'username',
             'email'
         );
         $inArray = false;
