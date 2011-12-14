@@ -12,6 +12,10 @@
         <item name="wcf.acp.option.category.message.newsletterSystem.general.description"><![CDATA[]]></item>
         <!-- /categories -->
     </category>
+    <category name="wcf.user.option">
+        <item name="wcf.user.option.acceptNewsletter"><![CDATA[Receive newsletter]]></item>
+        <item name="wcf.user.option.acceptNewsletter.description"><![CDATA[Select this option if you want to receive the newsletter.]]></item>
+    </category>
     <category name="wcf.acp.menu">
         <!-- content.* -->
         <item name="wcf.acp.menu.link.content.newsletterSystem"><![CDATA[]]></item>

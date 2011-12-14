@@ -56,22 +56,33 @@ DESC:DESC]]>
                 </selectoptions>
                 <showorder>3</showorder>
             </option>
-            <option name="message_newsletterSystem_general_sortField">
+            <option name="message_newsletterSystem_general_sortField_subscriber">
                 <categoryname>message.newsletterSystem.general</categoryname>
                 <optiontype>select</optiontype>
                 <defaultvalue><![CDATA[subscriberID]]></defaultvalue>
                 <selectoptions>
-                    <![CDATA[subscriberID:wcf.acp.option.message_newsletterSystem_general_sortField.subscriberID
-username:wcf.acp.option.message_newsletterSystem_general_sortField.username
-email:wcf.acp.option.message_newsletterSystem_general_sortField.email]]>
+                    <![CDATA[subscriberID:wcf.acp.option.message_newsletterSystem_general_sortField_subscriber.subscriberID
+username:wcf.acp.option.message_newsletterSystem_general_sortField_subscriber.username
+email:wcf.acp.option.message_newsletterSystem_general_sortField_subscriber.email]]>
                 </selectoptions>
                 <showorder>4</showorder>
+            </option>
+            <option name="message_newsletterSystem_general_sortField_newsletter">
+                <categoryname>message.newsletterSystem.general</categoryname>
+                <optiontype>select</optiontype>
+                <defaultvalue><![CDATA[newsletterID]]></defaultvalue>
+                <selectoptions>
+                    <![CDATA[newsletterID:wcf.acp.option.message_newsletterSystem_general_sortField_newsletter.subscriberID
+username:wcf.acp.option.message_newsletterSystem_general_sortField_newsletter.username
+subject:wcf.acp.option.message_newsletterSystem_general_sortField_newsletter.subject]]>
+                </selectoptions>
+                <showorder>5</showorder>
             </option>
             <option name="message_newsletterSystem_general_items">
                 <categoryname>message.newsletterSystem.general</categoryname>
                 <optiontype>integer</optiontype>
                 <defaultvalue>30</defaultvalue>
-                <showorder>5</showorder>
+                <showorder>6</showorder>
             </option>
             <!-- /newsletter options -->
         </options>
