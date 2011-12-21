@@ -28,12 +28,21 @@ class WriteNewsletterForm extends ACPForm {
     protected $text = '';
     
     /**
+     * Contains the read date values.
+     * @var array<int>
+     */
+    protected $dateValues = array('day' => 0, 'month' => 0, 'year' => 0);
+    
+    /**
      * @see AbstractForm::readFormParameters()
      */
     public function readFormParameters() {
         parent::readFormParameters();
         if (isset($_POST['subject'])) $this->subject = StringUtil::trim($_POST['subject']);
         if (isset($_POST['content'])) $this->text = StringUtil::trim($_POST['content']);
+        if (isset($_POST['day'])) $this->dateValues['day'] = intval($_POST['day']);
+        if (isset($_POST['month'])) $this->dateValues['month'] = intval($_POST['month']);
+        if (isset($_POST['year'])) $this->dateValues['year'] = intval($_POST['year']);
     }
     
     /**
@@ -43,6 +52,7 @@ class WriteNewsletterForm extends ACPForm {
         parent::validate();
         $this->validateSubject();
         $this->validateText();
+        $this->validateDate();
     }
     
     /**
@@ -50,7 +60,15 @@ class WriteNewsletterForm extends ACPForm {
      */
     public function save() {
         parent::save();
-        //TODO: implement save method
+        //create date
+        $date = (string) $this->dateValues['year'].'-'.
+            (string) $this->dateValues['month'].'-'.
+            (string) $this->dateValues['day'];
+        //convert date to timestamp
+        $unixTime = strtotime($date);
+        $newsletter = NewsletterEditor::create(WCF::getUser()->userID, $unixTime,
+                    $this->subject, $this->text);
+        
         $this->saved();
     }
     
@@ -60,7 +78,43 @@ class WriteNewsletterForm extends ACPForm {
     public function assignVariables() {
         WCF::getTPL()->assign(array(
             'subject' => $this->subject,
-            'text' => $this->text
+            'text' => $this->text,
+            'day' => $dateValues['day'],
+            'month' => $dateValues['month'],
+            'year' => $dateValues['year']
         ));
+    }
+    
+    /**
+     * Validates the subject.
+     * @throws UserInputException
+     */
+    protected function validateSubject() {
+        if (empty($this->subject)) {
+            throw new UserInputException('subject');
+        }
+        if (strlen($this->subject) < 4) {
+            throw new UserInputException('subject', 'tooShort');
+        }
+    }
+    
+    /**
+     * Validates the text.
+     * @throws UserInputException
+     */
+    protected function validateText() {
+        if (empty($this->text)) {
+            throw new UserInputException('text');
+        }
+    }
+    
+    /**
+     * Validates the date.
+     * @throws UserInputException
+     */
+    protected function validateDate() {
+        if (!checkdate($this->dateValues['month'], $this->dateValues['day'], $this->dateValues['year'])) {
+            throw new UserInputException('date', 'notValidated');
+        }
     }
 }

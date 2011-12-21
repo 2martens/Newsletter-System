@@ -74,6 +74,7 @@ email:wcf.acp.option.message_newsletterSystem_general_sortField_subscriber.email
                 <selectoptions>
                     <![CDATA[newsletterID:wcf.acp.option.message_newsletterSystem_general_sortField_newsletter.subscriberID
 username:wcf.acp.option.message_newsletterSystem_general_sortField_newsletter.username
+deliveryTime:wcf.acp.option.message_newsletterSystem_general_sortField_newsletter.deliveryTime
 subject:wcf.acp.option.message_newsletterSystem_general_sortField_newsletter.subject]]>
                 </selectoptions>
                 <showorder>5</showorder>
