@@ -26,7 +26,7 @@ class CacheBuilderNewsletter implements CacheBuilder {
         $data = array('newsletter' => array());
         
         //get all newsletters and order them by id
-        $sql = 'SELECT newsletterID, userID, subject
+        $sql = 'SELECT newsletterID, userID, deliveryTime, subject
         		FROM wcf'.WCF_N.'_'.$this->databaseTable.' newsletter
         		ORDER BY newsletter.newsletterID';
         $result = WCF::getDB()->sendQuery($sql);
@@ -34,6 +34,7 @@ class CacheBuilderNewsletter implements CacheBuilder {
         while ($row = WCF::getDB()->fetchArray($result)) {
             $newsletterIDs[$row['newsletterID']] = array(
                 'userID' => $row['userID'],
+                'deliveryTime' => $row['deliveryTime'],
                 'subject' => $row['subject']
             );
         }
@@ -46,6 +47,7 @@ class CacheBuilderNewsletter implements CacheBuilder {
                 $data['newsletter'][] = array(
                 	'newsletterID' => $id,
                 	'username' => $name,
+                    'deliveryTime' => $userArray['deliveryTime'],
                     'subject' => $userArray['subject']
                 );
             }
