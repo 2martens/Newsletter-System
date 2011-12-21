@@ -9,7 +9,7 @@
     </div>
 </div>
 
-{if $deleteSubscriber}
+{if $result|isset && $result == "success"}
     <p class="success">{lang}wcf.acp.newsletter.delete.success{/lang}</p>
 {/if}
 

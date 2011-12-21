@@ -20,10 +20,21 @@ class NewsletterSubscriberListPage extends SortablePage {
     public $itemsPerPage = MESSAGE_NEWSLETTERSYSTEM_GENERAL_ITEMS;
     
     /**
+     * Contains the result of deleting a subscriber.
+     * @var string
+     */
+    protected $result = '';
+    
+    /**
      * Contains the subscribers list.
      * @var array
      */
     protected $subscribersList = array();
+    
+    public function readParameters() {
+        parent::readParameters();
+        if (isset($_REQUEST['result'])) $this->result = StringUtil::trim($_REQUEST['result']);
+    }
     
     /**
      * @see SortablePage::readData()
@@ -60,7 +71,8 @@ class NewsletterSubscriberListPage extends SortablePage {
     public function assignVariables() {
         parent::assignVariables();
         WCF::getTPL()->assign(array(
-            'subscribers' => $this->subscribersList
+            'subscribers' => $this->subscribersList,
+            'result' => $this->result
         ));
     }
     
