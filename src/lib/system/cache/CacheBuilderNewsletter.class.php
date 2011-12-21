@@ -46,6 +46,7 @@ class CacheBuilderNewsletter implements CacheBuilder {
                 $name = $user->username;
                 $data['newsletter'][] = array(
                 	'newsletterID' => $id,
+                    'userID' => $userArray['userID'],
                 	'username' => $name,
                     'deliveryTime' => $userArray['deliveryTime'],
                     'subject' => $userArray['subject']

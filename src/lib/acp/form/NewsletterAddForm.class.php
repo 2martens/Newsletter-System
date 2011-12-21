@@ -65,10 +65,10 @@ class NewsletterAddForm extends ACPForm {
     public function readData() {
         parent::readData();
         for ($i = 1; $i <= 31; $i++) {
-            $this->dateOptions['day'][$i] = (string) $i;
+            $this->dateOptions['day'][$i] = ($i < 10 ? '0'. (string) $i: (string) $i);
         }
         for ($i = 1; $i <= 12; $i++) {
-            $this->dateOptions['month'][$i] = (string) $i;
+            $this->dateOptions['month'][$i] = ($i < 10 ? '0'. (string) $i: (string) $i);
         }
         for ($i = 2011; $i <= 2038; $i++) {
             $this->dateOptions['year'][$i] = (string) $i;
