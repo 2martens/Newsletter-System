@@ -24,7 +24,7 @@
                 <acpmenuitem name="wcf.acp.menu.link.content.newsletterSystem.writeNewsletter">
                     <parent>wcf.acp.menu.link.content.newsletterSystem.general</parent>
                     <showorder>3</showorder>
-                    <link>index.php?form=WriteNewsletter</link>
+                    <link>index.php?form=NewsletterAdd</link>
                     <permissions>admin.content.newsletterSystem.canWriteNewsletter</permissions>
                 </acpmenuitem>
             <acpmenuitem name="wcf.acp.menu.link.content.newsletterSystem.about">
