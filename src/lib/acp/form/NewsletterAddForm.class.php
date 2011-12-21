@@ -13,7 +13,7 @@ require_once(WCF_DIR.'lib/acp/form/ACPForm.class.php');
  * @category Community Framework
  */
 class NewsletterAddForm extends ACPForm {
-    public $activeMenuItem = 'wcf.acp.menu.link.content.newsletterSystem';
+    public $activeMenuItem = 'wcf.acp.menu.link.content.newsletterSystem.writeNewsletter';
     public $templateName = 'newsletterAdd';
     
     /**

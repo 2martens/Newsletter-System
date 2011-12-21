@@ -84,6 +84,16 @@ class NewsletterSubscriberListPage extends SortablePage {
         return count($this->subscribersList);
     }
     
+	/**
+     * @see AbstractPage::show()
+     */
+    public function show() {
+        // enable menu item
+		WCFACP::getMenu()->setActiveMenuItem('wcf.acp.menu.link.content.newsletterSystem.subscriberList');
+		
+		parent::show();
+    }
+    
     /**
      * Reads the newsletter subscribers.
      */

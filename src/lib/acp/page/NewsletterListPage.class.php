@@ -86,6 +86,16 @@ class NewsletterListPage extends SortablePage {
     }
     
     /**
+     * @see AbstractPage::show()
+     */
+    public function show() {
+        // enable menu item
+		WCFACP::getMenu()->setActiveMenuItem('wcf.acp.menu.link.content.newsletterSystem.newsletterList');
+		
+		parent::show();
+    }
+    
+    /**
      * Reads the newsletters.
      */
     protected function readNewsletters() {
