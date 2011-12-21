@@ -41,6 +41,7 @@ class NewsletterListPage extends SortablePage {
         $allowedSortFields = array(
             'newsletterID',
             'username',
+            'deliveryTime',
             'subject'
         );
         $inArray = false;
