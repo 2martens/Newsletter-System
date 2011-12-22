@@ -55,7 +55,6 @@ class SendNewsletterCronjob implements Cronjob {
      */
     protected function sendNewsletters() {
         $templateName = 'newsletterMail';
-        WCF::getTPL()->assign('signature', MESSAGE_NEWSLETTERSYSTEM_GENERAL_SIGNATURE);
         
         //Sends mail to all subscribers. They're listes as bcc to protect their privacy.
         foreach ($outstandingNewsletters as $newsletter) {

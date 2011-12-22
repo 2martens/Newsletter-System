@@ -5,7 +5,7 @@
     {* <img src="{@RELATIVE_WCF_DIR}icon/cronjobsL.png" alt="" /> *}
     <div class="headlineContainer">
         <h2>{lang}wcf.acp.newsletter.list{/lang}</h2>
-        <p>{lang}wcf.acp.newsletter.subtitle{/lang}</p>
+        <p>{lang}wcf.acp.newsletter.list.subtitle{/lang}</p>
     </div>
 </div>
 
@@ -15,6 +15,10 @@
 
 <div class="contentHeader">
     {pages print=true assign=pagesLinks link="index.php?page=NewsletterList&pageNo=%d&sortField=$sortField&sortOrder=$sortOrder&packageID="|concat:PACKAGE_ID:SID_ARG_2ND_NOT_ENCODED}
+	{if $this->user->getPermission('admin.content.newsletterSystem.canWriteNewsletter')}
+	<div class="largeButtons">
+		<ul><li><a href="index.php?form=NewsletterAdd&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}" title="{lang}wbb.acp.newsletter.add{/lang}">{*<img src="{@RELATIVE_WBB_DIR}icon/feedPosterAddM.png" alt="" /> *}<span>{lang}wbb.acp.newsletter.add{/lang}</span></a></li></ul>
+	</div>
 </div>
 
 {if !$items}
@@ -63,3 +67,5 @@
         {@$pagesLinks}
     </div>
 {/if}
+
+{include file='footer'}

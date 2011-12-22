@@ -36,6 +36,7 @@
         <useroptions>useroptions.xml</useroptions>
         <acpmenu>acpmenu.xml</acpmenu>
         <groupoptions>groupoptions.xml</groupoptions>
+        <cronjobs>cronjobs.xml</cronjobs>
         
         <!-- languages -->
         <languages languagecode="de">de.xml</languages>
