@@ -1,6 +1,7 @@
 <?php
 //wcf imports
 require_once(WCF_DIR.'lib/data/cronjobs/Cronjob.class.php');
+require_once(WCF_DIR.'lib/data/mail/Mail.class.php');
 
 /**
  * Sends the newsletters.
@@ -27,11 +28,24 @@ class SendNewsletterCronjob implements Cronjob {
     protected $outstandingNewsletters = array();
     
     /**
+     * Contains a list of all subscribers.
+     * @var array
+     */
+    protected $subscribersList = array();
+    
+    /**
+     * Contains the name of the database table.
+     * @var string
+     */
+    protected $databaseTable = 'newsletter';
+    
+    /**
      * @see Cronjob::execute()
      */
     public function execute($data) {
         parent::execute($data);
         $this->readNewsletters();
+        $this->readSubscribers();
         $this->checkNewsletters();
         $this->sendNewsletters();
     }
@@ -40,8 +54,22 @@ class SendNewsletterCronjob implements Cronjob {
      * Sends the newsletters.
      */
     protected function sendNewsletters() {
-        //TODO: Implement sendNewsletters method.
+        $templateName = 'newsletterMail';
+        WCF::getTPL()->assign('signature', MESSAGE_NEWSLETTERSYSTEM_GENERAL_SIGNATURE);
         
+        //Sends mail to all subscribers. They're listes as bcc to protect their privacy.
+        foreach ($outstandingNewsletters as $newsletter) {
+            $text = $newsletter['text'];
+            WCF::getTPL()->assign('text', $text);
+            $content = WCF::getTPL()->fetch($templateName);
+            $mail = new Mail(MAIL_ADMIN_ADDRESS, $newsletter['subject'], $content,
+                MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
+            foreach ($this->subscribersList as $subscriber) {
+                $email = $subscriber['email'];
+                $mail->addBCC($email);
+            }
+            $mail->send();
+        }
     }
     
     
@@ -55,6 +83,18 @@ class SendNewsletterCronjob implements Cronjob {
         
         //get options
         $this->newsletterList = WCF::getCache()->get($cacheName, 'newsletter');
+    }
+    
+    /**
+     * Reads the subscribers.
+     */
+    protected function readSubscribers() {
+        //add cache resource
+        $cacheName = 'newsletter-subscriber-'.PACKAGE_ID;
+        WCF::getCache()->addResource($cacheName, WCF_DIR.'cache/cache.'.$cacheName.'.php', WCF_DIR.'lib/system/cache/CacheBuilderNewsletterSubscriber.class.php');
+        
+        //get options
+        $this->subscribersList = WCF::getCache()->get($cacheName, 'subscribers');
     }
     
     /**
