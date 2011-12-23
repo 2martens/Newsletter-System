@@ -62,7 +62,7 @@ class NewsletterListPage extends SortablePage {
             $inArray = true;
         }
         if (!$inArray) {
-            $this->sortField = $this->defaulSortField;
+            $this->sortField = $this->defaultSortField;
         }
     }
     
