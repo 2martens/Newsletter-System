@@ -57,4 +57,67 @@
         <item name="wcf.acp.group.option.admin.content.newsletterSystem.canEditNewsletter"><![CDATA[]]></item>
         <item name="wcf.acp.group.option.admin.content.newsletterSystem.canEditNewsletter.description"><![CDATA[]]></item>
     </category>
+    <category name="wcf.acp.newsletter">
+        <!-- general -->
+        <item name="wcf.acp.newsletter.cronjob.description"><![CDATA[Sends all outstanding newsletter for the current day.]]></item>
+        <item name="wcf.acp.newsletter.unsubscribe"><![CDATA[Unsubscribe from the newsletter.]]></item>
+        <!-- /general -->
+        
+        <!-- about page -->
+        <item name="wcf.acp.newsletter.about"><![CDATA[About Newsletter-System]]></item>
+        <item name="wcf.acp.newsletter.about.subtitle"><![CDATA[Some meta info about Newsletter-System.]]></item>
+        <item name="wcf.acp.newsletter.author"><![CDATA[Author]]></item>
+        <item name="wcf.acp.newsletter.copyright"><![CDATA[Copyright]]></item>
+        <item name="wcf.acp.newsletter.version"><![CDATA[Version]]></item>
+        <item name="wcf.acp.newsletter.updateAvailable"><![CDATA[newer version available]]></item>
+        <!-- /about page -->
+        
+        <!-- actions -->
+        <item name="wcf.acp.newsletter.add"><![CDATA[Add a new newsletter]]></item>
+        <item name="wcf.acp.newsletter.add.success"><![CDATA[Newsletter has been successfully created.]]></item>
+        <item name="wcf.acp.newsletter.edit"><![CDATA[Edit a newsletter]]></item>
+        <item name="wcf.acp.newsletter.edit.success"><![CDATA[Newsletter has been successfully changed.]]></item>
+        <item name="wcf.acp.newsletter.delete"><![CDATA[Delete newsletter]]></item>
+        <item name="wcf.acp.newsletter.delete.success"><![CDATA[Newsletter has been successfully deleted.]]></item>
+        <!-- /actions -->
+        
+        <!-- newsletterAdd form -->
+        <item name="wcf.acp.newsletter.general"><![CDATA[General]]></item>
+        <item name="wcf.acp.newsletter.subject"><![CDATA[Subject]]></item>
+        <item name="wcf.acp.newsletter.subject.description"><![CDATA[Please insert here the subject of the newsletter.]]></item>
+        <item name="wcf.acp.newsletter.subject.error.tooShort"><![CDATA[The subject has to be at least 4 characters long.]]></item>
+        <item name="wcf.acp.newsletter.date"><![CDATA[Date]]></item>
+        <item name="wcf.acp.newsletter.date.description"><![CDATA[Please insert here the date of delivery.]]></item>
+        <item name="wcf.acp.newsletter.date.error.notValidated"><![CDATA[The inserted date doesn't fit in any defined format.]]></item>
+        <item name="wcf.acp.newsletter.date.day"><![CDATA[Day:]]></item>
+        <item name="wcf.acp.newsletter.date.month"><![CDATA[Month:]]></item>
+        <item name="wcf.acp.newsletter.date.year"><![CDATA[Year:]]></item>
+        <item name="wcf.acp.newsletter.message"><![CDATA[Message]]></item>
+        <item name="wcf.acp.newsletter.text"><![CDATA[Text]]></item>
+        <item name="wcf.acp.newsletter.text.description"><![CDATA[Please insert here the text of the newsletter.]]></item>
+        <!-- /newsletterAdd form -->
+        
+        <!-- newsletter list page -->
+        <item name="wcf.acp.newsletter.list"><![CDATA[Available newsletters]]></item>
+        <item name="wcf.acp.newsletter.list.subtitle"><![CDATA[Shows all available newsletters.]]></item>
+        <item name="wcf.acp.newsletter.list.noneAvailable"><![CDATA[No newsletter has been created.]]></item>
+        <item name="wcf.acp.newsletter.list.count"><![CDATA[A total of {#$items} newsletter{if $items != 1}s{/if}]]></item>
+        <item name="wcf.acp.newsletter.newsletterIDShort"><![CDATA[ID]]></item>
+        <item name="wcf.acp.newsletter.subject"><![CDATA[Subject]]></item>
+        <item name="wcf.acp.newsletter.subjectShort"><![CDATA[S]]></item>
+        <item name="wcf.acp.newsletter.deliveryTime"><![CDATA[Date of delivery]]></item>
+        <item name="wcf.acp.newsletter.deliveryTimeShort"><![CDATA[D]]></item>
+        <!-- /newsletter list page -->
+        
+        <!-- newsletter subscriber list page -->
+        <item name="wcf.acp.newsletter.subscriber.list"><![CDATA[List of Subscribers]]></item>
+        <item name="wcf.acp.newsletter.subscriber.list.subtitle"><![CDATA[Shows all subscribers.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.list.noneAvailable"><![CDATA[Noone has subscribed the newsletter.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.subscriberIDShort"><![CDATA[ID]]></item>
+        <item name="wcf.acp.newsletter.subscriber.username"><![CDATA[Username]]></item>
+        <item name="wcf.acp.newsletter.subscriber.usernameShort"><![CDATA[U]]></item>
+        <item name="wcf.acp.newsletter.subscriber.email"><![CDATA[E-Mail]]></item>
+        <item name="wcf.acp.newsletter.subscriber.emailShort"><![CDATA[E]]></item>
+        <!-- /newsletter subscriber list page -->
+    </category>
 </language>
