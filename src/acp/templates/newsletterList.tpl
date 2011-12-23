@@ -44,15 +44,15 @@
                 </tr>
             </thead>
             <tbody>
-            {foreach from=$newsletters item=newsletter}
+            {foreach from=$newsletters key=newsletterID item=newsletter}
                 <tr class="{cycle values="container-1,container-2"}">
                     <td class="columnIcon">
                         {if $this->user->getPermission('admin.content.newsletterSystem.canEditNewsletter')}
-                            <a href="index.php?action=NewsletterDelete&amp;newsletterID={@$newsletter.newsletterID}&amp;packageID={@PACKAGE_ID}&amp;t={@SECURITY_TOKEN}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/deleteS.png" alt="" title="{lang}wcf.acp.newsletter.delete{/lang}" /></a>
+                            <a href="index.php?action=NewsletterDelete&amp;newsletterID={@$newsletterID}&amp;packageID={@PACKAGE_ID}&amp;t={@SECURITY_TOKEN}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/deleteS.png" alt="" title="{lang}wcf.acp.newsletter.delete{/lang}" /></a>
                         {/if}
                         {if $newsletter.additionalButtons|isset}{@$newsletter.additionalButtons}{/if}
                     </td>
-                    <td class="columnNewsletterID">{@$newsletter.newsletterID}</td>
+                    <td class="columnNewsletterID">{@$newsletterID}</td>
                     <td class="columnUsername">{$newsletter.username|truncate:30:' ...'}</td>
                     <td class="columnDeliveryTime">{$newsletter.deliveryTime}</td>
                     <td class="columnSubject">{$newsletter.subject|truncate:30:' ...'}</td>
