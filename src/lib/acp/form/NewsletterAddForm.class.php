@@ -111,9 +111,9 @@ class NewsletterAddForm extends ACPForm {
         WCF::getTPL()->assign(array(
             'subject' => $this->subject,
             'text' => $this->text,
-            'day' => $dateValues['day'],
-            'month' => $dateValues['month'],
-            'year' => $dateValues['year'],
+            'day' => $this->dateValues['day'],
+            'month' => $this->dateValues['month'],
+            'year' => $this->dateValues['year'],
             'action' => 'add',
             'dateOptions' => $this->dateOptions,
             'result' => $this->result
