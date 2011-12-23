@@ -6,7 +6,7 @@
             <description><![CDATA[wcf.acp.newsletter.cronjob.description]]></description>
             <startminute>0</startminute>
             <starthour>0</starthour>
-            <startdom>1</startdom>
+            <startdom>*</startdom>
             <startmonth>*</startmonth>
             <startdow>*</startdow>
             <execmultiple>0</execmultiple>
