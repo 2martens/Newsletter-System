@@ -5,7 +5,7 @@
     {* <img src="{@RELATIVE_WCF_DIR}icon/cronjobsL.png" alt="" /> *}
     <div class="headlineContainer">
         <h2>{lang}wcf.acp.newsletter.subscriber.list{/lang}</h2>
-        <p>{lang}wcf.acp.newsletter.subscriber.subtitle{/lang}</p>
+        <p>{lang}wcf.acp.newsletter.subscriber.list.subtitle{/lang}</p>
     </div>
 </div>
 
