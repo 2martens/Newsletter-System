@@ -8,7 +8,7 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.0.0 Alpha 1</version>
+        <version>1.0.0 Alpha 2</version>
         <date>2011-12-23</date>
         <plugin>com.woltlab.wcf</plugin>
     </packageinformation>
