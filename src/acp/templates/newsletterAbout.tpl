@@ -12,7 +12,7 @@
     <div class="container-1">
         <p>{lang}wcf.acp.newsletter.author{/lang}: Jim Martens</p>
         <p>{lang}wcf.acp.newsletter.copyright{/lang}: &copy; 2011 Jim Martens</p>
-        <p>{lang}wcf.acp.newsletter.version{/lang}: {@$version} {if $update|isset && $update == true}[{lang}wcf.acp.newsletter.updateAvailable{/lang}]{/if}</p>
+        <p>{lang}wcf.acp.newsletter.version{/lang}: {@$version} {if $update}[{lang}wcf.acp.newsletter.updateAvailable{/lang}]{/if}</p>
     </div>
 </div>
 

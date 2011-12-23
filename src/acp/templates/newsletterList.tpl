@@ -24,7 +24,7 @@
 {if !$items}
     <div class="border content">
         <div class="container-1">
-            <p>{lang}wcf.acp.newsletter.noneAvailable{/lang}</p>
+            <p>{lang}wcf.acp.newsletter.list.noneAvailable{/lang}</p>
         </div>
     </div>
 {else}
@@ -37,7 +37,7 @@
                 <tr class="tableHead">
                     <th class="columnNewsletterID{if $sortField == 'newsletterID'} active{/if}" colspan="2"><div><a href="index.php?page=NewsletterList&amp;pageNo={@$pageNo}&amp;sortField=newsletterID&amp;sortOrder={if $sortField == 'newsletterID' && $sortOrder == 'ASC'}DESC{else}ASC{/if}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}">{lang}wcf.acp.newsletter.newsletterIDShort{/lang}{if $sortField == 'newsletterID'} <img src="{@RELATIVE_WCF_DIR}icon/sort{@$sortOrder}S.png" alt="" />{/if}</a></div></th>
                     <th class="columnUsername{if $sortField == 'username'} active{/if}" title="{lang}wcf.acp.newsletter.subscriber.username{/lang}"><div><a href="index.php?page=NewsletterList&amp;pageNo={@$pageNo}&amp;sortField=username&amp;sortOrder={if $sortField == 'username' && $sortOrder == 'ASC'}DESC{else}ASC{/if}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}">{lang}wcf.acp.newsletter.subscriber.usernameShort{/lang}{if $sortField == 'username'} <img src="{@RELATIVE_WCF_DIR}icon/sort{@$sortOrder}S.png" alt="" />{/if}</a></div></th>
-                    <th class="columnDeliveryTime{if $sortField == 'deliveryTime'} active{/if}" title="{lang}wcf.acp.newsletter.subscriber.deliveryTime{/lang}"><div><a href="index.php?page=NewsletterList&amp;pageNo={@$pageNo}&amp;sortField=deliveryTime&amp;sortOrder={if $sortField == 'deliveryTime' && $sortOrder == 'ASC'}DESC{else}ASC{/if}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}">{lang}wcf.acp.newsletter.subscriber.deliveryTimeShort{/lang}{if $sortField == 'deliveryTime'} <img src="{@RELATIVE_WCF_DIR}icon/sort{@$sortOrder}S.png" alt="" />{/if}</a></div></th>
+                    <th class="columnDeliveryTime{if $sortField == 'deliveryTime'} active{/if}" title="{lang}wcf.acp.newsletter.deliveryTime{/lang}"><div><a href="index.php?page=NewsletterList&amp;pageNo={@$pageNo}&amp;sortField=deliveryTime&amp;sortOrder={if $sortField == 'deliveryTime' && $sortOrder == 'ASC'}DESC{else}ASC{/if}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}">{lang}wcf.acp.newsletter.deliveryTimeShort{/lang}{if $sortField == 'deliveryTime'} <img src="{@RELATIVE_WCF_DIR}icon/sort{@$sortOrder}S.png" alt="" />{/if}</a></div></th>
                     <th class="columnSubject{if $sortField == 'subject'} active{/if}" title="{lang}wcf.acp.newsletter.subject{/lang}"><div><a href="index.php?page=NewsletterList&amp;pageNo={@$pageNo}&amp;sortField=subject&amp;sortOrder={if $sortField == 'subject' && $sortOrder == 'ASC'}DESC{else}ASC{/if}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}">{lang}wcf.acp.newsletter.subjectShort{/lang}{if $sortField == 'subject'} <img src="{@RELATIVE_WCF_DIR}icon/sort{@$sortOrder}S.png" alt="" />{/if}</a></div></th>
                     
                     {if $additionalColumns|isset}{@$additionalColumns}{/if}
