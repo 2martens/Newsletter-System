@@ -3,7 +3,7 @@ CREATE TABLE wcf1_newsletter (
     newsletterID INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     userID INT(10) NOT NULL DEFAULT 0,
     subject VARCHAR(255) NOT NULL DEFAULT '',
-    text MEDIUMTEXT NOT NULL DEFAULT '',
+    text MEDIUMTEXT NOT NULL,
     deliveryTime INT(10) NOT NULL DEFAULT 0,
     FULLTEXT KEY (subject, text),
     KEY (userID),
