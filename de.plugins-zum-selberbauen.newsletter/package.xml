@@ -8,8 +8,8 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>0.1.0</version>
-        <date>2011-12-11</date>
+        <version>1.0.0 Alpha 1</version>
+        <date>2011-12-23</date>
         <plugin>com.woltlab.wcf</plugin>
     </packageinformation>
     
