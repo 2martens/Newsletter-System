@@ -19,6 +19,7 @@
 	<div class="largeButtons">
 		<ul><li><a href="index.php?form=NewsletterAdd&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}" title="{lang}wbb.acp.newsletter.add{/lang}">{*<img src="{@RELATIVE_WBB_DIR}icon/feedPosterAddM.png" alt="" /> *}<span>{lang}wbb.acp.newsletter.add{/lang}</span></a></li></ul>
 	</div>
+	{/if}
 </div>
 
 {if !$items}
