@@ -20,7 +20,7 @@
 {if !$items}
     <div class="border content">
         <div class="container-1">
-            <p>{lang}wcf.acp.newsletter.subscriber.noneAvailable{/lang}</p>
+            <p>{lang}wcf.acp.newsletter.subscriber.list.noneAvailable{/lang}</p>
         </div>
     </div>
 {else}
