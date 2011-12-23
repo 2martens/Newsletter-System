@@ -22,7 +22,7 @@ class CacheBuilderNewsletter implements CacheBuilder {
     /**
      * @see CacheBuilder::getData()
      */
-    public function getData() {
+    public function getData($cacheResource) {
         $data = array('newsletter' => array());
         
         //get all newsletters and order them by id
