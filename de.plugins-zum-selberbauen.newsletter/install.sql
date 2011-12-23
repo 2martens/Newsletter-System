@@ -11,7 +11,7 @@ CREATE TABLE wcf1_newsletter (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS wcf1_newsletter_subscriber;
-CREATE TABLE wcf1_newsletter_subscriber {
+CREATE TABLE wcf1_newsletter_subscriber (
     subscriberID INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     userID INT(10) NOT NULL DEFAULT 0,
     email VARCHAR(255) NOT NULL DEFAULT '',
