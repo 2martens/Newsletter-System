@@ -18,7 +18,7 @@ class NewsletterEditor extends Newsletter {
      * Contains the database table name.
      * @var string
      */
-    protected static $databaseTable = 'newsletter';
+    protected static $databaseTableStatic = 'newsletter';
     
     /**
      * Updates the database entry of this newsletter with the given parameters.
@@ -54,7 +54,7 @@ class NewsletterEditor extends Newsletter {
         $subject = StringUtil::trim($subject);
         $text = StringUtil::trim($text);
         
-        $sql = 'INSERT INTO wcf'.WCF_N.'_'.self::$databaseTable.' newsletter
+        $sql = 'INSERT INTO wcf'.WCF_N.'_'.self::$databaseTableStatic.' newsletter
         			(userID, deliveryTime, subject, text)
         		VALUES
         			('.$userID.', '.$deliveryTime.", '".
