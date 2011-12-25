@@ -97,7 +97,9 @@ class NewsletterAddForm extends MessageForm {
                     $this->subject, $this->text);
         
         $this->saved();
-        WCF::getCache()->rebuild('newsletter-'.PACKAGE_ID);
+        $cacheName = 'newsletter-'.PACKAGE_ID;
+        WCF::getCache()->addResource($cacheName, WCF_DIR.'cache/cache.'.$cacheName.'.php', WCF_DIR.'lib/system/cache/CacheBuilderNewsletter.class.php');
+        WCF::getCache()->rebuild($cacheName);
         HeaderUtil::redirect('index.php?form=NewsletterAdd&result=success&packageID='.PACKAGE_ID.SID_ARG_2ND_NOT_ENCODED);
         exit;
     }
