@@ -38,7 +38,7 @@
                     </div>
                     <div class="formField">
                         <input type="text" class="inputText" id="subject" name="subject" value="{$subject}" />
-                        {if $errorField = 'subject'}
+                        {if $errorField == 'subject'}
                             <p class="innerError">
                                 {if $errorType == 'empty'}{lang}wcf.global.error.empty{/lang}{/if}
                                 {if $errorType == 'tooShort'}{lang}wcf.acp.newsletter.subject.error.tooShort{/lang}{/if}
