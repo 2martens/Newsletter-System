@@ -8,7 +8,7 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.0.0 Alpha 16 pl 5</version>
+        <version>1.0.0 Alpha 16 pl 6</version>
         <date>2011-12-24</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
@@ -49,6 +49,9 @@
     
     <instructions type="update" fromversion="1.0.0 Alpha 16*">
         <files>files.tar</files> 
-        <acptemplates>acptemplates.tar</acptemplates>       
+        <acptemplates>acptemplates.tar</acptemplates>
+        <languages languagecode="de">de.xml</languages>
+        <languages languagecode="de-informal">de-informal.xml</languages>
+        <languages languagecode="en">en.xml</languages>       
     </instructions>
 </package>
