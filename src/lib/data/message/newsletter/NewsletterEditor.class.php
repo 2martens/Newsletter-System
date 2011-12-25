@@ -17,19 +17,18 @@ class NewsletterEditor extends Newsletter {
     /**
      * Updates the database entry of this newsletter with the given parameters.
      *
-     * @param int $newsletterID
      * @param int $userID
      * @param int $deliveryTime (timestamp)
      * @param string $subject
      * @param string $text
      */
-    public function update($newsletterID, $userID, $deliveryTime, $subject = '', $text = '') {
+    public function update($userID, $deliveryTime, $subject = '', $text = '') {
         $sql = 'UPDATE wcf'.WCF_N.'_'.$this->databaseTable.' newsletter
         		SET userID = '.intval($userID).',
         			deliveryTime = '.intval($deliveryTime).",
         			subject = '".escapeString($subject)."',
         			text = '".escapeString($text)."'
-        		WHERE newsletter.newsletterID = ".intval($newsletterID);
+        		WHERE newsletter.newsletterID = ".intval($this->messageID);
         WCF::getDB()->sendQuery($sql);
     }
     
