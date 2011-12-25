@@ -101,10 +101,13 @@
         <item name="wcf.acp.newsletter.add"><![CDATA[Neuen Newsletter erstellen]]></item>
         <item name="wcf.acp.newsletter.add.success"><![CDATA[Newsletter wurde erfolgreich erstellt.]]></item>
         <item name="wcf.acp.newsletter.edit"><![CDATA[Newsletter bearbeiten]]></item>
-        <item name="wcf.acp.newsletter.edit.success"><![CDATA[Newsletter wurde erfolgreich bearbeitet]]></item>
+        <item name="wcf.acp.newsletter.edit.success"><![CDATA[Newsletter wurde erfolgreich bearbeitet.]]></item>
         <item name="wcf.acp.newsletter.delete"><![CDATA[Newsletter löschen]]></item>
         <item name="wcf.acp.newsletter.delete.sure"><![CDATA[Sind Sie sicher, dass Sie den Newsletter löschen möchten?]]></item>
         <item name="wcf.acp.newsletter.delete.success"><![CDATA[Newsletter wurde erfolgreich gelöscht.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.delete"><![CDATA[Abonnent löschen]]></item>
+        <item name="wcf.acp.newsletter.subscriber.delete.sure"><![CDATA[Sind Sie sicher, dass Sie den Abonnenten löschen möchten?]]></item>
+        <item name="wcf.acp.newsletter.subscriber.delete.success"><![CDATA[Abonnent wurde erfolgreich gelöscht.]]></item>
         <!-- /actions -->
         
         <!-- newsletterAdd form -->
