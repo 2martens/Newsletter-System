@@ -8,7 +8,7 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.0.0 Alpha 16 pl 3</version>
+        <version>1.0.0 Alpha 16 pl 4</version>
         <date>2011-12-24</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
