@@ -1,7 +1,7 @@
 {include file="header"}
 
 <div class="mainHeadline">
-    {* <img src="{@RELATIVE_WCF_DIR}icon/cronjobsL.png" alt="" /> *}
+    <img src="{@RELATIVE_WCF_DIR}icon/helpL.png" alt="" />
     <div class="headlineContainer">
         <h2>{lang}wcf.acp.newsletter.about{/lang}</h2>
         <p>{lang}wcf.acp.newsletter.about.subtitle{/lang}</p>

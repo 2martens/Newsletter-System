@@ -38,6 +38,7 @@
                     <parent>wcf.acp.menu.link.content.newsletterSystem.about</parent>
                     <showorder>1</showorder>
                     <link>index.php?page=NewsletterAbout</link>                    
+                    <icon>helpM.png</icon>
                 </acpmenuitem>
     </import>
 </data>
