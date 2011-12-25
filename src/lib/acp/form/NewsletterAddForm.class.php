@@ -109,6 +109,7 @@ class NewsletterAddForm extends ACPForm {
      * @see AbstractForm::assignVariables()
      */
     public function assignVariables() {
+        parent::assignVariables();
         WCF::getTPL()->assign(array(
             'subject' => $this->subject,
             'text' => $this->text,
