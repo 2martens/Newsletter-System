@@ -133,12 +133,16 @@ class NewsletterListPage extends SortablePage {
             case 'deliveryTime':
                 $sqlOrder = 'ORDER BY deliveryTime';
                 break;
+            case 'newsletterID':
+                if ($this->sortOrder == 'DESC') {
+                    $this->newsletterList = array_reverse($this->newsletterList);
+                }
             default:
                 return; //does nothing and exits the method
         }
         $sql .= $sqlOrder.' '.$this->sortOrder;
         $result = WCF::getDB()->sendQuery($sql);
-        while ($result = WCF::getDB()->fetchArray($result)) {
+        while ($row = WCF::getDB()->fetchArray($result)) {
             $this->newsletterList[$row['newsletterID']] = array(
                 'userID' => $row['userID'],
                 'username' => $row['username'],
