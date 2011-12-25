@@ -31,16 +31,16 @@
             <fieldset>
                 <legend>{lang}wcf.acp.newsletter.general{/lang}</legend>
                 
-                <div class="formElement{if $errorType.subject|isset} formError{/if}" id="subjectDiv">
+                <div class="formElement{if $errorField == 'subject'} formError{/if}" id="subjectDiv">
                     <div class="formFieldLabel">
                         <label for="subject">{lang}wcf.acp.newsletter.subject{/lang}</label>
                     </div>
                     <div class="formField">
                         <input type="text" class="inputText" id="subject" name="subject" value="{$subject}" />
-                        {if $errorType.subject|isset}
+                        {if $errorField = 'subject'}
                             <p class="innerError">
-                                {if $errorType.subject == 'empty'}{lang}wcf.global.error.empty{/lang}{/if}
-                                {if $errorType.subject == 'tooShort'}{lang}wcf.acp.newsletter.subject.error.tooShort{/lang}{/if}
+                                {if $errorType == 'empty'}{lang}wcf.global.error.empty{/lang}{/if}
+                                {if $errorType == 'tooShort'}{lang}wcf.acp.newsletter.subject.error.tooShort{/lang}{/if}
                             </p>
                         {/if}
                     </div>
@@ -51,7 +51,7 @@
                 <script type="text/javascript">//<![CDATA[
                     inlineHelp.register('subject');
                 //]]></script>
-                <div class="formGroup{if $errorType.date|isset} formError{/if}" id="dateDiv">
+                <div class="formGroup{if $errorField == 'date'} formError{/if}" id="dateDiv">
                     <div class="formGroupLabel">
                         <label for="date">{lang}wcf.acp.newsletter.date{/lang}</label>
                     </div>
@@ -104,9 +104,9 @@
                     </div>
                     <div class="formField">
                         <textarea name="text" id="text" rows="15" cols="40" tabindex="{counter name='tabindex'}">{$text}</textarea>
-                        {if $errorType.text|isset}
+                        {if $errorField == 'text'}
                             <p class="innerError">
-                                {if $errorType.text == 'empty'}{lang}wcf.global.error.empty{/lang}{/if}
+                                {if $errorType == 'empty'}{lang}wcf.global.error.empty{/lang}{/if}
                             </p>
                         {/if}
                     </div>
