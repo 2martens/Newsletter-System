@@ -1,5 +1,4 @@
 {include file='header'}
-{include file="wysiwyg"}
 <script type="text/javascript" src="{@RELATIVE_WCF_DIR}js/TabbedPane.class.js"></script>
 
 <div class="mainHeadline">
@@ -20,7 +19,7 @@
 <div class="contentHeader">
     <div class="largeButtons">
         <ul>
-            <li><a href="index.php?page=NewsletterList&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}" title="{lang}wcf.acp.menu.link.content.newsletter.newsletterList{/lang}">{*<img src="{@RELATIVE_WCF_DIR}icon/groupM.png" alt="" />*} <span>{lang}wcf.acp.menu.link.content.newsletter.newsletterList{/lang}</span></a></li>
+            <li><a href="index.php?page=NewsletterList&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}" title="{lang}wcf.acp.menu.link.content.newsletter.newsletterList{/lang}"><img src="{@RELATIVE_WCF_DIR}icon/messageM.png" alt="" /> <span>{lang}wcf.acp.menu.link.content.newsletter.newsletterList{/lang}</span></a></li>
             {if $additionalLargeButtons|isset}{@$additionalLargeButtons}{/if}
         </ul>
     </div>
