@@ -1,6 +1,7 @@
 <?php
 //wcf imports
 require_once(WCF_DIR.'lib/system/cache/CacheBuilder.class.php');
+require_once(WCF_DIR.'lib/data/user/User.class.php');
 
 /**
  * Builds the newsletter subscribers cache.
@@ -28,26 +29,15 @@ class CacheBuilderNewsletterSubscriber implements CacheBuilder {
         //get all subscribers and list them by id
         $sql = 'SELECT subscriberID, userID, email
         		FROM wcf'.WCF_N.'_'.$this->databaseTable.' subscribers
-        		ORDER BY subscribers.userID';
+        		ORDER BY subscribers.subscriberID';
         $result = WCF::getDB()->sendQuery($sql);
         $subscriberIDs = array();
         while ($row = WCF::getDB()->fetchArray($result)) {
+            $user = new User($row['userID']);
             $subscriberIDs[$row['subscriberID']] = array(
-            	'userID' => $row['userID'],
+            	'username' => $user->username,
             	'email' => $row['email']
             );
-        }
-        
-        if (count($subscriberIDs) > 0) {
-            require_once(WCF_DIR.'lib/data/user/User.class.php');
-            foreach ($subscriberIDs as $id => $userArray) {
-                $user = new User($userArray['userID']);
-                $name = $user->username;
-                $data['subscriber'][$id] = array(
-                	'username' => $name,
-                    'email' => $userArray['email']
-                );
-            }
         }
         return $data;
     }
