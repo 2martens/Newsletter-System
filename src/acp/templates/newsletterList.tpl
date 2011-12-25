@@ -28,6 +28,13 @@
             <p>{lang}wcf.acp.newsletter.list.noneAvailable{/lang}</p>
         </div>
     </div>
+    <div class="contentFooter">
+        {if $this->user->getPermission('admin.content.newsletterSystem.canWriteNewsletter')}
+			<div class="largeButtons">
+				<ul><li><a href="index.php?form=NewsletterAdd&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}" title="{lang}wcf.acp.newsletter.add{/lang}"><img src="{@RELATIVE_WCF_DIR}icon/messageAddM.png" alt="" /> <span>{lang}wcf.acp.newsletter.add{/lang}</span></a></li></ul>
+			</div>
+		{/if}
+    </div>
 {else}
     <div class="border titleBarPanel">
         <div class="containerHead"><h3>{lang}wcf.acp.newsletter.list.count{/lang}</h3></div>

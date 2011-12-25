@@ -61,3 +61,5 @@
         {@$pagesLinks}
     </div>
 {/if}
+
+{include file='footer'}
