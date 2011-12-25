@@ -141,6 +141,7 @@
         <item name="wcf.acp.newsletter.subscriber.list"><![CDATA[Eingetragene Abonnenten]]></item>
         <item name="wcf.acp.newsletter.subscriber.list.subtitle"><![CDATA[Zeigt die eingetragenen Abonnenten.]]></item>
         <item name="wcf.acp.newsletter.subscriber.list.noneAvailable"><![CDATA[Niemand hat den Newsletter abonniert.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.list.count"><![CDATA[Insgesamt {#$items} Abonnent{if $items != 1}en{/if}]]></item>
         <item name="wcf.acp.newsletter.subscriber.subscriberIDShort"><![CDATA[ID]]></item>
         <item name="wcf.acp.newsletter.subscriber.username"><![CDATA[Benutzername]]></item>
         <item name="wcf.acp.newsletter.subscriber.usernameShort"><![CDATA[B]]></item>
