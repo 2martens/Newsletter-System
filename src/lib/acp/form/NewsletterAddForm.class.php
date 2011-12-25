@@ -16,19 +16,7 @@ class NewsletterAddForm extends MessageForm {
     public $activeMenuItem = 'wcf.acp.menu.link.content.newsletterSystem.writeNewsletter';
     public $templateName = 'newsletterAdd';
     public $action = 'add';
-    
-    /**
-     * Contains the subject of the newsletter.
-     * @var string
-     */
-    protected $subject = '';
-    
-    /**
-     * Contains the content of the newsletter.
-     * @var string
-     */
-    protected $text = '';
-    
+        
     /**
      * Contains the read date values.
      * @var array<int>
@@ -52,8 +40,6 @@ class NewsletterAddForm extends MessageForm {
      */
     public function readFormParameters() {
         parent::readFormParameters();
-        if (isset($_POST['subject'])) $this->subject = StringUtil::trim($_POST['subject']);
-        if (isset($_POST['content'])) $this->text = StringUtil::trim($_POST['content']);
         if (isset($_POST['day'])) $this->dateValues['day'] = intval($_POST['day']);
         if (isset($_POST['month'])) $this->dateValues['month'] = intval($_POST['month']);
         if (isset($_POST['year'])) $this->dateValues['year'] = intval($_POST['year']);
