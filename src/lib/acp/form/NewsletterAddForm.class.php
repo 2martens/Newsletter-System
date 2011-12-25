@@ -16,6 +16,8 @@ class NewsletterAddForm extends MessageForm {
     public $activeMenuItem = 'wcf.acp.menu.link.content.newsletterSystem.writeNewsletter';
     public $templateName = 'newsletterAdd';
     public $action = 'add';
+    public $enableSmilies = 0;
+    public $showAttachments = false;
         
     /**
      * Contains the read date values.
@@ -102,7 +104,8 @@ class NewsletterAddForm extends MessageForm {
             'year' => $this->dateValues['year'],
             'action' => $this->action,
             'dateOptions' => $this->dateOptions,
-            'result' => $this->result
+            'result' => $this->result,
+            'useACPAttachments' => false
         ));
     }
     
