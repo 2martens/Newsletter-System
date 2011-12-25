@@ -50,6 +50,8 @@ class NewsletterAddForm extends MessageForm {
      * @see AbstractForm::readData()
      */
     public function readData() {
+        $cacheName = 'smileys';
+        WCF::getCache()->addResource($cacheName, WCF_DIR.'cache/cache.'.$cacheName.'.php', WCF_DIR.'lib/system/cache/CacheBuilderSmileys.class.php');
         parent::readData();
         for ($i = 1; $i <= 31; $i++) {
             $this->dateOptions['day'][$i] = ($i < 10 ? '0'. (string) $i: (string) $i);
