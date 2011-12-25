@@ -2,7 +2,7 @@
 <script type="text/javascript" src="{@RELATIVE_WCF_DIR}js/MultiPagesLinks.class.js"></script>
 
 <div class="mainHeadline">
-    {* <img src="{@RELATIVE_WCF_DIR}icon/cronjobsL.png" alt="" /> *}
+    <img src="{@RELATIVE_WCF_DIR}icon/membersL.png" alt="" />
     <div class="headlineContainer">
         <h2>{lang}wcf.acp.newsletter.subscriber.list{/lang}</h2>
         <p>{lang}wcf.acp.newsletter.subscriber.list.subtitle{/lang}</p>

@@ -14,18 +14,21 @@
                     <showorder>1</showorder>
                     <link>index.php?page=NewsletterSubscriberList</link>
                     <permissions>admin.content.newsletterSystem.canSeeSubscriberOverview</permissions>
+                    <icon>membersM.png</icon>
                 </acpmenuitem>
                 <acpmenuitem name="wcf.acp.menu.link.content.newsletterSystem.newsletterList">
                     <parent>wcf.acp.menu.link.content.newsletterSystem.general</parent>
                     <showorder>2</showorder>
                     <link>index.php?page=NewsletterList</link>
                     <permissions>admin.content.newsletterSystem.canSeeNewsletterOverview</permissions>
+                    <icon>messageM.png</icon>
                 </acpmenuitem>
                 <acpmenuitem name="wcf.acp.menu.link.content.newsletterSystem.writeNewsletter">
                     <parent>wcf.acp.menu.link.content.newsletterSystem.general</parent>
                     <showorder>3</showorder>
                     <link>index.php?form=NewsletterAdd</link>
                     <permissions>admin.content.newsletterSystem.canWriteNewsletter</permissions>
+                    <icon>messageAddM.png</icon>
                 </acpmenuitem>
             <acpmenuitem name="wcf.acp.menu.link.content.newsletterSystem.about">
                 <parent>wcf.acp.menu.link.content.newsletterSystem</parent>
