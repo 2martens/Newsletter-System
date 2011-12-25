@@ -1,6 +1,6 @@
 <?php
 //wcf imports
-require_once(WCF_DIR.'lib/acp/form/ACPForm.class.php');
+require_once(WCF_DIR.'lib/form/MessageForm.class.php');
 
 /**
  * Shows the newsletter add form.
@@ -12,7 +12,7 @@ require_once(WCF_DIR.'lib/acp/form/ACPForm.class.php');
  * @subpackage acp.form
  * @category Community Framework
  */
-class NewsletterAddForm extends ACPForm {
+class NewsletterAddForm extends MessageForm {
     public $activeMenuItem = 'wcf.acp.menu.link.content.newsletterSystem.writeNewsletter';
     public $templateName = 'newsletterAdd';
     public $action = 'add';
@@ -120,6 +120,14 @@ class NewsletterAddForm extends ACPForm {
             'dateOptions' => $this->dateOptions,
             'result' => $this->result
         ));
+    }
+    
+    /**
+     * @see MessageForm::show()
+     */
+    public function show() {
+        if (!empty($this->activeMenuItem)) WCFACP::getMenu()->setActiveMenuItem($this->activeMenuItem);
+		parent::show();
     }
     
     /**

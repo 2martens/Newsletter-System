@@ -1,4 +1,5 @@
 {include file='header'}
+{include file='wysiwyg'}
 <script type="text/javascript" src="{@RELATIVE_WCF_DIR}js/TabbedPane.class.js"></script>
 
 <div class="mainHeadline">
