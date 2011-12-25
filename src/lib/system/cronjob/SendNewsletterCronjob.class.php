@@ -19,7 +19,6 @@ class SendNewsletterCronjob implements Cronjob {
      * @see Cronjob::execute()
      */
     public function execute($data) {
-        parent::execute($data);
         $action = new SendNewsletterAction();
     }
 }
