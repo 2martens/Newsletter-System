@@ -131,7 +131,7 @@ class NewsletterSubscriberListPage extends SortablePage {
                 break;
             case 'subscriberID':
                 if ($this->sortOrder == 'DESC') {
-                    $this->subscribersList = array_reverse($this->subscribersList);
+                    $this->subscribersList = array_reverse($this->subscribersList, true);
                 }
             default:
                 return; //does nothing and exits the method

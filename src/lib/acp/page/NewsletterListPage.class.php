@@ -135,7 +135,7 @@ class NewsletterListPage extends SortablePage {
                 break;
             case 'newsletterID':
                 if ($this->sortOrder == 'DESC') {
-                    $this->newsletterList = array_reverse($this->newsletterList);
+                    $this->newsletterList = array_reverse($this->newsletterList, true);
                 }
             default:
                 return; //does nothing and exits the method
