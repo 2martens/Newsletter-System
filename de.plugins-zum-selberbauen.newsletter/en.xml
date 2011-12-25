@@ -132,21 +132,21 @@
         <item name="wcf.acp.newsletter.list.count"><![CDATA[A total of {#$items} newsletter{if $items != 1}s{/if}]]></item>
         <item name="wcf.acp.newsletter.newsletterIDShort"><![CDATA[ID]]></item>
         <item name="wcf.acp.newsletter.subject"><![CDATA[Subject]]></item>
-        <item name="wcf.acp.newsletter.subjectShort"><![CDATA[S]]></item>
+        <item name="wcf.acp.newsletter.subjectShort"><![CDATA[Subject]]></item>
         <item name="wcf.acp.newsletter.deliveryTime"><![CDATA[Date of delivery]]></item>
-        <item name="wcf.acp.newsletter.deliveryTimeShort"><![CDATA[D]]></item>
+        <item name="wcf.acp.newsletter.deliveryTimeShort"><![CDATA[Date]]></item>
         <!-- /newsletter list page -->
         
         <!-- newsletter subscriber list page -->
         <item name="wcf.acp.newsletter.subscriber.list"><![CDATA[List of Subscribers]]></item>
         <item name="wcf.acp.newsletter.subscriber.list.subtitle"><![CDATA[Shows all subscribers.]]></item>
-        <item name="wcf.acp.newsletter.subscriber.list.noneAvailable"><![CDATA[Noone has subscribed the newsletter.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.list.noneAvailable"><![CDATA[Nobody has subscribed the newsletter.]]></item>
         <item name="wcf.acp.newsletter.subscriber.list.count"><![CDATA[A total of {#$items} subscriber{if $items != 1}s{/if}]]></item>
         <item name="wcf.acp.newsletter.subscriber.subscriberIDShort"><![CDATA[ID]]></item>
         <item name="wcf.acp.newsletter.subscriber.username"><![CDATA[Username]]></item>
-        <item name="wcf.acp.newsletter.subscriber.usernameShort"><![CDATA[U]]></item>
+        <item name="wcf.acp.newsletter.subscriber.usernameShort"><![CDATA[Username]]></item>
         <item name="wcf.acp.newsletter.subscriber.email"><![CDATA[E-Mail]]></item>
-        <item name="wcf.acp.newsletter.subscriber.emailShort"><![CDATA[E]]></item>
+        <item name="wcf.acp.newsletter.subscriber.emailShort"><![CDATA[E-Mail]]></item>
         <!-- /newsletter subscriber list page -->
     </category>
 </language>

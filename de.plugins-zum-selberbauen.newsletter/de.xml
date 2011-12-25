@@ -135,7 +135,7 @@
         <item name="wcf.acp.newsletter.subject"><![CDATA[Betreff]]></item>
         <item name="wcf.acp.newsletter.subjectShort"><![CDATA[Betreff]]></item>
         <item name="wcf.acp.newsletter.deliveryTime"><![CDATA[Erscheinungsdatum]]></item>
-        <item name="wcf.acp.newsletter.deliveryTimeShort"><![CDATA[D]]></item>
+        <item name="wcf.acp.newsletter.deliveryTimeShort"><![CDATA[Datum]]></item>
         <!-- /newsletter list page -->
         
         <!-- newsletter subscriber list page -->
@@ -145,9 +145,9 @@
         <item name="wcf.acp.newsletter.subscriber.list.count"><![CDATA[Insgesamt {#$items} Abonnent{if $items != 1}en{/if}]]></item>
         <item name="wcf.acp.newsletter.subscriber.subscriberIDShort"><![CDATA[ID]]></item>
         <item name="wcf.acp.newsletter.subscriber.username"><![CDATA[Benutzername]]></item>
-        <item name="wcf.acp.newsletter.subscriber.usernameShort"><![CDATA[B]]></item>
+        <item name="wcf.acp.newsletter.subscriber.usernameShort"><![CDATA[Benutzername]]></item>
         <item name="wcf.acp.newsletter.subscriber.email"><![CDATA[E-Mail]]></item>
-        <item name="wcf.acp.newsletter.subscriber.emailShort"><![CDATA[E]]></item>
+        <item name="wcf.acp.newsletter.subscriber.emailShort"><![CDATA[E-Mail]]></item>
         <!-- /newsletter subscriber list page -->
     </category>
 </language>
