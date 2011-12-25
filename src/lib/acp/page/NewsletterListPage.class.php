@@ -142,13 +142,15 @@ class NewsletterListPage extends SortablePage {
         }
         $sql .= $sqlOrder.' '.$this->sortOrder;
         $result = WCF::getDB()->sendQuery($sql);
+        $tmpArray = array();
         while ($row = WCF::getDB()->fetchArray($result)) {
-            $this->newsletterList[$row['newsletterID']] = array(
+            $tmpArray[$row['newsletterID']] = array(
                 'userID' => $row['userID'],
                 'username' => $row['username'],
                 'subject' => $row['subject'],
                 'deliveryTime' => $row['deliveryTime']
             );
         }
+        $this->newsletterList = $tmpArray;
     }
 }
