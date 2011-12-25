@@ -38,6 +38,7 @@ class CacheBuilderNewsletterSubscriber implements CacheBuilder {
             	'email' => $row['email']
             );
         }
+        $this->data['subscribers'] = $subscriberIDs;
         return $data;
     }
 }

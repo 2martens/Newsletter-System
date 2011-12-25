@@ -40,7 +40,7 @@ class CacheBuilderNewsletter implements CacheBuilder {
                 'text' => $row['text']
             );
         }
-        
+        $this->data['newsletter'] = $newsletterIDs;
         return $data;
     }
 }
