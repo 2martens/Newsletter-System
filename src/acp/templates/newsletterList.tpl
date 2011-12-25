@@ -68,5 +68,12 @@
         {@$pagesLinks}
     </div>
 {/if}
+<div class="contentHeader">
+    {if $this->user->getPermission('admin.content.newsletterSystem.canWriteNewsletter')}
+	<div class="largeButtons">
+		<ul><li><a href="index.php?form=NewsletterAdd&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}" title="{lang}wcf.acp.newsletter.add{/lang}"><img src="{@RELATIVE_WCF_DIR}icon/messageAddM.png" alt="" /> <span>{lang}wcf.acp.newsletter.add{/lang}</span></a></li></ul>
+	</div>
+	{/if}
+</div>
 
 {include file='footer'}
