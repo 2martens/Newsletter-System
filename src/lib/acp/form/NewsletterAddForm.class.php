@@ -97,6 +97,7 @@ class NewsletterAddForm extends MessageForm {
                     $this->subject, $this->text);
         
         $this->saved();
+        WCF::getCache()->rebuild('newsletter-'.PACKAGE_ID);
         HeaderUtil::redirect('index.php?form=NewsletterAdd&result=success&packageID='.PACKAGE_ID.SID_ARG_2ND_NOT_ENCODED);
         exit;
     }

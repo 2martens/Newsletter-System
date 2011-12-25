@@ -32,6 +32,7 @@ class NewsletterSubscriberDeleteAction extends AbstractSecureAction {
         		WHERE subscriberID = '.$this->subscriberID;
         WCF::getDB()->sendQuery($sql);
         $this->executed();
+        WCF::getCache()->rebuild('newsletter-subscriber-'.PACKAGE_ID);
         HeaderUtil::redirect('index.php?page=NewsletterSubscriberList&result=success&packageID='.PACKAGE_ID.SID_ARG_2ND_NOT_ENCODED);
         exit;
     }

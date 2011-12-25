@@ -77,6 +77,7 @@ class NewsletterEditForm extends NewsletterAddForm {
         $newsletter->update(WCF::getUser()->userID, $unixTime, $this->subject, $this->text);
         $this->saved();
         $this->success = true;
+        WCF::getCache()->rebuild('newsletter-'.PACKAGE_ID);
     }
     
     /**
