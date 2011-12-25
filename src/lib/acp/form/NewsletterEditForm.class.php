@@ -84,6 +84,7 @@ class NewsletterEditForm extends NewsletterAddForm {
      */
     public function assignVariables() {
         parent::assignVariables();
+        WCF::getTPL()->assign('newsletterID', $this->newsletterID);
         if ($this->success) {
             WCF::getTPL()->assign('result', 'success');
         }

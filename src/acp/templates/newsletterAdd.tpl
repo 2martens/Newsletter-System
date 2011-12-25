@@ -126,6 +126,7 @@
 		<input type="hidden" name="packageID" value="{@PACKAGE_ID}" />
         {@SID_INPUT_TAG}
         <input type="hidden" name="action" value="{@$action}" />
+        {if $newsletterID|isset}<input type="hidden" name="newsletterID" value="{@$newsletterID}" />{/if}
     </div>
 </form>
 
