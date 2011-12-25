@@ -92,6 +92,9 @@
 							</div>
                     	</fieldset>
                 	</div>
+                	<div class="formFieldDesc hidden" id="dateHelpMessage">
+                        <p>{lang}wcf.acp.newsletter.date.description{/lang}</p>
+                    </div>
                 </div>
                 <script type="text/javascript">//<![CDATA[
                     inlineHelp.register('date');
@@ -111,14 +114,8 @@
                             </p>
                         {/if}
                     </div>
-                    <div class="formFieldDesc hidden" id="textHelpMessage">
-                        <p>{lang}wcf.acp.newsletter.text.description{/lang}</p>
-                    </div>
                 </div>
                 {include file='messageFormTabs'}
-                <script type="text/javascript">//<![CDATA[
-                    inlineHelp.register('text');
-                //]]></script>
             </fieldset>
         </div>
     </div>
