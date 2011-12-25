@@ -42,6 +42,25 @@ class NewsletterEditForm extends NewsletterAddForm {
         parent::readFormParameters();
         if (isset($_REQUEST['newsletterID'])) $this->newsletterID = intval($_REQUEST['newsletterID']);
     }
+    
+    /**
+     * @see NewsletterAddForm::readData()
+     */
+    public function readData() {
+        if (!count($_POST)) {
+            $newsletter = new NewsletterEditor($this->newsletterID);
+            $this->subject = $newsletter->subject;
+            $this->text = $newsletter->text;
+            $time = $newsletter->deliveryTime;
+            $dateArray = explode('-', DateUtil::formatDate('%Y-%m-%d', $time, false, true));
+            $this->dateValues = array(
+                'day' => $dateArray[2],
+                'month' => $dateArray[1],
+                'year' => $dateArray[0]
+            );
+            parent::readData();
+        }
+    }
 
     /**
      * @see NewsletterAddForm::save()
