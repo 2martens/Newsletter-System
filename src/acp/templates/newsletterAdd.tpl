@@ -3,7 +3,7 @@
 <script type="text/javascript" src="{@RELATIVE_WCF_DIR}js/TabbedPane.class.js"></script>
 
 <div class="mainHeadline">
-    {* <img src="{@RELATIVE_WCF_DIR}icon/group{@$action|ucfirst}L.png" alt="" /> *}
+    <img src="{@RELATIVE_WCF_DIR}icon/message{@$action|ucfirst}L.png" alt="" />
     <div class="headlineContainer">
         <h2>{lang}wcf.acp.newsletter.{@$action}{/lang}</h2>
     </div>
