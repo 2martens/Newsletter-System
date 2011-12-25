@@ -67,8 +67,6 @@ class NewsletterAddForm extends MessageForm {
      */
     public function validate() {
         parent::validate();
-        $this->validateSubject();
-        $this->validateText();
         $this->validateDate();
     }
     
@@ -97,8 +95,6 @@ class NewsletterAddForm extends MessageForm {
     public function assignVariables() {
         parent::assignVariables();
         WCF::getTPL()->assign(array(
-            'subject' => $this->subject,
-            'text' => $this->text,
             'day' => $this->dateValues['day'],
             'month' => $this->dateValues['month'],
             'year' => $this->dateValues['year'],
@@ -121,9 +117,7 @@ class NewsletterAddForm extends MessageForm {
      * @throws UserInputException
      */
     protected function validateSubject() {
-        if (empty($this->subject)) {
-            throw new UserInputException('subject');
-        }
+        parent::validateSubject();
         if (strlen($this->subject) < 4) {
             throw new UserInputException('subject', 'tooShort');
         }
