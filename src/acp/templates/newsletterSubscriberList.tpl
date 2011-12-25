@@ -48,8 +48,8 @@
                         {if $subscriber.additionalButtons|isset}{@$subscriber.additionalButtons}{/if}
                     </td>
                     <td class="columnSubscriberID">{@$subscriberID}</td>
-                    <td class="columnUsername">{$subscriber.username|truncate:30:' ...'}</td>
-                    <td class="columnEmail">{$subscriber.email|truncate:30:' ...'}</td>
+                    <td class="columnUsername">{$subscriber.username}</td>
+                    <td class="columnEmail">{$subscriber.email}</td>
                     {if $subscriber.additionalColumns|isset}{@$subscriber.additionalColumns}{/if}
                 </tr>
             {/foreach}
