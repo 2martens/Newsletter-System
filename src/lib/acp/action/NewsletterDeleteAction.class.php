@@ -39,8 +39,8 @@ class NewsletterDeleteAction extends AbstractSecureAction {
      */
     public function execute() {
         parent::execute();
-        $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->databaseTable.' newsletter
-        		WHERE newsletter.newsletterID = '.$this->newsletterID;
+        $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->databaseTable.'
+        		WHERE newsletterID = '.$this->newsletterID;
         WCF::getDB()->sendQuery($sql);
         $this->executed();
         HeaderUtil::redirect('index.php?page=NewsletterList&result=success&packageID='.PACKAGE_ID.SID_ARG_2ND_NOT_ENCODED);
