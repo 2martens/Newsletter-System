@@ -3,7 +3,7 @@
 require_once(WCF_DIR.'lib/acp/form/ACPForm.class.php');
 
 /**
- * Shows the write newsletter form.
+ * Shows the newsletter add form.
  *
  * @author Jim Martens
  * @copyright 2011 Jim Martens
@@ -15,6 +15,7 @@ require_once(WCF_DIR.'lib/acp/form/ACPForm.class.php');
 class NewsletterAddForm extends ACPForm {
     public $activeMenuItem = 'wcf.acp.menu.link.content.newsletterSystem.writeNewsletter';
     public $templateName = 'newsletterAdd';
+    public $action = 'add';
     
     /**
      * Contains the subject of the newsletter.
@@ -100,7 +101,7 @@ class NewsletterAddForm extends ACPForm {
                     $this->subject, $this->text);
         
         $this->saved();
-        HeaderUtil::redirect('index.php?form=NewsletterAdd&result=success');
+        HeaderUtil::redirect('index.php?form=NewsletterAdd&result=success&packageID='.PACKAGE_ID.SID_ARG_2ND_NOT_ENCODED);
         exit;
     }
     
@@ -114,7 +115,7 @@ class NewsletterAddForm extends ACPForm {
             'day' => $this->dateValues['day'],
             'month' => $this->dateValues['month'],
             'year' => $this->dateValues['year'],
-            'action' => 'add',
+            'action' => $this->action,
             'dateOptions' => $this->dateOptions,
             'result' => $this->result
         ));
