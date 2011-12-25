@@ -48,6 +48,7 @@
     </instructions>
     
     <instructions type="update" fromversion="1.0.0 Alpha 16*">
-        <files>files.tar</files>        
+        <files>files.tar</files> 
+        <acptemplates>acptemplates.tar</acptemplates>       
     </instructions>
 </package>
