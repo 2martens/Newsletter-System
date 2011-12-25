@@ -72,7 +72,7 @@ class NewsletterEditForm extends NewsletterAddForm {
         //convert date to timestamp
         $unixTime = strtotime($date);
         $newsletter = new NewsletterEditor($this->newsletterID);
-        $newsletter->update(WCF::getUser()->userID, $unixTime, $this->subject, $this->text);
+        $newsletter->update(WCF::getUser()->userID, WCF::getUser()->username, $unixTime, $this->subject, $this->text);
         $this->saved();
         $this->success = true;
         

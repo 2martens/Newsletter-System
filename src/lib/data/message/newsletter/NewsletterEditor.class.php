@@ -24,14 +24,16 @@ class NewsletterEditor extends Newsletter {
      * Updates the database entry of this newsletter with the given parameters.
      *
      * @param int $userID
+     * @param string $username
      * @param int $deliveryTime (timestamp)
      * @param string $subject
      * @param string $text
      */
-    public function update($userID, $deliveryTime, $subject = '', $text = '') {
+    public function update($userID, $username, $deliveryTime, $subject = '', $text = '') {
         $sql = 'UPDATE wcf'.WCF_N.'_'.$this->databaseTable.'
-        		SET userID = '.intval($userID).',
-        			deliveryTime = '.intval($deliveryTime).",
+        		SET userID = '.intval($userID).",
+        			username = '".escapeString($username)."',
+        			deliveryTime = ".intval($deliveryTime).",
         			subject = '".escapeString($subject)."',
         			text = '".escapeString($text)."'
         		WHERE newsletterID = ".intval($this->messageID);
@@ -48,16 +50,17 @@ class NewsletterEditor extends Newsletter {
      *
      * @return NewsletterEditor
      */
-    public static function create($userID, $deliveryTime, $subject, $text) {
-        $userID = intval($userID);
+    public static function create($deliveryTime, $subject, $text) {
+        $userID = intval(WCF::getUser()->userID);
+        $username = StringUtil::trim(WCF::getUser()->username);
         $deliveryTime = intval($deliveryTime);
         $subject = StringUtil::trim($subject);
         $text = StringUtil::trim($text);
         
         $sql = 'INSERT INTO wcf'.WCF_N.'_'.self::$databaseTableStatic.'
-        			(userID, deliveryTime, subject, text)
+        			(userID, username, deliveryTime, subject, text)
         		VALUES
-        			('.$userID.', '.$deliveryTime.", '".
+        			('.$userID.", '".escapeString($username)."', ".$deliveryTime.", '".
                     escapeString($subject)."', '".escapeString($text)."')";
         WCF::getDB()->sendQuery($sql);
         $newsletterID = WCF::getDB()->getInsertID();

@@ -93,7 +93,7 @@ class NewsletterAddForm extends MessageForm {
             (string) $this->dateValues['day'];
         //convert date to timestamp
         $unixTime = strtotime($date);
-        $newsletter = NewsletterEditor::create(WCF::getUser()->userID, $unixTime,
+        $newsletter = NewsletterEditor::create($unixTime,
                     $this->subject, $this->text);
         
         $this->saved();
