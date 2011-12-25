@@ -31,6 +31,12 @@ class NewsletterListPage extends SortablePage {
      */
     protected $newsletterList = array();
     
+    /**
+     * Contains the database table name.
+     * @var string
+     */
+    protected $databaseTable = 'newsletter';
+    
     public function readParameters() {
         parent::readParameters();
         if (isset($_REQUEST['result'])) $this->result = StringUtil::trim($_REQUEST['result']);
@@ -42,6 +48,7 @@ class NewsletterListPage extends SortablePage {
     public function readData() {
         $this->readNewsletters();
         parent::readData();
+        $this->sortNewsletters();
     }
     
 	/**
@@ -105,5 +112,39 @@ class NewsletterListPage extends SortablePage {
         
         //get options
         $this->newsletterList = WCF::getCache()->get($cacheName, 'newsletter');
+    }
+    
+	/**
+     * Sorts the subscribers.
+     */
+    protected function sortNewsletters() {
+        
+        $sql = 'SELECT newsletterID, userID, username, subject, deliveryTime
+        		FROM wcf'.WCF_N.'_'.$this->databaseTable.'
+        		';
+        $sqlOrder = '';
+        switch ($this->sortField) {
+            case 'username':
+                $sqlOrder = 'ORDER BY username';
+                break;
+            case 'subject':
+                $sqlOrder = 'ORDER BY subject';
+                break;
+            case 'deliveryTime':
+                $sqlOrder = 'ORDER BY deliveryTime';
+                break;
+            default:
+                return; //does nothing and exits the method
+        }
+        $sql .= $sqlOrder.' '.$this->sortOrder;
+        $result = WCF::getDB()->sendQuery($sql);
+        while ($result = WCF::getDB()->fetchArray($result)) {
+            $this->newsletterList[$row['newsletterID']] = array(
+                'userID' => $row['userID'],
+                'username' => $row['username'],
+                'subject' => $row['subject'],
+                'deliveryTime' => $row['deliveryTime']
+            );
+        }
     }
 }
