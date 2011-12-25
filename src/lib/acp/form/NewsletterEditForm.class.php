@@ -64,7 +64,7 @@ class NewsletterEditForm extends NewsletterAddForm {
      * @see NewsletterAddForm::save()
      */
     public function save() {
-        ACPForm::save();
+        MessageForm::save();
         //create date
         $date = (string) $this->dateValues['year'].'-'.
         (string) $this->dateValues['month'].'-'.
