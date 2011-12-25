@@ -39,6 +39,14 @@ class NewsletterAddForm extends MessageForm {
     protected $result = '';
     
     /**
+     * @see CaptchaForm::readParameters()
+     */
+    public function readParameters() {
+        parent::readParameters();
+        if (isset($_GET['result'])) $this->result = StringUtil::trim($_GET['result']);
+    }
+    
+    /**
      * @see AbstractForm::readFormParameters()
      */
     public function readFormParameters() {
@@ -46,7 +54,6 @@ class NewsletterAddForm extends MessageForm {
         if (isset($_POST['day'])) $this->dateValues['day'] = intval($_POST['day']);
         if (isset($_POST['month'])) $this->dateValues['month'] = intval($_POST['month']);
         if (isset($_POST['year'])) $this->dateValues['year'] = intval($_POST['year']);
-        if (isset($_REQUEST['result'])) $this->result = StringUtil::trim($_REQUEST['result']);
     }
     
     /**
