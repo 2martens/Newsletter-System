@@ -102,6 +102,7 @@
         <item name="wcf.acp.newsletter.edit"><![CDATA[Edit a newsletter]]></item>
         <item name="wcf.acp.newsletter.edit.success"><![CDATA[Newsletter has been successfully changed.]]></item>
         <item name="wcf.acp.newsletter.delete"><![CDATA[Delete newsletter]]></item>
+        <item name="wcf.acp.newsletter.delete.sure"><![CDATA[Are you sure that you want to delete the newsletter?]]></item>
         <item name="wcf.acp.newsletter.delete.success"><![CDATA[Newsletter has been successfully deleted.]]></item>
         <!-- /actions -->
         

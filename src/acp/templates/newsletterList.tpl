@@ -49,7 +49,7 @@
                     <td class="columnIcon">
                         {if $this->user->getPermission('admin.content.newsletterSystem.canEditNewsletter')}
                             <a href="index.php?form=NewsletterEdit&amp;newsletterID={@$newsletterID}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/editS.png" alt="" title="{lang}wcf.acp.newsletter.edit{/lang}" /></a>
-                            <a href="index.php?action=NewsletterDelete&amp;newsletterID={@$newsletterID}&amp;packageID={@PACKAGE_ID}&amp;t={@SECURITY_TOKEN}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/deleteS.png" alt="" title="{lang}wcf.acp.newsletter.delete{/lang}" /></a>
+                            <a onclick="return confirm('{lang}wcf.acp.newsletter.delete.sure{/lang}')" href="index.php?action=NewsletterDelete&amp;newsletterID={@$newsletterID}&amp;packageID={@PACKAGE_ID}&amp;t={@SECURITY_TOKEN}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/deleteS.png" alt="" title="{lang}wcf.acp.newsletter.delete{/lang}" /></a>
                         {/if}
                         {if $newsletter.additionalButtons|isset}{@$newsletter.additionalButtons}{/if}
                     </td>
