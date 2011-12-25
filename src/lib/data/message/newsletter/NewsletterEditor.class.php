@@ -29,12 +29,12 @@ class NewsletterEditor extends Newsletter {
      * @param string $text
      */
     public function update($userID, $deliveryTime, $subject = '', $text = '') {
-        $sql = 'UPDATE wcf'.WCF_N.'_'.$this->databaseTable.' newsletter
+        $sql = 'UPDATE wcf'.WCF_N.'_'.$this->databaseTable.'
         		SET userID = '.intval($userID).',
         			deliveryTime = '.intval($deliveryTime).",
         			subject = '".escapeString($subject)."',
         			text = '".escapeString($text)."'
-        		WHERE newsletter.newsletterID = ".intval($this->messageID);
+        		WHERE newsletterID = ".intval($this->messageID);
         WCF::getDB()->sendQuery($sql);
     }
     
@@ -54,7 +54,7 @@ class NewsletterEditor extends Newsletter {
         $subject = StringUtil::trim($subject);
         $text = StringUtil::trim($text);
         
-        $sql = 'INSERT INTO wcf'.WCF_N.'_'.self::$databaseTableStatic.' newsletter
+        $sql = 'INSERT INTO wcf'.WCF_N.'_'.self::$databaseTableStatic.'
         			(userID, deliveryTime, subject, text)
         		VALUES
         			('.$userID.', '.$deliveryTime.", '".
