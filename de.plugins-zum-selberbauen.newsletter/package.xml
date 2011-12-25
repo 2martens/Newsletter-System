@@ -8,7 +8,7 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.0.0 Alpha 16</version>
+        <version>1.0.0 Alpha 16 pl 1</version>
         <date>2011-12-24</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
@@ -47,7 +47,7 @@
         <languages languagecode="en">en.xml</languages>
     </instructions>
     
-    <instructions type="update" fromversion="1.0.0 Alpha 15">
+    <instructions type="update" fromversion="1.0.0 Alpha 16">
         <files>files.tar</files>        
     </instructions>
 </package>
