@@ -77,9 +77,18 @@ class NewsletterEditForm extends NewsletterAddForm {
         $newsletter->update(WCF::getUser()->userID, $unixTime, $this->subject, $this->text);
         $this->saved();
         $this->success = true;
+        
+        //resetting cache
         $cacheName = 'newsletter-'.PACKAGE_ID;
-        WCF::getCache()->addResource($cacheName, WCF_DIR.'cache/cache.'.$cacheName.'.php', WCF_DIR.'lib/system/cache/CacheBuilderNewsletter.class.php');
-        WCF::getCache()->rebuild($cacheName);
+        $cacheResource = array(
+			'cache' => $cacheName,
+			'file' => WCF_DIR.'cache/cache.'.$cacheName.'.php',
+			'className' => 'CacheBuilderNewsletter',
+			'classFile' => WCF_DIR.'lib/system/cache/CacheBuilderNewsletter.class.php',
+			'minLifetime' => 0,
+			'maxLifetime' => 0
+		);
+        WCF::getCache()->rebuild($cacheResource);
     }
     
     /**

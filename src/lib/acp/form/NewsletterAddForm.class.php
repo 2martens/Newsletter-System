@@ -97,9 +97,18 @@ class NewsletterAddForm extends MessageForm {
                     $this->subject, $this->text);
         
         $this->saved();
+        
+        //resetting cache
         $cacheName = 'newsletter-'.PACKAGE_ID;
-        WCF::getCache()->addResource($cacheName, WCF_DIR.'cache/cache.'.$cacheName.'.php', WCF_DIR.'lib/system/cache/CacheBuilderNewsletter.class.php');
-        WCF::getCache()->rebuild($cacheName);
+        $cacheResource = array(
+			'cache' => $cacheName,
+			'file' => WCF_DIR.'cache/cache.'.$cacheName.'.php',
+			'className' => 'CacheBuilderNewsletter',
+			'classFile' => WCF_DIR.'lib/system/cache/CacheBuilderNewsletter.class.php',
+			'minLifetime' => 0,
+			'maxLifetime' => 0
+		);
+        WCF::getCache()->rebuild($cacheResource);
         HeaderUtil::redirect('index.php?form=NewsletterAdd&result=success&packageID='.PACKAGE_ID.SID_ARG_2ND_NOT_ENCODED);
         exit;
     }
