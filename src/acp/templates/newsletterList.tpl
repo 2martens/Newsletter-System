@@ -56,7 +56,7 @@
                     <td class="columnNewsletterID">{@$newsletterID}</td>
                     <td class="columnSubject">{$newsletter.subject|truncate:30:' ...'}</td>
                     <td class="columnUsername">{$newsletter.username|truncate:30:' ...'}</td>
-                    <td class="columnDeliveryTime">{$newsletter.deliveryTime}</td>
+                    <td class="columnDeliveryTime">{$newsletter.deliveryTime|date:"%d.%m.%Y"}</td>
                     {if $newsletter.additionalColumns|isset}{@$newsletter.additionalColumns}{/if}
                 </tr>
             {/foreach}
