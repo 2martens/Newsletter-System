@@ -21,8 +21,26 @@ class UserProfileEditNewsletterListener implements EventListener {
      */
     public function execute($eventObj, $className, $eventName) {
         $option = $eventObj->activeOptions['acceptNewsletter'];
-        if ($option) $this->addSubscriber();
-        else $this->deleteSubscriber();
+        $sql = 'SELECT COUNT(userID) AS count
+        		FROM wcf'.WCF_N.'_'.$this->databaseTable.'
+        		WHERE userID = '.intval(WCF::getUser()->userID);
+        $existCount = WCF::getDB()->getFirstRow($sql);
+        
+        if ($option['optionValue'] && !$existCount['count']) $this->addSubscriber();
+        elseif (!$option['optionValue'] && $existCount['count']) $this->deleteSubscriber();
+        else return;
+        
+        $cacheName = 'newsletter-subscriber-'.PACKAGE_ID;
+        $cacheFile = WCF_DIR.'lib/system/cache/CacheBuilderNewsletterSubscriber.class.php';
+        $cacheResource = array(
+			'cache' => $cacheName,
+			'file' => WCF_DIR.'cache/cache.'.$cacheName.'.php',
+			'className' => StringUtil::getClassName($cacheFile),
+			'classFile' => $cacheFile,
+			'minLifetime' => 0,
+			'maxLifetime' => 0
+		);
+        WCF::getCache()->rebuild($cacheResource);
     }
     
     /**
