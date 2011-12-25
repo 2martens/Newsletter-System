@@ -1,6 +1,7 @@
 <?php
 //wcf imports
 require_once(WCF_DIR.'lib/form/MessageForm.class.php');
+require_once(WCF_DIR.'lib/data/message/newsletter/NewsletterEditor.class.php');
 
 /**
  * Shows the newsletter add form.
