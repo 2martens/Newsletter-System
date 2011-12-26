@@ -37,13 +37,13 @@
             <option name="message_newsletterSystem_general_from">
                 <categoryname>message.newsletterSystem.general</categoryname>
                 <optiontype>text</optiontype>
-                <defaultvalue>MAIL_FROM_ADDRESS</defaultvalue>
+                <defaultvalue></defaultvalue>
                 <showorder>1</showorder>
             </option>
             <option name="message_newsletterSystem_general_signature">
                 <categoryname>message.newsletterSystem.general</categoryname>
                 <optiontype>textarea</optiontype>
-                <defaultvalue>MAIL_SIGNATURE</defaultvalue>
+                <defaultvalue></defaultvalue>
                 <showorder>2</showorder>
             </option>
             <option name="message_newsletterSystem_general_items">
