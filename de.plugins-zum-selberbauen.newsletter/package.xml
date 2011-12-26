@@ -46,6 +46,9 @@
         <languages languagecode="de">de.xml</languages>
         <languages languagecode="de-informal">de-informal.xml</languages>
         <languages languagecode="en">en.xml</languages>
+        
+        <!-- script -->
+        <script>acp/InstallNewsletter.class.php</script>
     </instructions>
     
     <instructions type="update" fromversion="1.0.0 Alpha 21*">
