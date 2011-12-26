@@ -47,6 +47,9 @@ class SendNewsletterAction extends AbstractAction {
         if (isset($_GET['id'])) $this->newsletterID = intval($_GET['id']);
     }
     
+    /**
+     * @see AbstractAction::execute()
+     */
     public function execute() {
         parent::execute();
         $this->readNewsletters();
