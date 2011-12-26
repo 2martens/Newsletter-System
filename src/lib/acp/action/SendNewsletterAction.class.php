@@ -85,7 +85,7 @@ class SendNewsletterAction extends AbstractAction {
      */
     protected function readNewsletters() {
         //add cache resource
-        $cacheName = 'newsletter-list-'.PACKAGE_ID;
+        $cacheName = 'newsletter-'.PACKAGE_ID;
         WCF::getCache()->addResource($cacheName, WCF_DIR.'cache/cache.'.$cacheName.'.php', WCF_DIR.'lib/system/cache/CacheBuilderNewsletter.class.php');
         
         //get options
