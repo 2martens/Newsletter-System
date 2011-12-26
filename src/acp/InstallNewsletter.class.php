@@ -51,7 +51,7 @@ class InstallNewsletter {
         //reading packageID
         $sql = 'SELECT packageID
 			FROM wcf'.WCF_N.'_'.$databaseTablePackage."'
-			WHERE package = '".escapeString($package)."'";
+			WHERE package = '".escapeString($this->package)."'";
         $row = WCF::getDB()->getFistRow($sql);
         $packageID = intval($row['packageID']);
 
