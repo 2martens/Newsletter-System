@@ -15,9 +15,9 @@ require_once(WCF_DIR.'lib/page/SortablePage.class.php');
 class NewsletterSubscriberListPage extends SortablePage {
     public $neededPermissions = 'admin.content.newslettersystem.canSeeSubscriberOverview';
     public $templateName = 'newsletterSubscriberList';
-    public $defaultSortField = MESSAGE_GENERAL_NEWSLETTERSYSTEM_SORTFIELD_SUBSCRIBER;
-    public $defaultSortOrder = MESSAGE_GENERAL_NEWSLETTERSYSTEM_SORTORDER_SUBSCRIBER;
-    public $itemsPerPage = MESSAGE_GENERAL_NEWSLETTERSYSTEM_ITEMS;
+    public $defaultSortField = MESSAGE_NEWSLETTERSYSTEM_GENERAL_SORTFIELD_SUBSCRIBER;
+    public $defaultSortOrder = MESSAGE_NEWSLETTERSYSTEM_GENERAL_SORTORDER_SUBSCRIBER;
+    public $itemsPerPage = MESSAGE_NEWSLETTERSYSTEM_GENERAL_ITEMS;
     
     /**
      * Contains the result of deleting a subscriber.

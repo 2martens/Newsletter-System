@@ -6,33 +6,35 @@
         <item name="wcf.acp.option.module_newslettersystem.description"><![CDATA[Aktiviert Newsletter-System]]></item>
         <!-- /module -->
         <!-- categories -->
-        <item name="wcf.acp.option.category.message.general.newslettersystem"><![CDATA[Newsletter-System]]></item>
-        <item name="wcf.acp.option.category.message.general.newslettersystem.description"><![CDATA[]]></item>
+        <item name="wcf.acp.option.category.message.newslettersystem"><![CDATA[Newsletter-System]]></item>
+        <item name="wcf.acp.option.category.message.newslettersystem.description"><![CDATA[]]></item>
+        <item name="wcf.acp.option.category.message.newslettersystem.general"><![CDATA[Allgemein]]></item>
+        <item name="wcf.acp.option.category.message.newslettersystem.general.description"><![CDATA[]]></item>
         <!-- /categories -->
         <!-- options -->
-        <item name="wcf.acp.option.message_general_newslettersystem_from"><![CDATA[Absendeadresse]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_from.description"><![CDATA[Geben Sie hier die Absendeadresse an, die im "Von"-Feld erscheinen soll.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_from"><![CDATA[Absendeadresse]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_from.description"><![CDATA[Geben Sie hier die Absendeadresse an, die im "Von"-Feld erscheinen soll.]]></item>
         
-        <item name="wcf.acp.option.message_general_newslettersystem_items"><![CDATA[Anzahl der angezeigten Elemente]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_items.description"><![CDATA[Geben Sie hier die Anzahl der anzuzeigenden Elemente pro Seite an.]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_login"><![CDATA[Paketserverzugang]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_login.description"><![CDATA[Geben Sie hier Ihre Zugangsdaten für den Paketserver http://update.plugins-zum-selberbauen.de im Format User:Passwort an.]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortOrder_subscriber"><![CDATA[Sortierreihenfolge]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortOrder_subscriber.description"><![CDATA[Geben Sie hier die Sortierreihenfolge für die Abonnentenliste an.]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortField_subscriber"><![CDATA[Sortierfeld]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortField_subscriber.description"><![CDATA[Geben Sie hier an nach welchem Element sortiert werden soll.]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortField_subscriber.subscriberID"><![CDATA[ID]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortField_subscriber.username"><![CDATA[Benutzername]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortField_subscriber.email"><![CDATA[E-Mail]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_items"><![CDATA[Anzahl der angezeigten Elemente]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_items.description"><![CDATA[Geben Sie hier die Anzahl der anzuzeigenden Elemente pro Seite an.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_login"><![CDATA[Paketserverzugang]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_login.description"><![CDATA[Geben Sie hier Ihre Zugangsdaten für den Paketserver http://update.plugins-zum-selberbauen.de im Format User:Passwort an.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber"><![CDATA[Sortierreihenfolge]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber.description"><![CDATA[Geben Sie hier die Sortierreihenfolge für die Abonnentenliste an.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber"><![CDATA[Sortierfeld]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber.description"><![CDATA[Geben Sie hier an nach welchem Element sortiert werden soll.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber.subscriberID"><![CDATA[ID]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber.username"><![CDATA[Benutzername]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber.email"><![CDATA[E-Mail]]></item>
         
-        <item name="wcf.acp.option.message_general_newslettersystem_sortOrder_newsletter"><![CDATA[Sortierreihenfolge]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortOrder_newsletter.description"><![CDATA[Geben Sie hier die Sortierreihenfolge für die Newsletterliste an.]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortField_newsletter"><![CDATA[Sortierfeld]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortField_newsletter.description"><![CDATA[Geben Sie hier an nach welchem Element sortiert werden soll.]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortField_newsletter.newsletterID"><![CDATA[ID]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortField_newsletter.username"><![CDATA[Benutzername]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortField_newsletter.deliveryTime"><![CDATA[Erscheinungsdatum]]></item>
-        <item name="wcf.acp.option.message_general_newslettersystem_sortField_newsletter.subject"><![CDATA[Betreff]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_newsletter"><![CDATA[Sortierreihenfolge]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_newsletter.description"><![CDATA[Geben Sie hier die Sortierreihenfolge für die Newsletterliste an.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_newsletter"><![CDATA[Sortierfeld]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_newsletter.description"><![CDATA[Geben Sie hier an nach welchem Element sortiert werden soll.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_newsletter.newsletterID"><![CDATA[ID]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_newsletter.username"><![CDATA[Benutzername]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_newsletter.deliveryTime"><![CDATA[Erscheinungsdatum]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_newsletter.subject"><![CDATA[Betreff]]></item>
         <!-- /options -->
     </category>
     <category name="wcf.user.option">

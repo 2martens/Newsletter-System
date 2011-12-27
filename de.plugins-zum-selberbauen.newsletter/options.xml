@@ -12,13 +12,16 @@
             <!-- /module -->
             <!-- newsletter category -->
             <category name="message">
-                <showorder>5</showorder>
-            </category>
-            <category name="message.general.newslettersystem">
-                <parent>message.general</parent>
-                <options>module_newslettersystem</options>
-            </category>
                 
+            </category>
+                <category name="message.newslettersystem">
+                    <parent>message</parent>
+                    <options>module_newslettersystem</options>
+                </category>
+                    <category name="message.newslettersystem.general">
+                        <parent>message.newslettersystem</parent>
+                        <showorder>1</showorder>
+                    </category>
             <!-- /newletter category -->
         </categories>
         
@@ -31,25 +34,26 @@
             </option>
             <!-- /module -->
             <!-- newsletter options -->
-            <option name="message_general_newslettersystem_from">
-                <categoryname>message.general.newslettersystem</categoryname>
+            <option name="message_newslettersystem_general_from">
+                <categoryname>message.newslettersystem.general</categoryname>
                 <optiontype>text</optiontype>
+                <defaultvalue></defaultvalue>
                 <showorder>1</showorder>
             </option>
-            <option name="message_general_newslettersystem_items">
-                <categoryname>message.general.newslettersystem</categoryname>
+            <option name="message_newslettersystem_general_items">
+                <categoryname>message.newslettersystem.general</categoryname>
                 <optiontype>integer</optiontype>
                 <defaultvalue>30</defaultvalue>
                 <showorder>2</showorder>
             </option>
-            <option name="message_general_newslettersystem_login">
-                <categoryname>message.general.newslettersystem</categoryname>
+            <option name="message_newslettersystem_general_login">
+                <categoryname>message.newslettersystem.general</categoryname>
                 <optiontype>text</optiontype>
-                <defaultvalue><![CDATA[User:Password]]></defaultvalue>
+                <defaultvalue>User:Password</defaultvalue>
                 <showorder>3</showorder>
             </option>
-            <option name="message_general_newslettersystem_sortOrder_subscriber">
-                <categoryname>message.general.newslettersystem</categoryname>
+            <option name="message_newslettersystem_general_sortOrder_subscriber">
+                <categoryname>message.newslettersystem.general</categoryname>
                 <optiontype>select</optiontype>
                 <defaultvalue><![CDATA[ASC]]></defaultvalue>
                 <selectoptions>
@@ -58,19 +62,19 @@ DESC:DESC]]>
                 </selectoptions>
                 <showorder>4</showorder>
             </option>
-            <option name="message_general_newslettersystem_sortField_subscriber">
-                <categoryname>message.general.newslettersystem</categoryname>
+            <option name="message_newslettersystem_general_sortField_subscriber">
+                <categoryname>message.newslettersystem.general</categoryname>
                 <optiontype>select</optiontype>
                 <defaultvalue><![CDATA[subscriberID]]></defaultvalue>
                 <selectoptions>
-                    <![CDATA[subscriberID:wcf.acp.option.message_general_newslettersystem_sortField_subscriber.subscriberID
-username:wcf.acp.option.message_general_newslettersystem_sortField_subscriber.username
-email:wcf.acp.option.message_general_newslettersystem_sortField_subscriber.email]]>
+                    <![CDATA[subscriberID:wcf.acp.option.message_newslettersystem_general_sortField_subscriber.subscriberID
+username:wcf.acp.option.message_newslettersystem_general_sortField_subscriber.username
+email:wcf.acp.option.message_newslettersystem_general_sortField_subscriber.email]]>
                 </selectoptions>
                 <showorder>5</showorder>
             </option>
-            <option name="message_general_newslettersystem_sortOrder_newsletter">
-                <categoryname>message.general.newslettersystem</categoryname>
+            <option name="message_newslettersystem_general_sortOrder_newsletter">
+                <categoryname>message.newslettersystem.general</categoryname>
                 <optiontype>select</optiontype>
                 <defaultvalue><![CDATA[ASC]]></defaultvalue>
                 <selectoptions>
@@ -79,15 +83,15 @@ DESC:DESC]]>
                 </selectoptions>
                 <showorder>6</showorder>
             </option>
-            <option name="message_general_newslettersystem_sortField_newsletter">
-                <categoryname>message.general.newslettersystem</categoryname>
+            <option name="message_newslettersystem_general_sortField_newsletter">
+                <categoryname>message.newslettersystem.general</categoryname>
                 <optiontype>select</optiontype>
                 <defaultvalue><![CDATA[newsletterID]]></defaultvalue>
                 <selectoptions>
-                    <![CDATA[newsletterID:wcf.acp.option.message_general_newslettersystem_sortField_newsletter.newsletterID
-username:wcf.acp.option.message_general_newslettersystem_sortField_newsletter.username
-deliveryTime:wcf.acp.option.message_general_newslettersystem_sortField_newsletter.deliveryTime
-subject:wcf.acp.option.message_general_newslettersystem_sortField_newsletter.subject]]>
+                    <![CDATA[newsletterID:wcf.acp.option.message_newslettersystem_general_sortField_newsletter.newsletterID
+username:wcf.acp.option.message_newslettersystem_general_sortField_newsletter.username
+deliveryTime:wcf.acp.option.message_newslettersystem_general_sortField_newsletter.deliveryTime
+subject:wcf.acp.option.message_newslettersystem_general_sortField_newsletter.subject]]>
                 </selectoptions>
                 <showorder>7</showorder>
             </option>
