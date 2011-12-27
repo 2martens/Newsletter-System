@@ -2,26 +2,15 @@
 <data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/options.xsd">
     <import>
         <categories>
-            <!-- module -->
-            <category name="module">
-                <showorder>1</showorder>
-            </category>
-                <category name="module.content">
-                    <parent>module</parent>
-                </category>
-            <!-- /module -->
             <!-- newsletter category -->
-            <category name="message">
-                <showorder>5</showorder>
+            <category name="message.newsletter">
+                <parent>message</parent>
+                <options>module_newsletterSystem</options>
             </category>
-                <category name="message.newsletter">
-                    <parent>message</parent>
-                    <options>module_newsletterSystem</options>
+                <category name="message.newsletter.general">
+                    <parent>message.newsletter</parent>
+                    <showorder>1</showorder>
                 </category>
-                    <category name="message.newsletter.general">
-                        <parent>message.newsletter</parent>
-                        <showorder>1</showorder>
-                    </category>
             <!-- /newletter category -->
         </categories>
         
