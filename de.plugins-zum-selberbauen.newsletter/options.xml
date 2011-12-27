@@ -12,7 +12,7 @@
             <!-- /module -->
             <!-- newsletter category -->
             <category name="message">
-                
+                <showorder>5</showorder>
             </category>
                 <category name="message.newslettersystem">
                     <parent>message</parent>
