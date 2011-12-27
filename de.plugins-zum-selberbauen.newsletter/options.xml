@@ -57,8 +57,8 @@
                 <optiontype>select</optiontype>
                 <defaultvalue><![CDATA[ASC]]></defaultvalue>
                 <selectoptions>
-                    <![CDATA[ASC:ASC
-DESC:DESC]]>
+                    <![CDATA[ASC:wcf.global.sortOrder.ascending
+DESC:wcf.global.sortOrder.descending]]>
                 </selectoptions>
                 <showorder>4</showorder>
             </option>
@@ -78,8 +78,8 @@ email:wcf.acp.option.message_newslettersystem_general_sortField_subscriber.email
                 <optiontype>select</optiontype>
                 <defaultvalue><![CDATA[ASC]]></defaultvalue>
                 <selectoptions>
-                    <![CDATA[ASC:ASC
-DESC:DESC]]>
+                    <![CDATA[ASC:wcf.global.sortOrder.ascending
+DESC:wcf.global.sortOrder.descending]]>
                 </selectoptions>
                 <showorder>6</showorder>
             </option>
