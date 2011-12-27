@@ -8,7 +8,7 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.0.0 Alpha 29</version>
+        <version>1.0.0 Alpha 30</version>
         <date>2011-12-27</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
@@ -51,7 +51,7 @@
         <script>acp/InstallNewsletter.class.php</script>
     </instructions>
     
-    <instructions type="update" fromversion="1.0.0 Alpha 28">
+    <instructions type="update" fromversion="1.0.0 Alpha 29">
         <options>options.xml</options>
         
     </instructions>
