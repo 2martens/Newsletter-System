@@ -14,8 +14,6 @@
         <!-- options -->
         <item name="wcf.acp.option.message_newsletterSystem_general_from"><![CDATA[Absendeadresse]]></item>
         <item name="wcf.acp.option.message_newsletterSystem_general_from.description"><![CDATA[Gib hier die Absendeadresse an, die im "Von"-Feld erscheinen soll.]]></item>
-        <item name="wcf.acp.option.message_newsletterSystem_general_signature"><![CDATA[Signatur]]></item>
-        <item name="wcf.acp.option.message_newsletterSystem_general_signature.description"><![CDATA[Gib hier die Signatur an, die unter jedem Newsletter angezeigt werden soll.]]></item>
         <item name="wcf.acp.option.message_newsletterSystem_general_items"><![CDATA[Anzahl der angezeigten Elemente]]></item>
         <item name="wcf.acp.option.message_newsletterSystem_general_items.description"><![CDATA[Gib hier die Anzahl der anzuzeigenden Elemente pro Seite an.]]></item>
         <item name="wcf.acp.option.message_newsletterSystem_general_sortOrder_subscriber"><![CDATA[Sortierreihenfolge]]></item>

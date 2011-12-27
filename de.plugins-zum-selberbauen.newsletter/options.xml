@@ -40,17 +40,11 @@
                 <defaultvalue></defaultvalue>
                 <showorder>1</showorder>
             </option>
-            <option name="message_newsletterSystem_general_signature">
-                <categoryname>message.newsletterSystem.general</categoryname>
-                <optiontype>textarea</optiontype>
-                <defaultvalue></defaultvalue>
-                <showorder>2</showorder>
-            </option>
             <option name="message_newsletterSystem_general_items">
                 <categoryname>message.newsletterSystem.general</categoryname>
                 <optiontype>integer</optiontype>
                 <defaultvalue>30</defaultvalue>
-                <showorder>3</showorder>
+                <showorder>2</showorder>
             </option>
             <option name="message_newsletterSystem_general_sortOrder_subscriber">
                 <categoryname>message.newsletterSystem.general</categoryname>
@@ -60,7 +54,7 @@
                     <![CDATA[ASC:ASC
 DESC:DESC]]>
                 </selectoptions>
-                <showorder>4</showorder>
+                <showorder>3</showorder>
             </option>
             <option name="message_newsletterSystem_general_sortField_subscriber">
                 <categoryname>message.newsletterSystem.general</categoryname>
@@ -71,7 +65,7 @@ DESC:DESC]]>
 username:wcf.acp.option.message_newsletterSystem_general_sortField_subscriber.username
 email:wcf.acp.option.message_newsletterSystem_general_sortField_subscriber.email]]>
                 </selectoptions>
-                <showorder>5</showorder>
+                <showorder>4</showorder>
             </option>
             <option name="message_newsletterSystem_general_sortOrder_newsletter">
                 <categoryname>message.newsletterSystem.general</categoryname>
@@ -81,7 +75,7 @@ email:wcf.acp.option.message_newsletterSystem_general_sortField_subscriber.email
                     <![CDATA[ASC:ASC
 DESC:DESC]]>
                 </selectoptions>
-                <showorder>6</showorder>
+                <showorder>5</showorder>
             </option>
             <option name="message_newsletterSystem_general_sortField_newsletter">
                 <categoryname>message.newsletterSystem.general</categoryname>
@@ -93,7 +87,7 @@ username:wcf.acp.option.message_newsletterSystem_general_sortField_newsletter.us
 deliveryTime:wcf.acp.option.message_newsletterSystem_general_sortField_newsletter.deliveryTime
 subject:wcf.acp.option.message_newsletterSystem_general_sortField_newsletter.subject]]>
                 </selectoptions>
-                <showorder>7</showorder>
+                <showorder>6</showorder>
             </option>
             
             <!-- /newsletter options -->

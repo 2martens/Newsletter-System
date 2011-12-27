@@ -14,8 +14,6 @@
         <!-- options -->
         <item name="wcf.acp.option.message_newsletterSystem_general_from"><![CDATA["From"-address]]></item>
         <item name="wcf.acp.option.message_newsletterSystem_general_from.description"><![CDATA[Please insert here the E-Mail address which should be used for sending the newsletters.]]></item>
-        <item name="wcf.acp.option.message_newsletterSystem_general_signature"><![CDATA[Signature]]></item>
-        <item name="wcf.acp.option.message_newsletterSystem_general_signature.description"><![CDATA[Please insert here the signature which is shown under each newsletter.]]></item>
         <item name="wcf.acp.option.message_newsletterSystem_general_items"><![CDATA[Number of shown elements]]></item>
         <item name="wcf.acp.option.message_newsletterSystem_general_items.description"><![CDATA[Please insert here the number of elements per page.]]></item>
         <item name="wcf.acp.option.message_newsletterSystem_general_sortOrder_subscriber"><![CDATA[Sort order]]></item>
