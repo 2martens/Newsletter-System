@@ -8,7 +8,7 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.0.0 Alpha 28</version>
+        <version>1.0.0 Alpha 29</version>
         <date>2011-12-27</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
@@ -51,13 +51,8 @@
         <script>acp/InstallNewsletter.class.php</script>
     </instructions>
     
-    <instructions type="update" fromversion="1.0.0 Alpha 27">
+    <instructions type="update" fromversion="1.0.0 Alpha 28">
         <options>options.xml</options>
-        <!-- languages -->
-        <languages languagecode="de">de.xml</languages>
-        <languages languagecode="de-informal">de-informal.xml</languages>
-        <languages languagecode="en">en.xml</languages>
-        <files>files.tar</files>
-        <acptemplates>acptemplates.tar</acptemplates>
+        
     </instructions>
 </package>
