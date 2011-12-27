@@ -20,7 +20,7 @@
 <div class="contentHeader">
     <div class="largeButtons">
         <ul>
-            <li><a href="index.php?page=NewsletterList&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}" title="{lang}wcf.acp.menu.link.content.newsletterSystem.newsletterList{/lang}"><img src="{@RELATIVE_WCF_DIR}icon/messageM.png" alt="" /> <span>{lang}wcf.acp.menu.link.content.newsletterSystem.newsletterList{/lang}</span></a></li>
+            <li><a href="index.php?page=NewsletterList&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}" title="{lang}wcf.acp.menu.link.content.newslettersystem.newsletterList{/lang}"><img src="{@RELATIVE_WCF_DIR}icon/messageM.png" alt="" /> <span>{lang}wcf.acp.menu.link.content.newslettersystem.newsletterList{/lang}</span></a></li>
             {if $additionalLargeButtons|isset}{@$additionalLargeButtons}{/if}
         </ul>
     </div>

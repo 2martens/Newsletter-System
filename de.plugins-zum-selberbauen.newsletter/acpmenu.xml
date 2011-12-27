@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/acpmenu.xsd">
     <import>
-        <acpmenuitem name="wcf.acp.menu.link.content.newsletterSystem">
+        <acpmenuitem name="wcf.acp.menu.link.content.newslettersystem">
             <parent>wcf.acp.menu.link.content</parent>
-            <options>module_newsletterSystem</options>
+            <options>module_newslettersystem</options>
         </acpmenuitem>
-            <acpmenuitem name="wcf.acp.menu.link.content.newsletterSystem.general">
-                <parent>wcf.acp.menu.link.content.newsletterSystem</parent>
+            <acpmenuitem name="wcf.acp.menu.link.content.newslettersystem.general">
+                <parent>wcf.acp.menu.link.content.newslettersystem</parent>
                 <showorder>1</showorder>
             </acpmenuitem>
-                <acpmenuitem name="wcf.acp.menu.link.content.newsletterSystem.subscriberList">
-                    <parent>wcf.acp.menu.link.content.newsletterSystem.general</parent>
+                <acpmenuitem name="wcf.acp.menu.link.content.newslettersystem.subscriberList">
+                    <parent>wcf.acp.menu.link.content.newslettersystem.general</parent>
                     <showorder>1</showorder>
                     <link>index.php?page=NewsletterSubscriberList</link>
-                    <permissions>admin.content.newsletterSystem.canSeeSubscriberOverview</permissions>
+                    <permissions>admin.content.newslettersystem.canSeeSubscriberOverview</permissions>
                     <icon>icon/membersM.png</icon>
                 </acpmenuitem>
-                <acpmenuitem name="wcf.acp.menu.link.content.newsletterSystem.newsletterList">
-                    <parent>wcf.acp.menu.link.content.newsletterSystem.general</parent>
+                <acpmenuitem name="wcf.acp.menu.link.content.newslettersystem.newsletterList">
+                    <parent>wcf.acp.menu.link.content.newslettersystem.general</parent>
                     <showorder>2</showorder>
                     <link>index.php?page=NewsletterList</link>
-                    <permissions>admin.content.newsletterSystem.canSeeNewsletterOverview</permissions>
+                    <permissions>admin.content.newslettersystem.canSeeNewsletterOverview</permissions>
                     <icon>icon/messageM.png</icon>
                 </acpmenuitem>
-                <acpmenuitem name="wcf.acp.menu.link.content.newsletterSystem.writeNewsletter">
-                    <parent>wcf.acp.menu.link.content.newsletterSystem.general</parent>
+                <acpmenuitem name="wcf.acp.menu.link.content.newslettersystem.writeNewsletter">
+                    <parent>wcf.acp.menu.link.content.newslettersystem.general</parent>
                     <showorder>3</showorder>
                     <link>index.php?form=NewsletterAdd</link>
-                    <permissions>admin.content.newsletterSystem.canWriteNewsletter</permissions>
+                    <permissions>admin.content.newslettersystem.canWriteNewsletter</permissions>
                     <icon>icon/messageAddM.png</icon>
                 </acpmenuitem>
-            <acpmenuitem name="wcf.acp.menu.link.content.newsletterSystem.about">
-                <parent>wcf.acp.menu.link.content.newsletterSystem</parent>
+            <acpmenuitem name="wcf.acp.menu.link.content.newslettersystem.about">
+                <parent>wcf.acp.menu.link.content.newslettersystem</parent>
                 <showorder>2</showorder>
             </acpmenuitem>
-                <acpmenuitem name="wcf.acp.menu.link.content.newsletterSystem.info">
-                    <parent>wcf.acp.menu.link.content.newsletterSystem.about</parent>
+                <acpmenuitem name="wcf.acp.menu.link.content.newslettersystem.info">
+                    <parent>wcf.acp.menu.link.content.newslettersystem.about</parent>
                     <showorder>1</showorder>
                     <link>index.php?page=NewsletterAbout</link>                    
                     <icon>icon/helpM.png</icon>

@@ -14,7 +14,7 @@ require_once(WCF_DIR.'lib/data/message/newsletter/NewsletterEditor.class.php');
  * @category Community Framework
  */
 class NewsletterAddForm extends MessageForm {
-    public $activeMenuItem = 'wcf.acp.menu.link.content.newsletterSystem.writeNewsletter';
+    public $activeMenuItem = 'wcf.acp.menu.link.content.newslettersystem.writeNewsletter';
     public $templateName = 'newsletterAdd';
     public $action = 'add';
     public $enableSmilies = 0;

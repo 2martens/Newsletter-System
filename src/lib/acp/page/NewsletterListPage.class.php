@@ -13,11 +13,11 @@ require_once(WCF_DIR.'lib/page/SortablePage.class.php');
  * @category Community Framework
  */
 class NewsletterListPage extends SortablePage {
-    public $neededPermissions = 'admin.content.newsletterSystem.canSeeNewsletterOverview';
+    public $neededPermissions = 'admin.content.newslettersystem.canSeeNewsletterOverview';
     public $templateName = 'newsletterList';
-    public $defaultSortField = MESSAGE_NEWSLETTERSYSTEM_GENERAL_SORTFIELD_NEWSLETTER;
-    public $defaultSortOrder = MESSAGE_NEWSLETTERSYSTEM_GENERAL_SORTORDER_NEWSLETTER;
-    public $itemsPerPage = MESSAGE_NEWSLETTERSYSTEM_GENERAL_ITEMS;
+    public $defaultSortField = MESSAGE_GENERAL_NEWSLETTERSYSTEM_SORTFIELD_NEWSLETTER;
+    public $defaultSortOrder = MESSAGE_GENERAL_NEWSLETTERSYSTEM_SORTORDER_NEWSLETTER;
+    public $itemsPerPage = MESSAGE_GENERAL_NEWSLETTERSYSTEM_ITEMS;
     
     /**
      * Contains the result of deleting a newsletter.
@@ -97,7 +97,7 @@ class NewsletterListPage extends SortablePage {
      */
     public function show() {
         // enable menu item
-		WCFACP::getMenu()->setActiveMenuItem('wcf.acp.menu.link.content.newsletterSystem.newsletterList');
+		WCFACP::getMenu()->setActiveMenuItem('wcf.acp.menu.link.content.newslettersystem.newsletterList');
 		
 		parent::show();
     }

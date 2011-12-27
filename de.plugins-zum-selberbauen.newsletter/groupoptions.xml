@@ -8,46 +8,46 @@
                 <category name="admin.content">
                     <parent>admin</parent>
                 </category>
-                    <!-- newsletterSystem category -->
-                    <category name="admin.content.newsletterSystem">
+                    <!-- newslettersystem category -->
+                    <category name="admin.content.newslettersystem">
                         <parent>admin.content</parent>
-                        <options>module_newsletterSystem</options>
+                        <options>module_newslettersystem</options>
                     </category>
-                    <!-- /newsletterSystem category -->
+                    <!-- /newslettersystem category -->
         </categories>
         <options>
-            <!-- newsletterSystem options -->
-            <option name="admin.content.newsletterSystem.canSeeSubscriberOverview">
-                <categoryname>admin.content.newsletterSystem</categoryname>
+            <!-- newslettersystem options -->
+            <option name="admin.content.newslettersystem.canSeeSubscriberOverview">
+                <categoryname>admin.content.newslettersystem</categoryname>
                 <optiontype>boolean</optiontype>
                 <defaultvalue>0</defaultvalue>
                 <showorder>1</showorder>
             </option>
-            <option name="admin.content.newsletterSystem.canEditSubscribers">
-                <categoryname>admin.content.newsletterSystem</categoryname>
+            <option name="admin.content.newslettersystem.canEditSubscribers">
+                <categoryname>admin.content.newslettersystem</categoryname>
                 <optiontype>boolean</optiontype>
                 <defaultvalue>0</defaultvalue>
                 <showorder>2</showorder>
             </option>
-            <option name="admin.content.newsletterSystem.canSeeNewsletterOverview">
-                <categoryname>admin.content.newsletterSystem</categoryname>
+            <option name="admin.content.newslettersystem.canSeeNewsletterOverview">
+                <categoryname>admin.content.newslettersystem</categoryname>
                 <optiontype>boolean</optiontype>
                 <defaultvalue>0</defaultvalue>
                 <showorder>3</showorder>
             </option>
-            <option name="admin.content.newsletterSystem.canWriteNewsletter">
-                <categoryname>admin.content.newsletterSystem</categoryname>
+            <option name="admin.content.newslettersystem.canWriteNewsletter">
+                <categoryname>admin.content.newslettersystem</categoryname>
                 <optiontype>boolean</optiontype>
                 <defaultvalue>0</defaultvalue>
                 <showorder>4</showorder>
             </option>
-            <option name="admin.content.newsletterSystem.canEditNewsletter">
-                <categoryname>admin.content.newsletterSystem</categoryname>
+            <option name="admin.content.newslettersystem.canEditNewsletter">
+                <categoryname>admin.content.newslettersystem</categoryname>
                 <optiontype>boolean</optiontype>
                 <defaultvalue>0</defaultvalue>
                 <showorder>5</showorder>
             </option>
-            <!-- /newsletterSystem options -->
+            <!-- /newslettersystem options -->
         </options>
     </import>
 </data>

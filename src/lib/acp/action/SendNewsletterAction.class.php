@@ -77,7 +77,7 @@ class SendNewsletterAction extends AbstractAction {
             ));
             $content = WCF::getTPL()->fetch($templateName);
             $mail = new Mail(MAIL_ADMIN_ADDRESS, $newsletter['subject'], $content,
-                MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
+                MESSAGE_GENERAL_NEWSLETTERSYSTEM_FROM);
             $mail->setContentType('text/html');
             foreach ($this->subscribersList as $subscriber) {
                 $email = $subscriber['email'];

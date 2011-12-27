@@ -15,7 +15,7 @@
 
 <div class="contentHeader">
     {pages print=true assign=pagesLinks link="index.php?page=NewsletterList&pageNo=%d&sortField=$sortField&sortOrder=$sortOrder&packageID="|concat:PACKAGE_ID:SID_ARG_2ND_NOT_ENCODED}
-	{if $this->user->getPermission('admin.content.newsletterSystem.canWriteNewsletter')}
+	{if $this->user->getPermission('admin.content.newslettersystem.canWriteNewsletter')}
 	<div class="largeButtons">
 		<ul><li><a href="index.php?form=NewsletterAdd&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}" title="{lang}wcf.acp.newsletter.add{/lang}"><img src="{@RELATIVE_WCF_DIR}icon/messageAddM.png" alt="" /> <span>{lang}wcf.acp.newsletter.add{/lang}</span></a></li></ul>
 	</div>
@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="contentFooter">
-        {if $this->user->getPermission('admin.content.newsletterSystem.canWriteNewsletter')}
+        {if $this->user->getPermission('admin.content.newslettersystem.canWriteNewsletter')}
 			<div class="largeButtons">
 				<ul><li><a href="index.php?form=NewsletterAdd&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}" title="{lang}wcf.acp.newsletter.add{/lang}"><img src="{@RELATIVE_WCF_DIR}icon/messageAddM.png" alt="" /> <span>{lang}wcf.acp.newsletter.add{/lang}</span></a></li></ul>
 			</div>
@@ -54,7 +54,7 @@
             {foreach from=$newsletters key=newsletterID item=newsletter}
                 <tr class="{cycle values="container-1,container-2"}">
                     <td class="columnIcon">
-                        {if $this->user->getPermission('admin.content.newsletterSystem.canEditNewsletter')}
+                        {if $this->user->getPermission('admin.content.newslettersystem.canEditNewsletter')}
                             <a href="index.php?form=NewsletterEdit&amp;newsletterID={@$newsletterID}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/editS.png" alt="" title="{lang}wcf.acp.newsletter.edit{/lang}" /></a>
                             <a onclick="return confirm('{lang}wcf.acp.newsletter.delete.sure{/lang}')" href="index.php?action=NewsletterDelete&amp;newsletterID={@$newsletterID}&amp;packageID={@PACKAGE_ID}&amp;t={@SECURITY_TOKEN}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/deleteS.png" alt="" title="{lang}wcf.acp.newsletter.delete{/lang}" /></a>
                         {/if}
@@ -73,7 +73,7 @@
     
     <div class="contentFooter">
         {@$pagesLinks}
-        {if $this->user->getPermission('admin.content.newsletterSystem.canWriteNewsletter')}
+        {if $this->user->getPermission('admin.content.newslettersystem.canWriteNewsletter')}
 			<div class="largeButtons">
 				<ul><li><a href="index.php?form=NewsletterAdd&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}" title="{lang}wcf.acp.newsletter.add{/lang}"><img src="{@RELATIVE_WCF_DIR}icon/messageAddM.png" alt="" /> <span>{lang}wcf.acp.newsletter.add{/lang}</span></a></li></ul>
 			</div>
