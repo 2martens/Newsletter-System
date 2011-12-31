@@ -20,6 +20,7 @@ class UserProfileEditNewsletterListener implements EventListener {
      * @see EventListener::execute()
      */
     public function execute($eventObj, $className, $eventName) {
+        if (!isset($eventObj->activeOptions['acceptNewsletter'])) return;
         $option = $eventObj->activeOptions['acceptNewsletter'];
         $sql = 'SELECT COUNT(userID) AS count
         		FROM wcf'.WCF_N.'_'.$this->databaseTable.'
