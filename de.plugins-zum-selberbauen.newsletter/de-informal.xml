@@ -157,6 +157,7 @@ durch Klicken des folgenden Links: [url]{$url}[/url]
 
 Wenn du den Link nicht aktivierst, erhälst du keine Newsletter von uns.
 Deine E-Mail-Adresse wird automatisch aus unserem Newsletter-Verteiler gelöscht.]]></item>
+        <item name="wcf.acp.newsletter.optin.invalidToken"><![CDATA[Das angegebene Token ist ungültig.]]></item>
         <!-- /newsletter optin process -->
     </category>
 </language>

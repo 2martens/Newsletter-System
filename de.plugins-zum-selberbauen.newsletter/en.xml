@@ -157,6 +157,7 @@ Please validate the subscription by clicking this link: [url]{$url}[/url]
 
 If you do not click on this link, you will not get any newsletters from us.
 Your email will be automatically deleted from our subscriber database.]]></item>
+        <item name="wcf.acp.newsletter.optin.invalidToken"><![CDATA[The given token isn't valid.]]></item>
         <!-- /newsletter optin process -->
     </category>
 </language>

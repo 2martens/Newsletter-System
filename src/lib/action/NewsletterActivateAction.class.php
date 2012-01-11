@@ -61,6 +61,16 @@ class NewsletterActivateAction extends AbstractAction {
     public function execute() {
         parent::execute();
         
+        //validates the given token to avoid misusing
+        $sql = 'SELECT COUNT(token) AS count
+        		FROM wcf'.WCF_N.'_'.$this->activationTable.'
+        		WHERE userID = '.$this->userID;
+        $row = WCF::getDB()->getFirstRow($sql);
+        if ($row['count'] != 1) {
+            $message = WCF::getLanguage()->get('wcf.acp.newsletter.optin.invalidToken');
+            throw new NamedUserException($message);
+        }
+        
         //validates the user as a subscriber
         $sql = 'UPDATE wcf'.WCF_N.'_'.$this->activationTable."
         		SET token = '', activated = 1
