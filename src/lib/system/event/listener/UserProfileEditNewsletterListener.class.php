@@ -92,5 +92,9 @@ class UserProfileEditNewsletterListener implements EventListener {
         $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->subscriberTable.'
         		WHERE userID = '.intval(WCF::getUser()->userID);
         WCF::getDB()->sendQuery($sql);
+        
+        $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->activationTable.'
+        		WHERE userID = '.intval(WCF::getUser()->userID);
+        WCF::getDB()->sendQuery($sql);
     }
 }
