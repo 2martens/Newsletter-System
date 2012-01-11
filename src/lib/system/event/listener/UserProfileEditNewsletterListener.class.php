@@ -68,14 +68,20 @@ class UserProfileEditNewsletterListener implements EventListener {
                 escapeString($token)."')";
         WCF::getDB()->sendQuery($sql);
         
-        $url = PAGE_URL.'/index.php?action=NewsletterActivate&amp;id='.WCF::getUser()->userID.'&amp;token='.$token;
+        $url = PAGE_URL.'/index.php?action=NewsletterActivate&id='.WCF::getUser()->userID.'&t='.$token;
         
         $subject = WCF::getLanguage()->get('wcf.acp.newsletter.optin.subject');
         $content = WCF::getLanguage()->getDynamicVariable('wcf.acp.newsletter.optin.text', array(
             'username' => WCF::getUser()->username,
             'url' => $url
         ));
-        $mail = new Mail(WCF::getUser()->email, $subject, $content, MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
+        WCF::getTPL()->assign(array(
+            'subject' => $subject,
+            'content' => $content
+        ));
+        $output = WCF::getTPL()->fetch('validationEmail');
+        $mail = new Mail(WCF::getUser()->email, $subject, $output, MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
+        $mail->setContentType('text/html');
         $mail->send();
     }
     

@@ -51,7 +51,7 @@ class NewsletterActivateAction extends AbstractAction {
     public function readParameters() {
         parent::readParameters();
         if (isset($_GET['id'])) $this->userID = intval($_GET['id']);
-        if (isset($_GET['token'])) $this->token = StringUtil::trim($_GET['token']);
+        if (isset($_GET['t'])) $this->token = StringUtil::trim($_GET['t']);
         if (isset($_GET['url'])) $this->url = StringUtil::trim($_GET['url']);
     }
     
@@ -88,9 +88,10 @@ class NewsletterActivateAction extends AbstractAction {
         WCF::getDB()->sendQuery($sql);
         
         $this->executed();
-        
-        HeaderUtil::redirect($this->url);
-        exit;
+        if (!empty($this->url)) {
+            HeaderUtil::redirect($this->url);
+            exit;
+        }
     }
     
 }

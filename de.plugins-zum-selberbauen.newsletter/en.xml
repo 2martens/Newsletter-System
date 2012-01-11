@@ -153,9 +153,13 @@
         <item name="wcf.acp.newsletter.optin.subject"><![CDATA[Newsletter activation]]></item>
         <item name="wcf.acp.newsletter.optin.text"><![CDATA[{$username},
 you have subscribed our newsletter. 
-Please validate the subscription by clicking this link: [url]{$url}[/url]
-
-If you do not click on this link, you will not get any newsletters from us.
+Please validate the subscription by clicking this link: <br />
+<a href="{$url}">Validate subscription</a><br />
+<br />
+If the link isn't shown in proper format copy the following into your browser and open the page there:<br />
+{$url}<br />
+<br />
+If you do not click on this link, you will not get any newsletters from us.<br />
 Your email will be automatically deleted from our subscriber database.]]></item>
         <item name="wcf.acp.newsletter.optin.invalidToken"><![CDATA[The given token isn't valid.]]></item>
         <!-- /newsletter optin process -->
