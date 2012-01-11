@@ -148,5 +148,15 @@
         <item name="wcf.acp.newsletter.subscriber.email"><![CDATA[E-Mail]]></item>
         <item name="wcf.acp.newsletter.subscriber.emailShort"><![CDATA[E-Mail]]></item>
         <!-- /newsletter subscriber list page -->
+        
+        <!-- newsletter optin process -->
+        <item name="wcf.acp.newsletter.optin.subject"><![CDATA[Newsletter activation]]></item>
+        <item name="wcf.acp.newsletter.optin.text"><![CDATA[{$username},
+you have subscribed our newsletter. 
+Please validate the subscription by clicking this link: [url]{$url}[/url]
+
+If you do not click on this link, you will not get any newsletters from us.
+Your email will be automatically deleted from our subscriber database.]]></item>
+        <!-- /newsletter optin process -->
     </category>
 </language>

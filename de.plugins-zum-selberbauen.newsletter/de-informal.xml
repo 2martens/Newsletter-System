@@ -148,5 +148,15 @@
         <item name="wcf.acp.newsletter.subscriber.email"><![CDATA[E-Mail]]></item>
         <item name="wcf.acp.newsletter.subscriber.emailShort"><![CDATA[E-Mail]]></item>
         <!-- /newsletter subscriber list page -->
+        
+        <!-- newsletter optin process -->
+        <item name="wcf.acp.newsletter.optin.subject"><![CDATA[Newsletter-Bestätigung]]></item>
+        <item name="wcf.acp.newsletter.optin.text"><![CDATA[{$username},
+du hast dich für unseren Newsletter angemeldet. Bitte bestätige die Anmeldung
+durch Klicken des folgenden Links: [url]{$url}[/url]
+
+Wenn du den Link nicht aktivierst, erhälst du keine Newsletter von uns.
+Deine E-Mail-Adresse wird automatisch aus unserem Newsletter-Verteiler gelöscht.]]></item>
+        <!-- /newsletter optin process -->
     </category>
 </language>
