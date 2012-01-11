@@ -162,7 +162,7 @@ If the link isn't shown in proper format copy the following into your browser an
 If you do not click on this link, you will not get any newsletters from us.<br />
 Your email will be automatically deleted from our subscriber database.]]></item>
         <item name="wcf.acp.newsletter.optin.invalidToken"><![CDATA[The given token isn't valid.]]></item>
-        <item name="wcf.acp.newsletter.option.activationSuccess"><![CDATA[The newsletter subscription has been successfully activated.]]></item>
+        <item name="wcf.acp.newsletter.optin.activationSuccess"><![CDATA[The newsletter subscription has been successfully activated.]]></item>
         <!-- /newsletter optin process -->
     </category>
 </language>

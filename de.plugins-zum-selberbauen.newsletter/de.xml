@@ -164,7 +164,7 @@ Ihres Browsers:<br />
 Wenn Sie den Link nicht aktivieren, erhalten Sie keine Newsletter von uns.<br />
 Ihre E-Mail-Adresse wird automatisch aus unserem Newsletter-Verteiler gelöscht.]]></item>
         <item name="wcf.acp.newsletter.optin.invalidToken"><![CDATA[Das angegebene Token ist ungültig.]]></item>
-        <item name="wcf.acp.newsletter.option.activationSuccess"><![CDATA[Der Newsletterempfang wurde erfolgreich bestätigt.]]></item>
+        <item name="wcf.acp.newsletter.optin.activationSuccess"><![CDATA[Der Newsletterempfang wurde erfolgreich bestätigt.]]></item>
         <!-- /newsletter optin process -->
     </category>
 </language>
