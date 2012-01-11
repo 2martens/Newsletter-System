@@ -38,13 +38,7 @@ class NewsletterActivateAction extends AbstractAction {
      * @var string
      */
     protected $subscriberTable = 'newsletter_subscriber';
-    
-    /**
-     * Contains the redirect url.
-     * @var string
-     */
-    protected $url = '';
-    
+       
     /**
      * @see Action::readParameters()
      */
@@ -52,7 +46,6 @@ class NewsletterActivateAction extends AbstractAction {
         parent::readParameters();
         if (isset($_GET['id'])) $this->userID = intval($_GET['id']);
         if (isset($_GET['t'])) $this->token = StringUtil::trim($_GET['t']);
-        if (isset($_GET['url'])) $this->url = StringUtil::trim($_GET['url']);
     }
     
     /**
@@ -88,10 +81,12 @@ class NewsletterActivateAction extends AbstractAction {
         WCF::getDB()->sendQuery($sql);
         
         $this->executed();
-        if (!empty($this->url)) {
-            HeaderUtil::redirect($this->url);
-            exit;
-        }
+        WCF::getTPL()->assign(array(
+        	'message' => WCF::getLanguage()->get('wcf.acp.newsletter.optin.activationSuccess'),
+            'url' => PAGE_URL.'/index.php?page=Index'.SID_ARG_2ND
+        ));
+        WCF::getTPL()->display('redirect');
+        exit;
     }
     
 }
