@@ -42,17 +42,7 @@ class UserProfileEditNewsletterListener implements EventListener {
         elseif (!$option['optionValue'] && $existCount['count']) $this->deleteSubscriber();
         else return;
         
-        $cacheName = 'newsletter-subscriber-'.PACKAGE_ID;
-        $cacheFile = WCF_DIR.'lib/system/cache/CacheBuilderNewsletterSubscriber.class.php';
-        $cacheResource = array(
-			'cache' => $cacheName,
-			'file' => WCF_DIR.'cache/cache.'.$cacheName.'.php',
-			'className' => StringUtil::getClassName($cacheFile),
-			'classFile' => $cacheFile,
-			'minLifetime' => 0,
-			'maxLifetime' => 0
-		);
-        WCF::getCache()->rebuild($cacheResource);
+        WCF::getCache()->clear(WCF_DIR.'cache/', 'cache.newsletter-subscriber-'.PACKAGE_ID.'.php', true);
     }
     
     /**

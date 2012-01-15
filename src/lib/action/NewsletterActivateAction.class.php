@@ -80,6 +80,9 @@ class NewsletterActivateAction extends AbstractAction {
                 escapeString($user->email)."')";
         WCF::getDB()->sendQuery($sql);
         
+        //clears cache
+        WCF::getCache()->clear(WCF_DIR.'cache/', 'cache.newsletter-subscriber-'.PACKAGE_ID.'.php', true);
+        
         $this->executed();
         WCF::getTPL()->assign(array(
         	'message' => WCF::getLanguage()->get('wcf.acp.newsletter.optin.activationSuccess'),
