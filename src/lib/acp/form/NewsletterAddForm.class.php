@@ -126,10 +126,8 @@ class NewsletterAddForm extends MessageForm {
             'action' => $this->action,
             'dateOptions' => $this->dateOptions,
             'result' => $this->result,
-            'useACPAttachments' => false,
-            'style' => StyleManager::getStyle()
+            'useACPAttachments' => false
         ));
-        WCF::getTPL()->append('specialStyles', '<link rel="stylesheet" href="'.RELATIVE_WCF_DIR.'/style/wysiwyg.css" />');
     }
     
     /**

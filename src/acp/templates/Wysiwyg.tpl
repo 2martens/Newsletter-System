@@ -14,7 +14,7 @@ language['img.desc'] = "{lang}wcf.wysiwyg.image.desc{/lang}";language['image.ins
 language['color.desc'] = "{lang}wcf.wysiwyg.forecolor.desc{/lang}";language['fontsize.default'] = "{lang}wcf.wysiwyg.fontsize{/lang}";language['fontFamily.default'] = "{lang}wcf.wysiwyg.font.default{/lang}";
 language['quotation.desc'] = "{lang}wcf.wysiwyg.quotation.desc{/lang}";language['quote.desc'] = "{lang}wcf.wysiwyg.quote.desc{/lang}";language['code.desc'] = "{lang}wcf.wysiwyg.code.desc{/lang}";
 language['view.wysiwyg'] = "{lang}wcf.wysiwyg.view.wysiwyg{/lang}";language['view.code'] = "{lang}wcf.wysiwyg.view.code{/lang}";
-language['noFormElement'] = "{lang}wcf.wysiwyg.error.noFormElement{/lang}";language['extraBBCodeNotValid'] = "{lang}wcf.wysiwyg.message.bbcodeAttributeMissmatch{/lang}"; 
+language['noFormElement'] = "{lang}wcf.wysiwyg.error.noFormElement{/lang}";language['extraBBCodeNotValid'] = "{lang}wcf.wysiwyg.message.bbcodeAttributeMissmatch{/lang}";
 
 // language direction
 var languageDirection = "{lang}wcf.global.pageDirection{/lang}";
@@ -49,19 +49,19 @@ tinyMCE.init({
 	
 	// set available views (default: both views available)
 	editorEnableWysiwygView : {if $editorEnableWysiwygView|isset}{@$editorEnableWysiwygView}{else}1{/if},
-	editorEnableCodeView : {if $editorEnableCodeView|isset}{@$editorEnableCodeView}{else}1{/if},	
+	editorEnableCodeView : {if $editorEnableCodeView|isset}{@$editorEnableCodeView}{else}1{/if},
 		
 	// set some url vars
 	iconURL : "{@RELATIVE_WCF_DIR}icon/",
 	imageURL : "{@RELATIVE_WCF_DIR}icon/wysiwyg/",
 	blankHTML : "{@RELATIVE_WCF_DIR}js/blank.htm",
-	cssFile : "{@RELATIVE_WCF_DIR}style/style-{@$style->styleID}.css",
+	cssFile : "{@RELATIVE_WCF_DIR}style/wysiwyg.css",
 		
 	// set editor height var ($wysiwygHeight)
 	height: {if $wysiwygEditorHeight|isset}{@$wysiwygEditorHeight}{else}-1{/if},
 	
 	// set page default font color var
-	defaultPageFontColor: '{@$style->getVariable('page.font.color')|encodeJS}'
+	defaultPageFontColor: '#000'
 });
 //]]>
 </script>
