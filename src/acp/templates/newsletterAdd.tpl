@@ -1,5 +1,5 @@
 {include file='header'}
-{include file='Wysiwyg'}
+{include file='Wysiwyg_custom'}
 
 <div class="mainHeadline">
     <img src="{@RELATIVE_WCF_DIR}icon/message{@$action|ucfirst}L.png" alt="" />
