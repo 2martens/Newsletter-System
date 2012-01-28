@@ -148,5 +148,22 @@
         <item name="wcf.acp.newsletter.subscriber.email"><![CDATA[E-Mail]]></item>
         <item name="wcf.acp.newsletter.subscriber.emailShort"><![CDATA[E-Mail]]></item>
         <!-- /newsletter subscriber list page -->
+        
+        <!-- newsletter optin process -->
+        <item name="wcf.acp.newsletter.optin.subject"><![CDATA[Newsletter-Bestätigung]]></item>
+        <item name="wcf.acp.newsletter.optin.text"><![CDATA[{$username},
+du hast dich für unseren Newsletter angemeldet. Bitte bestätige die Anmeldung
+durch Klicken des folgenden Links: <br />
+<a href="{$url}">Anmeldung für Newsletter bestätigen</a><br />
+<br />
+Wenn der Link bei dir nicht vernünftig angezeigt wird, dann kopiere folgenden Text in die Addresszeile deines Browsers
+und öffne die Seite dort:<br />
+{$url}<br />
+<br />
+Wenn du den Link nicht aktivierst, erhälst du keine Newsletter von uns.<br />
+Deine E-Mail-Adresse wird automatisch aus unserem Newsletter-Verteiler gelöscht.]]></item>
+        <item name="wcf.acp.newsletter.optin.invalidToken"><![CDATA[Das angegebene Token ist ungültig.]]></item>
+        <item name="wcf.acp.newsletter.optin.activationSuccess"><![CDATA[Der Newsletterempfang wurde erfolgreich bestätigt.]]></item>
+        <!-- /newsletter optin process -->
     </category>
 </language>

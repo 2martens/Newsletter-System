@@ -71,20 +71,29 @@ class SendNewsletterAction extends AbstractAction {
         //Sends mail to all subscribers. They're listes as bcc to protect their privacy.
         foreach ($this->outstandingNewsletters as $newsletter) {
             $text = $newsletter['text'];
+            //workaround to make sure that the template is found
+            $templatePaths = array(
+                WCF_DIR.'templates/',
+                WCF_DIR.'acp/templates/'
+            );
+            WCF::getTPL()->setTemplatePaths($templatePaths);
+            
             WCF::getTPL()->assign(array(
                 'subject' => $newsletter['subject'],
             	'text' => $text
             ));
             $content = WCF::getTPL()->fetch($templateName);
-            $mail = new Mail(MAIL_ADMIN_ADDRESS, $newsletter['subject'], $content,
-                MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
-            $mail->setContentType('text/html');
+            
+            //sending one mail per subscriber
+            //is longer, but safer
             foreach ($this->subscribersList as $subscriber) {
                 $email = $subscriber['email'];
-                $mail->addBCC($email);
+                $mail = new Mail($email, $newsletter['subject'], $content,
+                MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
+                $mail->addBCC(MAIL_ADMIN_ADDRESS);
+                $mail->setContentType('text/html');
+                $mail->send();
             }
-            
-            $mail->send();
         }
     }
     

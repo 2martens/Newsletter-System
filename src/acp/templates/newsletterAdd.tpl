@@ -1,6 +1,5 @@
 {include file='header'}
-{include file='wysiwyg'}
-<script type="text/javascript" src="{@RELATIVE_WCF_DIR}js/TabbedPane.class.js"></script>
+{include file='Wysiwyg'}
 
 <div class="mainHeadline">
     <img src="{@RELATIVE_WCF_DIR}icon/message{@$action|ucfirst}L.png" alt="" />
