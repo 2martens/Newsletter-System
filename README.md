@@ -7,7 +7,7 @@ Implements a WCF compatible newsletter system.
 Version notes
 -------------
 
-The currently available source code represents a relase candidate version of NewsletterSystem and can be used in productive environments but it still can contain some mistakes.
+The currently available source code represents the final version of NewsletterSystem and can be used in productive environments.
 
 Contribution
 ------------
