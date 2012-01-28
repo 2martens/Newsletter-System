@@ -2,6 +2,7 @@
 //wcf imports
 require_once(WCF_DIR.'lib/form/MessageForm.class.php');
 require_once(WCF_DIR.'lib/data/message/newsletter/NewsletterEditor.class.php');
+require_once(WCF_DIR.'lib/system/style/StyleManager.class.php');
 
 /**
  * Shows the newsletter add form.
@@ -125,8 +126,10 @@ class NewsletterAddForm extends MessageForm {
             'action' => $this->action,
             'dateOptions' => $this->dateOptions,
             'result' => $this->result,
-            'useACPAttachments' => false
+            'useACPAttachments' => false,
+            'style' => StyleManager::getStyle()
         ));
+        WCF::getTPL()->append('specialStyles', '<link rel="stylesheet" href="'.RELATIVE_WCF_DIR.'/style/wysiwyg.css" />');
     }
     
     /**
