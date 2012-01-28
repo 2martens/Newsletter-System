@@ -5,7 +5,7 @@
 # Windows
 # thumbnails
 Thumbs.db
-
+*.bat
 # Mac OS X
 # metadata
 .DS_Store
