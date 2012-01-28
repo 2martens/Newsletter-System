@@ -83,15 +83,17 @@ class SendNewsletterAction extends AbstractAction {
             	'text' => $text
             ));
             $content = WCF::getTPL()->fetch($templateName);
-            $mail = new Mail(MAIL_ADMIN_ADDRESS, $newsletter['subject'], $content,
-                MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
-            $mail->setContentType('text/html');
+            
+            //sending one mail per subscriber
+            //is longer, but safer
             foreach ($this->subscribersList as $subscriber) {
                 $email = $subscriber['email'];
-                $mail->addBCC($email);
+                $mail = new Mail($email, $newsletter['subject'], $content,
+                MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
+                $mail->addBCC(MAIL_ADMIN_ADDRESS);
+                $mail->setContentType('text/html');
+                $mail->send();
             }
-            
-            $mail->send();
         }
     }
     
