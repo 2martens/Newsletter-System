@@ -55,13 +55,13 @@ tinyMCE.init({
 	iconURL : "{@RELATIVE_WCF_DIR}icon/",
 	imageURL : "{@RELATIVE_WCF_DIR}icon/wysiwyg/",
 	blankHTML : "{@RELATIVE_WCF_DIR}js/blank.htm",
-	cssFile : "{@RELATIVE_WCF_DIR}style/wysiwyg.css",
+	cssFile : "{@RELATIVE_WCF_DIR}acp/style/style-{@PAGE_DIRECTION}.css",
 		
 	// set editor height var ($wysiwygHeight)
 	height: {if $wysiwygEditorHeight|isset}{@$wysiwygEditorHeight}{else}-1{/if},
 	
 	// set page default font color var
-	defaultPageFontColor: '#000'
+	defaultPageFontColor: '#57595a'
 });
 //]]>
 </script>
