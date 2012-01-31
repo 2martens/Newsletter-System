@@ -1,6 +1,6 @@
 <?php
 //wcf imports
-require_once(WCF_DIR.'lib/form/MessageForm.class.php');
+require_once(WCF_DIR.'lib/acp/form/WysiwygCacheloaderForm.class.php');
 require_once(WCF_DIR.'lib/data/message/newsletter/NewsletterEditor.class.php');
 require_once(WCF_DIR.'lib/system/style/StyleManager.class.php');
 
@@ -14,7 +14,7 @@ require_once(WCF_DIR.'lib/system/style/StyleManager.class.php');
  * @subpackage acp.form
  * @category Community Framework
  */
-class NewsletterAddForm extends MessageForm {
+class NewsletterAddForm extends WysiwygCacheloaderForm {
     public $activeMenuItem = 'wcf.acp.menu.link.content.newslettersystem.writeNewsletter';
     public $templateName = 'newsletterAdd';
     public $action = 'add';
@@ -61,8 +61,6 @@ class NewsletterAddForm extends MessageForm {
      * @see AbstractForm::readData()
      */
     public function readData() {
-        $cacheName = 'smileys';
-        WCF::getCache()->addResource($cacheName, WCF_DIR.'cache/cache.'.$cacheName.'.php', WCF_DIR.'lib/system/cache/CacheBuilderSmileys.class.php');
         parent::readData();
         for ($i = 1; $i <= 31; $i++) {
             $this->dateOptions['day'][$i] = ($i < 10 ? '0'. (string) $i: (string) $i);
