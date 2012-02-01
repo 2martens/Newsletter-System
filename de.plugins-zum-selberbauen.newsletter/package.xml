@@ -8,7 +8,7 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.0.1</version>
+        <version>1.0.1 pl 1</version>
         <date>2012-01-31</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
@@ -52,6 +52,8 @@
         
         <admindefault></admindefault>
     </instructions>
+    
+    <instructions type="update" fromversion="1.0.0"></instructions>
     
     <instructions type="update" fromversion="1.0.0 pl 1">
         <files>files.tar</files>
