@@ -58,5 +58,7 @@
         <acptemplates>acptemplates.tar</acptemplates>
     </instructions>
     
-    <instructions type="update" fromversion="1.0.1 pl 1"></instructions>
+    <instructions type="update" fromversion="1.0.1 pl 1">
+        <acptemplates>acptemplates.tar</acptemplates>
+    </instructions>
 </package>
