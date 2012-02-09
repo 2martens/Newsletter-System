@@ -6,6 +6,9 @@ CREATE TABLE wcf1_newsletter (
     subject VARCHAR(255) NOT NULL DEFAULT '',
     text MEDIUMTEXT NOT NULL,
     deliveryTime INT(10) NOT NULL DEFAULT 0,
+    enableSmilies TINYINT(1) NOT NULL DEFAULT 1,
+    enableHtml TINYINT(1) NOT NULL DEFAULT 0,
+    enableBBCodes TINYINT(1) NOT NULL DEFAULT 1,
     FULLTEXT KEY (subject, text),
     KEY (userID),
     KEY (deliveryTime)

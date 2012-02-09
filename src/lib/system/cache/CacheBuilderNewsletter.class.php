@@ -1,6 +1,7 @@
 <?php
 //wcf imports
 require_once(WCF_DIR.'lib/system/cache/CacheBuilder.class.php');
+require_once(WCF_DIR.'lib/data/message/newsletter/ViewableNewsletter.class.php');
 
 /**
  * Build the newsletter list cache.
@@ -32,12 +33,14 @@ class CacheBuilderNewsletter implements CacheBuilder {
         $result = WCF::getDB()->sendQuery($sql);
         $newsletterIDs = array();
         while ($row = WCF::getDB()->fetchArray($result)) {
+            $newsletter = new ViewableNewsletter($row['newsletterID']);
+            $text = $newsletter->getFormattedMessage();
             $newsletterIDs[$row['newsletterID']] = array(
                 'userID' => $row['userID'],
                 'username' => $row['username'],
                 'deliveryTime' => $row['deliveryTime'],
                 'subject' => $row['subject'],
-                'text' => $row['text']
+                'text' => $text
             );
         }
         $data['newsletter'] = $newsletterIDs;
