@@ -69,7 +69,7 @@ class SendNewsletterAction extends AbstractAction {
         $templateName = 'newsletterMail';
         
         //Sends mail to all subscribers. They're listes as bcc to protect their privacy.
-        foreach ($this->outstandingNewsletters as $newsletter) {
+        foreach ($this->outstandingNewsletters as $id => $newsletter) {
             $text = $newsletter['text'];
             //workaround to make sure that the template is found
             $templatePaths = array(

@@ -44,7 +44,7 @@ class NewsletterAboutPage extends AbstractPage {
         //can not continue without one of these things
         if (!function_exists('fsockopen')) return;
         elseif (!defined('MESSAGE_NEWSLETTERSYSTEM_GENERAL_LOGIN') || MESSAGE_NEWSLETTERSYSTEM_GENERAL_LOGIN == '') return;
-        
+        /*for debug reasons*/return;
         //contains the url to an action which shows the current version of the given package
         $url = 'http://update.plugins-zum-selberbauen.de/index.php?action=CurrentVersion&package=de.plugins-zum-selberbauen.newsletter';
         $urlParsed = parse_url($url);
