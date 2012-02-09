@@ -24,7 +24,7 @@ class Newsletter extends Message {
      */
     public function __construct($newsletterID, array $row = array()) {
         if ($newsletterID !== null && intval($newsletterID) > 0) {
-            $sql = 'SELECT newsletterID, userID, deliveryTime, subject, text
+            $sql = 'SELECT newsletterID, userID, deliveryTime, subject, text, enableSmilies, enableHtml, enableBBCodes
             		FROM wcf'.WCF_N.'_'.$this->databaseTable.' newsletter
             		WHERE newsletter.newsletterID = '.intval($newsletterID);
             $row = WCF::getDB()->getFirstRow($sql);
