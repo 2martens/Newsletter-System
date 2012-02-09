@@ -39,7 +39,7 @@ class UserProfileEditNewsletterListener implements EventListener {
         $existCount = WCF::getDB()->getFirstRow($sql);
         
         if ($option['optionValue'] && !$existCount['count']) $this->sendValidationEmail();
-        elseif (!$option['optionValue'] && $existCount['count']) $this->deleteSubscriber();
+        elseif (!$option['optionValue']) $this->deleteSubscriber();
         else return;
         
         WCF::getCache()->clear(WCF_DIR.'cache/', 'cache.newsletter-subscriber-'.PACKAGE_ID.'.php', true);
@@ -51,7 +51,7 @@ class UserProfileEditNewsletterListener implements EventListener {
     protected function sendValidationEmail() {
         //save activation token into database
         $token = StringUtil::getRandomID();
-        $sql = 'INSERT INTO wcf'.WCF_N.'_newsletter_activation
+        $sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->activationTable.'
         		(userID, token)
         			VALUES
         		('.intval(WCF::getUser()->userID).", '".
