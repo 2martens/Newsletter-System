@@ -56,5 +56,6 @@
     <instructions type="update" fromversion="1.0.1 pl 2">
         <files>files.tar</files>
         <sql>update.sql</sql>
+        <script>acp/updateNewsletter_101pl2-102.php</script>
     </instructions>
 </package>
