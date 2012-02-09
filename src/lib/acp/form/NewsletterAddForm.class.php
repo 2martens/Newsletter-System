@@ -93,7 +93,8 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
         //convert date to timestamp
         $unixTime = strtotime($date);
         $newsletter = NewsletterEditor::create($unixTime,
-                    $this->subject, $this->text);
+                    $this->subject, $this->text, $this->enableSmilies,
+                    $this->enableHtml, $this->enableBBCodes);
         
         $this->saved();
         
