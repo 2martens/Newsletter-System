@@ -46,10 +46,10 @@
                 <defaultvalue>30</defaultvalue>
                 <showorder>2</showorder>
             </option>
-            <option name="message_newslettersystem_general_login">
+            <option name="message_newslettersystem_general_admin">
                 <categoryname>message.newslettersystem.general</categoryname>
-                <optiontype>text</optiontype>
-                <defaultvalue>User:Password</defaultvalue>
+                <optiontype>integer</optiontype>
+                <defaultvalue>1</defaultvalue>
                 <showorder>3</showorder>
             </option>
             <option name="message_newslettersystem_general_sortOrder_subscriber">

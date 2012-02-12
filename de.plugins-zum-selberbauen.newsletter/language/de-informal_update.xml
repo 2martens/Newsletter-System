@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language languagecode="de-informal" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd">
+    <category name="wcf.acp.option">
+        <item name="wcf.acp.option.message_newslettersystem_general_admin"><![CDATA[Administrator ID]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_admin.description"><![CDATA[Gib hier die UserID des Administrators an.]]></item>
+    </category>
+    <category name="wcf.user.option">
+        <item name="wcf.user.option.newsletter"><![CDATA[Newsletter]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsEmail"><![CDATA[als Email]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsEmail.description"><![CDATA[Wähle hier aus, ob du den Newsletter als Email empfangen möchtest.]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsPM"><![CDATA[als PN]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsPM.description"><![CDATA[Wähle hier aus, ob du den Newsletter als PN empfangen möchtest.]]></item>
+    </category>
+</language>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language languagecode="en" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd">
+    <category name="wcf.acp.option">
+        <!-- module -->
+        <item name="wcf.acp.option.module_newslettersystem"><![CDATA[Newsletter-System]]></item>
+        <item name="wcf.acp.option.module_newslettersystem.description"><![CDATA[Activates Newsletter-System]]></item>
+        <!-- /module -->
+        <!-- categories -->
+        <item name="wcf.acp.option.category.message.newslettersystem"><![CDATA[Newsletter-System]]></item>
+        <item name="wcf.acp.option.category.message.newslettersystem.description"><![CDATA[]]></item>
+        <item name="wcf.acp.option.category.message.newslettersystem.general"><![CDATA[General]]></item>
+        <item name="wcf.acp.option.category.message.newslettersystem.general.description"><![CDATA[]]></item>
+        <!-- /categories -->
+        <!-- options -->
+        <item name="wcf.acp.option.message_newslettersystem_general_from"><![CDATA["From"-address]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_from.description"><![CDATA[Please insert here the E-Mail address which should be used for sending the newsletters.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_items"><![CDATA[Number of shown elements]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_items.description"><![CDATA[Please insert here the number of elements per page.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_admin"><![CDATA[Administrator ID]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_admin.description"><![CDATA[Please insert here the user ID of the administrator.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber"><![CDATA[Sort order]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber.description"><![CDATA[Please insert here the default sort order for the subscribers list.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber"><![CDATA[Sort field]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber.description"><![CDATA[Please insert the default sort field of the subscribers list.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber.subscriberID"><![CDATA[ID]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber.username"><![CDATA[Username]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber.email"><![CDATA[E-Mail]]></item>
+        
+        <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_newsletter"><![CDATA[Sort order]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_newsletter.description"><![CDATA[Please insert here the default sort order for the newsletters list.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_newsletter"><![CDATA[Sort field]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_newsletter.description"><![CDATA[Please insert here the default sort field for the newsletters list.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_newsletter.newsletterID"><![CDATA[ID]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_newsletter.username"><![CDATA[Username]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_newsletter.deliveryTime"><![CDATA[Date of delivery]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_sortField_newsletter.subject"><![CDATA[Subject]]></item>
+        <!-- /options -->
+    </category>
+    <category name="wcf.user.option">
+        <item name="wcf.user.option.newsletter"><![CDATA[Newsletter]]></item>
+        <item name="wcf.user.option.acceptNewsletter"><![CDATA[Receive newsletter]]></item>
+        <item name="wcf.user.option.acceptNewsletter.description"><![CDATA[Select this option if you want to receive the newsletter.]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsEmail"><![CDATA[as Email]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsEmail.description"><![CDATA[Select this option if you want to receive the newsletter as email.]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsEmail.error.notChecked"><![CDATA[You have to select at least one delivery option.]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsPM"><![CDATA[as PM]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsPM.description"><![CDATA[Select this option if you want to receive the newsletter as pm.]]></item>
+    </category>
+    <category name="wcf.acp.menu">
+        <!-- content.* -->
+        <item name="wcf.acp.menu.link.content.newslettersystem"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.description"><![CDATA[]]></item>
+        <!-- /content.* -->
+        
+        <!-- newslettersystem.* -->
+        <item name="wcf.acp.menu.link.content.newslettersystem.general"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.general.description"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.about"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.about.description"><![CDATA[]]></item>
+        <!-- /newslettersystem.* -->
+        
+        <!-- newslettersystem.general.* -->
+        <item name="wcf.acp.menu.link.content.newslettersystem.subscriberList"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.subscriberList.description"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.newsletterList"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.newsletterList.description"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.writeNewsletter"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.writeNewsletter.description"><![CDATA[]]></item>
+        <!-- /newslettersystem.general.* -->
+        
+        <!-- newslettersystem.about.* -->
+        <item name="wcf.acp.menu.link.content.newslettersystem.info"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.info.description"><![CDATA[]]></item>
+        <!-- /newslettersystem.about.* -->
+    </category>
+    <category name="wcf.acp.group">
+        <item name="wcf.acp.group.option.category.admin.content.newslettersystem"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.category.admin.content.newslettersystem.description"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeSubscriberOverview"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeSubscriberOverview.description"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditSubscribers"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditSubscribers.description"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeNewsletterOverview"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeNewsletterOverview.description"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canWriteNewsletter"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canWriteNewsletter.description"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditNewsletter"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditNewsletter.description"><![CDATA[]]></item>
+    </category>
+    <category name="wcf.acp.newsletter">
+        <!-- general -->
+        <item name="wcf.acp.newsletter.cronjob.description"><![CDATA[Sends all outstanding newsletter for the current day.]]></item>
+        <item name="wcf.acp.newsletter.unsubscribe"><![CDATA[Unsubscribe from the newsletter.]]></item>
+        <!-- /general -->
+        
+        <!-- about page -->
+        <item name="wcf.acp.newsletter.about"><![CDATA[About Newsletter-System]]></item>
+        <item name="wcf.acp.newsletter.about.subtitle"><![CDATA[Some meta info about Newsletter-System.]]></item>
+        <item name="wcf.acp.newsletter.author"><![CDATA[Author]]></item>
+        <item name="wcf.acp.newsletter.copyright"><![CDATA[Copyright]]></item>
+        <item name="wcf.acp.newsletter.version"><![CDATA[Version]]></item>
+        <item name="wcf.acp.newsletter.updateAvailable"><![CDATA[newer version available]]></item>
+        <!-- /about page -->
+        
+        <!-- actions -->
+        <item name="wcf.acp.newsletter.add"><![CDATA[Add a new newsletter]]></item>
+        <item name="wcf.acp.newsletter.add.success"><![CDATA[Newsletter has been successfully created.]]></item>
+        <item name="wcf.acp.newsletter.edit"><![CDATA[Edit a newsletter]]></item>
+        <item name="wcf.acp.newsletter.edit.success"><![CDATA[Newsletter has been successfully changed.]]></item>
+        <item name="wcf.acp.newsletter.delete"><![CDATA[Delete newsletter]]></item>
+        <item name="wcf.acp.newsletter.delete.sure"><![CDATA[Are you sure that you want to delete the newsletter?]]></item>
+        <item name="wcf.acp.newsletter.delete.success"><![CDATA[Newsletter has been successfully deleted.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.delete"><![CDATA[Delete subscriber]]></item>
+        <item name="wcf.acp.newsletter.subscriber.delete.sure"><![CDATA[Are you sure that you want to delete the subscriber?]]></item>
+        <item name="wcf.acp.newsletter.subscriber.delete.success"><![CDATA[Subscriber has been successfully deleted.]]></item>
+        <!-- /actions -->
+        
+        <!-- newsletterAdd form -->
+        <item name="wcf.acp.newsletter.general"><![CDATA[General]]></item>
+        <item name="wcf.acp.newsletter.subject"><![CDATA[Subject]]></item>
+        <item name="wcf.acp.newsletter.subject.description"><![CDATA[Please insert here the subject of the newsletter.]]></item>
+        <item name="wcf.acp.newsletter.subject.error.tooShort"><![CDATA[The subject has to be at least 4 characters long.]]></item>
+        <item name="wcf.acp.newsletter.date"><![CDATA[Date]]></item>
+        <item name="wcf.acp.newsletter.date.description"><![CDATA[Please insert here the date of delivery.]]></item>
+        <item name="wcf.acp.newsletter.date.error.notValidated"><![CDATA[The inserted date doesn't fit in any defined format.]]></item>
+        <item name="wcf.acp.newsletter.date.day"><![CDATA[Day:]]></item>
+        <item name="wcf.acp.newsletter.date.month"><![CDATA[Month:]]></item>
+        <item name="wcf.acp.newsletter.date.year"><![CDATA[Year:]]></item>
+        <item name="wcf.acp.newsletter.message"><![CDATA[Message]]></item>
+        <item name="wcf.acp.newsletter.text"><![CDATA[Text]]></item>
+        <item name="wcf.acp.newsletter.text.description"><![CDATA[Please insert here the text of the newsletter.]]></item>
+        <!-- /newsletterAdd form -->
+        
+        <!-- newsletter list page -->
+        <item name="wcf.acp.newsletter.list"><![CDATA[Available newsletters]]></item>
+        <item name="wcf.acp.newsletter.list.subtitle"><![CDATA[Shows all available newsletters.]]></item>
+        <item name="wcf.acp.newsletter.list.noneAvailable"><![CDATA[No newsletter has been created.]]></item>
+        <item name="wcf.acp.newsletter.list.count"><![CDATA[A total of {#$items} newsletter{if $items != 1}s{/if}]]></item>
+        <item name="wcf.acp.newsletter.newsletterIDShort"><![CDATA[ID]]></item>
+        <item name="wcf.acp.newsletter.subject"><![CDATA[Subject]]></item>
+        <item name="wcf.acp.newsletter.subjectShort"><![CDATA[Subject]]></item>
+        <item name="wcf.acp.newsletter.deliveryTime"><![CDATA[Date of delivery]]></item>
+        <item name="wcf.acp.newsletter.deliveryTimeShort"><![CDATA[Date]]></item>
+        <!-- /newsletter list page -->
+        
+        <!-- newsletter subscriber list page -->
+        <item name="wcf.acp.newsletter.subscriber.list"><![CDATA[List of Subscribers]]></item>
+        <item name="wcf.acp.newsletter.subscriber.list.subtitle"><![CDATA[Shows all subscribers.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.list.noneAvailable"><![CDATA[Nobody has subscribed the newsletter.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.list.count"><![CDATA[A total of {#$items} subscriber{if $items != 1}s{/if}]]></item>
+        <item name="wcf.acp.newsletter.subscriber.subscriberIDShort"><![CDATA[ID]]></item>
+        <item name="wcf.acp.newsletter.subscriber.username"><![CDATA[Username]]></item>
+        <item name="wcf.acp.newsletter.subscriber.usernameShort"><![CDATA[Username]]></item>
+        <item name="wcf.acp.newsletter.subscriber.email"><![CDATA[E-Mail]]></item>
+        <item name="wcf.acp.newsletter.subscriber.emailShort"><![CDATA[E-Mail]]></item>
+        <!-- /newsletter subscriber list page -->
+        
+        <!-- newsletter optin process -->
+        <item name="wcf.acp.newsletter.optin.subject"><![CDATA[Newsletter activation]]></item>
+        <item name="wcf.acp.newsletter.optin.text"><![CDATA[{$username},
+you have subscribed our newsletter. 
+Please validate the subscription by clicking this link: <br />
+<a href="{$url}">Validate subscription</a><br />
+<br />
+If the link isn't shown in proper format copy the following into your browser and open the page there:<br />
+{$url}<br />
+<br />
+If you do not click on this link, you will not get any newsletters from us.<br />
+Your email will be automatically deleted from our subscriber database.]]></item>
+        <item name="wcf.acp.newsletter.optin.invalidToken"><![CDATA[The given token isn't valid.]]></item>
+        <item name="wcf.acp.newsletter.optin.activationSuccess"><![CDATA[The newsletter subscription has been successfully activated.]]></item>
+        <!-- /newsletter optin process -->
+    </category>
+</language>
