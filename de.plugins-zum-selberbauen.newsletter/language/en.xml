@@ -16,8 +16,8 @@
         <item name="wcf.acp.option.message_newslettersystem_general_from.description"><![CDATA[Please insert here the E-Mail address which should be used for sending the newsletters.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_items"><![CDATA[Number of shown elements]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_items.description"><![CDATA[Please insert here the number of elements per page.]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_login"><![CDATA[Packageserver access data]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_login.description"><![CDATA[Please insert here your access data for the packageserver http://update.plugins-zum-selberbauen.de in the format user:password.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_admin"><![CDATA[Administrator ID]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_admin.description"><![CDATA[Please insert here the user ID of the administrator.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber"><![CDATA[Sort order]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber.description"><![CDATA[Please insert here the default sort order for the subscribers list.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber"><![CDATA[Sort field]]></item>
@@ -37,8 +37,14 @@
         <!-- /options -->
     </category>
     <category name="wcf.user.option">
+        <item name="wcf.user.option.newsletter"><![CDATA[Newsletter]]></item>
         <item name="wcf.user.option.acceptNewsletter"><![CDATA[Receive newsletter]]></item>
         <item name="wcf.user.option.acceptNewsletter.description"><![CDATA[Select this option if you want to receive the newsletter.]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsEmail"><![CDATA[as Email]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsEmail.description"><![CDATA[Select this option if you want to receive the newsletter as email.]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsEmail.error.notChecked"><![CDATA[You have to select at least one delivery option.]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsPM"><![CDATA[as PM]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsPM.description"><![CDATA[Select this option if you want to receive the newsletter as pm.]]></item>
     </category>
     <category name="wcf.acp.menu">
         <!-- content.* -->

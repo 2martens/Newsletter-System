@@ -2,6 +2,7 @@
 //wcf imports
 require_once(WCF_DIR.'lib/action/AbstractAction.class.php');
 require_once(WCF_DIR.'lib/data/mail/Mail.class.php');
+require_once(WCF_DIR.'lib/data/user/User.class.php');
 
 /**
  * Sends a specified newsletter.
@@ -87,12 +88,29 @@ class SendNewsletterAction extends AbstractAction {
             //sending one mail per subscriber
             //is longer, but safer
             foreach ($this->subscribersList as $subscriber) {
-                $email = $subscriber['email'];
-                $mail = new Mail($email, $newsletter['subject'], $content,
-                MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
-                $mail->addBCC(MAIL_ADMIN_ADDRESS);
-                $mail->setContentType('text/html');
-                $mail->send();
+                $recipient = new User($subscriber['userID']);
+                if ($recipient->getUserOption('acceptNewsletterAsEmail')) {
+                    $email = $subscriber['email'];
+                    $mail = new Mail($email, $newsletter['subject'], $content,
+                    MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
+                    $mail->addBCC(MAIL_ADMIN_ADDRESS);
+                    $mail->setContentType('text/html');
+                    $mail->send();
+                }
+                if ($recipient->getUserOption('acceptNewsletterAsPM')) {
+                    $recipientArray = array();
+                    $recipientArray[] = array(
+                        'userID' => $subscriber['userID'],
+                        'username' => $subscriber['username']
+                    );
+                    $admin = new User(MESSAGE_NEWSLETTERSYSTEM_GENERAL_ADMIN);
+                    $options = array(
+                        'enableSmilies' => $newsletter['enableSmilies'],
+                        'enableHtml' => $newsletter['enableHtml'],
+                        'enableBBCodes' => $newsletter['enableBBCodes']
+                    );
+                    $pm = PMEditor::create(false, $recipientArray, array(), $newsletter['subject'], $text, $admin->userID, $admin->username, $options);
+                }
             }
         }
     }
