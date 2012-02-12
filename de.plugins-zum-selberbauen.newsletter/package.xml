@@ -46,16 +46,25 @@
         <sql>install.sql</sql>
         
         <!-- languages -->
-        <languages languagecode="de">de.xml</languages>
-        <languages languagecode="de-informal">de-informal.xml</languages>
-        <languages languagecode="en">en.xml</languages>
+        <languages languagecode="de">languages/de.xml</languages>
+        <languages languagecode="de-informal">languages/de-informal.xml</languages>
+        <languages languagecode="en">languages/en.xml</languages>
         
         <admindefault></admindefault>
     </instructions>
     
-    <instructions type="update" fromversion="1.0.1 pl 2">
+    <instructions type="update" fromversion="1.0.2">
         <files>files.tar</files>
-        <sql>update.sql</sql>
-        <script>acp/updateNewsletter_101pl2-102.php</script>
+        <templates>templates.tar</templates>
+        <acptemplates>acptemplates.tar</acptemplates>
+        
+        <eventlistener>eventlistener_update.xml</eventlistener>
+        <useroptions>useroptions_update.xml</useroptions>
+        <options>options_update.xml</options>
+        
+        <!-- languages -->
+        <languages languagecode="de">languages/de_update.xml</languages>
+        <languages languagecode="de-informal">languages/de-informal_update.xml</languages>
+        <languages languagecode="en">languages/en_update.xml</languages>
     </instructions>
 </package>
