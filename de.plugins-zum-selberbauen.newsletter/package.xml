@@ -8,8 +8,8 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.0.2</version>
-        <date>2012-02-09</date>
+        <version>1.0.3</version>
+        <date>2012-02-13</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
     
@@ -53,9 +53,7 @@
         <admindefault></admindefault>
     </instructions>
     
-    <instructions type="update" fromversion="1.0.1 pl 2">
+    <instructions type="update" fromversion="1.0.2">
         <files>files.tar</files>
-        <sql>update.sql</sql>
-        <script>acp/updateNewsletter_101pl2-102.php</script>
     </instructions>
 </package>

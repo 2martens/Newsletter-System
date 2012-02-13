@@ -141,7 +141,7 @@ class NewsletterListPage extends SortablePage {
                 return; //does nothing and exits the method
         }
         $sql .= $sqlOrder.' '.$this->sortOrder;
-        $result = WCF::getDB()->sendQuery($sql);
+        $result = WCF::getDB()->sendQuery($sql, $this->itemsPerPage, ($this->pageNo - 1) * $this->itemsPerPage);
         $tmpArray = array();
         while ($row = WCF::getDB()->fetchArray($result)) {
             $tmpArray[$row['newsletterID']] = array(
