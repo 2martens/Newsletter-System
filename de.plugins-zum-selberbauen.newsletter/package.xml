@@ -9,7 +9,7 @@
         <standalone>0</standalone>
         <isunique>1</isunique>
         <version>1.0.4</version>
-        <date>2012-02-13</date>
+        <date>2012-03-05</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
     
@@ -54,6 +54,13 @@
     </instructions>
     
     <instructions type="update" fromversion="1.0.3">
+<<<<<<< HEAD
+=======
+        <files>files.tar</files>
+    </instructions>
+    
+    <instructions type="update" fromversion="1.0.2">
+>>>>>>> hotfix/103pl1
         <files>files.tar</files>
 
         <templates>templates.tar</templates>
