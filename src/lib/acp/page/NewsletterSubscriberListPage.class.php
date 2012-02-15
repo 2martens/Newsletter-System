@@ -32,6 +32,12 @@ class NewsletterSubscriberListPage extends SortablePage {
     protected $subscribersList = array();
     
     /**
+     * Contains the current subscribers list.
+     * @var array
+     */
+    protected $currentSubscribersList = array();
+    
+    /**
      * Contains the database table name.
      * @var string
      */
@@ -78,7 +84,7 @@ class NewsletterSubscriberListPage extends SortablePage {
     public function assignVariables() {
         parent::assignVariables();
         WCF::getTPL()->assign(array(
-            'subscribers' => $this->subscribersList,
+            'subscribers' => $this->currentSubscribersList,
             'result' => $this->result
         ));
     }
@@ -111,6 +117,7 @@ class NewsletterSubscriberListPage extends SortablePage {
         
         //get options
         $this->subscribersList = WCF::getCache()->get($cacheName, 'subscribers');
+        $this->currentSubscribersList = array_slice($this->subscribersList, ($this->pageNo - 1) * $this->itemsPerPage, $this->itemsPerPage, true);
     }
     
     /**
@@ -132,6 +139,7 @@ class NewsletterSubscriberListPage extends SortablePage {
             case 'subscriberID':
                 if ($this->sortOrder == 'DESC') {
                     $this->subscribersList = array_reverse($this->subscribersList, true);
+                    $this->currentSubscribersList = array_reverse($this->currentSubscribersList, true);
                 }
             default:
                 return; //does nothing and exits the method
@@ -146,6 +154,6 @@ class NewsletterSubscriberListPage extends SortablePage {
                 'email' => $row['email']
             );
         }
-        $this->subscribersList = $tmpArray;
+        $this->subscribersList = $this->currentSubscribersList = $tmpArray;
     }
 }
