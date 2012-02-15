@@ -53,14 +53,7 @@
         <admindefault></admindefault>
     </instructions>
     
-    <instructions type="update" fromversion="1.0.3">
-<<<<<<< HEAD
-=======
-        <files>files.tar</files>
-    </instructions>
-    
-    <instructions type="update" fromversion="1.0.2">
->>>>>>> hotfix/103pl1
+    <instructions type="update" fromversion="1.0.3 pl 1">
         <files>files.tar</files>
 
         <templates>templates.tar</templates>
