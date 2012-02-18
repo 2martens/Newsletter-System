@@ -3,6 +3,16 @@
     <category name="wcf.acp.option">
         <item name="wcf.acp.option.message_newslettersystem_general_admin"><![CDATA[Administrator ID]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_admin.description"><![CDATA[Please insert here the user ID of the administrator.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob"><![CDATA[Hourly Cronjob]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob.description"><![CDATA[Click here to activate the hourly cronjob for sending newsletters.]]></item>
+    </category>
+    <category name="wcf.acp.menu">
+        <item name="wcf.acp.menu.link.content.newslettersystem.importSubscriber"><![CDATA[Import subscribers]]></item>
+    </category>
+    <category name="wcf.acp.newsletter">
+        <item name="wcf.acp.newsletter.send"><![CDATA[Send newsletter]]></item>
+        <item name="wcf.acp.newsletter.send.success"><![CDATA[Newsletter has been successfully sended.]]></item>
+        <item name="wcf.acp.newsletter.date.hour"><![CDATA[Hour:]]></item>
     </category>
     <category name="wcf.user.option">
         <item name="wcf.user.option.newsletter"><![CDATA[Newsletter]]></item>

@@ -83,6 +83,16 @@
 										{/foreach}
 									</select>
 								</div>
+								{if MESSAGE_NEWSLETTERSYSTEM_GENERAL_HOURLYCRONJOB}
+								<div class="floatedElement">
+									<select name="hour">
+										<option value="">{lang}wcf.acp.newsletter.date.hour{/lang}</option>
+										{foreach from=$dateOptions.hour item=hourNr}
+											<option value="{@$hourNr}"{if $hour == $hourNr} selected="selected"{/if}>{@$dayNr}</option>
+										{/foreach}
+									</select>
+								</div>
+								{/if}
 								{if $errorField == 'date'}
 									<p class="innerError">
 										{if $errorType == 'notValidated'}{lang}wcf.acp.newsletter.date.error.notValidated{/lang}{/if}

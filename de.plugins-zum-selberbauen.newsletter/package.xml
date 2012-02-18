@@ -59,6 +59,7 @@
         <templates>templates.tar</templates>
         <acptemplates>acptemplates.tar</acptemplates>
         
+        <cronjobs>cronjobs.xml</cronjobs>
         <eventlistener>eventlistener_update.xml</eventlistener>
         <useroptions>useroptions_update.xml</useroptions>
         <options>options_update.xml</options>

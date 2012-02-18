@@ -25,13 +25,13 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
      * Contains the read date values.
      * @var array<int>
      */
-    protected $dateValues = array('day' => 0, 'month' => 0, 'year' => 0);
+    protected $dateValues = array('hour' => array(), 'day' => 0, 'month' => 0, 'year' => 0);
     
     /**
      * Contains the options to be chosen in the form.
      * @var array
      */
-    protected $dateOptions = array('day' => array(), 'month' => array(), 'year' => array());
+    protected $dateOptions = array('hour' => array(), 'day' => array(), 'month' => array(), 'year' => array());
     
     /**
      * Contains the result of adding or editing a newsletter.
@@ -40,11 +40,18 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
     protected $result = '';
     
     /**
+     * If true, the newsletter was sended successfully.
+     * @var boolean
+     */
+    protected $success = false;
+    
+    /**
      * @see CaptchaForm::readParameters()
      */
     public function readParameters() {
         parent::readParameters();
         if (isset($_GET['result'])) $this->result = StringUtil::trim($_GET['result']);
+        if (isset($_GET['success'])) $this->success = true;
     }
     
     /**
@@ -52,6 +59,7 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
      */
     public function readFormParameters() {
         parent::readFormParameters();
+        if (isset($_POST['hour'])) $this->dateValues['hour'] = intval($_POST['hour']);
         if (isset($_POST['day'])) $this->dateValues['day'] = intval($_POST['day']);
         if (isset($_POST['month'])) $this->dateValues['month'] = intval($_POST['month']);
         if (isset($_POST['year'])) $this->dateValues['year'] = intval($_POST['year']);
@@ -62,14 +70,18 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
      */
     public function readData() {
         parent::readData();
-        for ($i = 1; $i <= 31; $i++) {
-            $this->dateOptions['day'][$i] = ($i < 10 ? '0'. (string) $i: (string) $i);
+        
+        for ($h = 0; $h <= 24; $h++) {
+            $this->dateOptions['hour'][$h] = ($h < 10 ? '0'.  (string) $h: (string) $h);
         }
-        for ($i = 1; $i <= 12; $i++) {
-            $this->dateOptions['month'][$i] = ($i < 10 ? '0'. (string) $i: (string) $i);
+        for ($d = 1; $d <= 31; $d++) {
+            $this->dateOptions['day'][$d] = ($d < 10 ? '0'. (string) $d: (string) $d);
         }
-        for ($i = 2011; $i <= 2038; $i++) {
-            $this->dateOptions['year'][$i] = (string) $i;
+        for ($m = 1; $m <= 12; $m++) {
+            $this->dateOptions['month'][$m] = ($m < 10 ? '0'. (string) $m: (string) $m);
+        }
+        for ($y = 2011; $y <= 2038; $y++) {
+            $this->dateOptions['year'][$y] = (string) $y;
         }
     }
     
@@ -89,7 +101,8 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
         //create date
         $date = (string) $this->dateValues['year'].'-'.
             (string) $this->dateValues['month'].'-'.
-            (string) $this->dateValues['day'];
+            (string) $this->dateValues['day'].
+            ($this->hourly ? ' '.(string) $this->dateValues['hour'] : '');
         //convert date to timestamp
         $unixTime = strtotime($date);
         $newsletter = NewsletterEditor::create($unixTime,
@@ -119,13 +132,15 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
     public function assignVariables() {
         parent::assignVariables();
         WCF::getTPL()->assign(array(
+            'hour' => $this->dateValues['hour'],
             'day' => $this->dateValues['day'],
             'month' => $this->dateValues['month'],
             'year' => $this->dateValues['year'],
             'action' => $this->action,
             'dateOptions' => $this->dateOptions,
             'result' => $this->result,
-            'useACPAttachments' => false
+            'useACPAttachments' => false,
+            'success' => $this->success
         ));
     }
     

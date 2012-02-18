@@ -18,6 +18,8 @@
         <item name="wcf.acp.option.message_newslettersystem_general_items.description"><![CDATA[Please insert here the number of elements per page.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_admin"><![CDATA[Administrator ID]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_admin.description"><![CDATA[Please insert here the user ID of the administrator.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob"><![CDATA[Hourly Cronjob]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob.description"><![CDATA[Click here to activate the hourly cronjob for sending newsletters.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber"><![CDATA[Sort order]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber.description"><![CDATA[Please insert here the default sort order for the subscribers list.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber"><![CDATA[Sort field]]></item>
@@ -60,6 +62,7 @@
         <!-- /newslettersystem.* -->
         
         <!-- newslettersystem.general.* -->
+        <item name="wcf.acp.menu.link.content.newslettersystem.importSubscriber"><![CDATA[Import subscriber]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.subscriberList"><![CDATA[]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.subscriberList.description"><![CDATA[]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.newsletterList"><![CDATA[]]></item>
@@ -110,6 +113,8 @@
         <item name="wcf.acp.newsletter.delete"><![CDATA[Delete newsletter]]></item>
         <item name="wcf.acp.newsletter.delete.sure"><![CDATA[Are you sure that you want to delete the newsletter?]]></item>
         <item name="wcf.acp.newsletter.delete.success"><![CDATA[Newsletter has been successfully deleted.]]></item>
+        <item name="wcf.acp.newsletter.send"><![CDATA[Send newsletter]]></item>
+        <item name="wcf.acp.newsletter.send.success"><![CDATA[Newsletter has been successfully sended.]]></item>
         <item name="wcf.acp.newsletter.subscriber.delete"><![CDATA[Delete subscriber]]></item>
         <item name="wcf.acp.newsletter.subscriber.delete.sure"><![CDATA[Are you sure that you want to delete the subscriber?]]></item>
         <item name="wcf.acp.newsletter.subscriber.delete.success"><![CDATA[Subscriber has been successfully deleted.]]></item>
@@ -123,6 +128,7 @@
         <item name="wcf.acp.newsletter.date"><![CDATA[Date]]></item>
         <item name="wcf.acp.newsletter.date.description"><![CDATA[Please insert here the date of delivery.]]></item>
         <item name="wcf.acp.newsletter.date.error.notValidated"><![CDATA[The inserted date doesn't fit in any defined format.]]></item>
+        <item name="wcf.acp.newsletter.date.hour"><![CDATA[Hour:]]></item>
         <item name="wcf.acp.newsletter.date.day"><![CDATA[Day:]]></item>
         <item name="wcf.acp.newsletter.date.month"><![CDATA[Month:]]></item>
         <item name="wcf.acp.newsletter.date.year"><![CDATA[Year:]]></item>

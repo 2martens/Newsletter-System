@@ -41,6 +41,24 @@ class SendNewsletterAction extends AbstractAction {
     protected $subscribersList = array();
     
     /**
+     * If true, the action was called by the hourly cronjob.
+     * @var false
+     */
+    protected $hourly = false;
+    
+    /**
+     * Creates a new SendNewsletterAction object.
+     *
+     * @param boolean $hourly
+     *
+     * @see AbstractAction::__construct()
+     */
+    public function __construct($hourly = false) {
+        $this->hourly = $hourly;
+        parent::__construct();
+    }
+    
+    /**
      * @see AbstractSecureAction::readParameters()
      */
     public function readParameters() {
@@ -61,6 +79,10 @@ class SendNewsletterAction extends AbstractAction {
             $this->outstandingNewsletters[$this->newsletterID] = $this->newsletterList[$this->newsletterID];
         }
         $this->sendNewsletters();
+        if ($this->newsletterID) {
+            HeaderUtil::redirect('index.php?page=NewsletterList&success'.SID_ARG_2ND);
+            exit;
+        }
     }
     
  	/**
@@ -89,6 +111,8 @@ class SendNewsletterAction extends AbstractAction {
             //is longer, but safer
             foreach ($this->subscribersList as $subscriber) {
                 $recipient = new User($subscriber['userID']);
+                // {$username} stands for the username of the specific subscriber
+                $content = str_replace('{$username}', $subscriber['username'], $content);
                 if ($recipient->getUserOption('acceptNewsletterAsEmail')) {
                     $email = $subscriber['email'];
                     $mail = new Mail($email, $newsletter['subject'], $content,
@@ -144,8 +168,9 @@ class SendNewsletterAction extends AbstractAction {
      */
     protected function checkNewsletters() {
         foreach ($this->newsletterList as $id => $newsletter) {
-            $date = date('Y-m-d', $newsletter['deliveryTime']);
-            $now = date('Y-m-d', TIME_NOW);
+            
+            $date = date('Y-m-d'.($this->hourly ? ' H' : ''), $newsletter['deliveryTime']);
+            $now = date('Y-m-d'.($this->hourly ? ' H' : ''), TIME_NOW);
             if ($date == $now) {
                 $this->outstandingNewsletters[$id] = $newsletter;
             }

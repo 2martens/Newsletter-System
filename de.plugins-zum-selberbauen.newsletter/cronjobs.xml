@@ -9,10 +9,23 @@
             <startdom>*</startdom>
             <startmonth>*</startmonth>
             <startdow>*</startdow>
-            <execmultiple>0</execmultiple>
+            <execmultiple>1</execmultiple>
             <canbeedited>1</canbeedited>
             <canbedisabled>1</canbedisabled>
             <active>1</active>
+        </cronjob>
+        <cronjob>
+            <classpath><![CDATA[lib/system/cronjob/SendNewsletterHourlyCronjob.class.php]]></classpath>
+            <description><![CDATA[Sends all outstanding newsletter for the current hour.]]></description>
+            <startminute>0</startminute>
+            <starthour>*</starthour>
+            <startdom>*</startdom>
+            <startmonth>*</startmonth>
+            <startdow>*</startdow>
+            <execmultiple>1</execmultiple>
+            <canbeedited>1</canbeedited>
+            <canbedisabled>1</canbedisabled>
+            <active>0</active>
         </cronjob>
     </import>
 </data>
