@@ -46,9 +46,9 @@
         <sql>install.sql</sql>
         
         <!-- languages -->
-        <languages languagecode="de">languages/de.xml</languages>
-        <languages languagecode="de-informal">languages/de-informal.xml</languages>
-        <languages languagecode="en">languages/en.xml</languages>
+        <languages languagecode="de">language/de.xml</languages>
+        <languages languagecode="de-informal">language/de-informal.xml</languages>
+        <languages languagecode="en">language/en.xml</languages>
         
         <admindefault></admindefault>
     </instructions>
@@ -66,8 +66,8 @@
         <options>options_update.xml</options>
         
         <!-- languages -->
-        <languages languagecode="de">languages/de_update.xml</languages>
-        <languages languagecode="de-informal">languages/de-informal_update.xml</languages>
-        <languages languagecode="en">languages/en_update.xml</languages>
+        <languages languagecode="de">language/de_update.xml</languages>
+        <languages languagecode="de-informal">language/de-informal_update.xml</languages>
+        <languages languagecode="en">language/en_update.xml</languages>
     </instructions>
 </package>
