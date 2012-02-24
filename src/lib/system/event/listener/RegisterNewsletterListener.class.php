@@ -95,7 +95,7 @@ class RegisterNewsletterListener implements EventListener {
             'acceptNewsletterAsEmail' => $this->acceptNewsletterAsEmail,
             'acceptNewsletterAsPM' => $this->acceptNewsletterAsPM
         );
-        $editor->update('', '', '', null, $options);
+        $editor->updateOptions($options);
         $this->sendValidationEmail($eventObj);
     }
     
