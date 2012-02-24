@@ -108,7 +108,9 @@ class RegisterNewsletterListener implements EventListener {
         WCF::getTPL()->assign(array(
         	'acceptNewsletter' => $this->acceptNewsletter,
             'acceptNewsletterAsEmail' => $this->acceptNewsletterAsEmail,
-            'acceptNewsletterAsPM' => $this->acceptNewsletterAsPM
+            'acceptNewsletterAsPM' => $this->acceptNewsletterAsPM,
+            'errorField' => $eventObj->errorField,
+            'errorType' => $eventObj->errorType
         ));
         $content = WCF::getTPL()->fetch($this->templateName);
         WCF::getTPL()->append('additionalFields', $content);

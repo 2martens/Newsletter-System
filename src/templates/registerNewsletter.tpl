@@ -11,7 +11,7 @@
             <p>{lang}wcf.user.option.acceptNewsletter.description{/lang}</p>
         </div>
     </div>
-    <div class="formElement">
+    <div class="formElement{if $errorField == 'acceptNewsletterAsEmail'} formError{/if}">
         <div class="formFieldLabel">
             <label for="acceptNewsletterAsEmail">{lang}wcf.user.option.acceptNewsletterAsEmail{/lang}</label>
         </div>
@@ -27,7 +27,7 @@
             <p>{lang}wcf.user.option.acceptNewsletterAsEmail.description{/lang}</p>
         </div>
     </div>
-    <div class="formElement">
+    <div class="formElement{if $errorField == 'acceptNewsletterAsEmail'} formError{/if}">
         <div class="formFieldLabel">
             <label for="acceptNewsletterAsPM">{lang}wcf.user.option.acceptNewsletterAsPM{/lang}</label>
         </div>
