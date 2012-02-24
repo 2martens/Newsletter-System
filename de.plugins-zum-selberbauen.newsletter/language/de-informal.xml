@@ -94,6 +94,8 @@
         <!-- general -->
         <item name="wcf.acp.newsletter.cronjob.description"><![CDATA[Versendet alle Newsletter, die für den betreffenden Tag anstehen.]]></item>
         <item name="wcf.acp.newsletter.unsubscribe"><![CDATA[Abonnement des Newsletters kündigen]]></item>
+        <item name="wcf.acp.newsletter.guestSubscription"><![CDATA[Gastabonnement]]></item>
+        <item name="wcf.acp.newsletter.subscriber.email.error.notUnique"><![CDATA[Diese E-Mail-Adresse ist bereits vergeben.]]></item>
         <!-- /general -->
         
         <!-- about page -->
@@ -156,6 +158,7 @@
         <item name="wcf.acp.newsletter.subscriber.list.count"><![CDATA[Insgesamt {#$items} Abonnent{if $items != 1}en{/if}]]></item>
         <item name="wcf.acp.newsletter.subscriber.subscriberIDShort"><![CDATA[ID]]></item>
         <item name="wcf.acp.newsletter.subscriber.username"><![CDATA[Benutzername]]></item>
+        <item name="wcf.acp.newsletter.subscriber.username.guest"><![CDATA[Gast]]></item>
         <item name="wcf.acp.newsletter.subscriber.usernameShort"><![CDATA[Benutzername]]></item>
         <item name="wcf.acp.newsletter.subscriber.email"><![CDATA[E-Mail]]></item>
         <item name="wcf.acp.newsletter.subscriber.emailShort"><![CDATA[E-Mail]]></item>
@@ -163,6 +166,7 @@
         
         <!-- newsletter optin process -->
         <item name="wcf.acp.newsletter.optin.subject"><![CDATA[Newsletter-Bestätigung]]></item>
+        <item name="wcf.acp.newsletter.optin.hello"><![CDATA[Hallo]]></item>
         <item name="wcf.acp.newsletter.optin.text"><![CDATA[{$username},
 du hast dich für unseren Newsletter angemeldet. Bitte bestätige die Anmeldung
 durch Klicken des folgenden Links: <br />
@@ -175,6 +179,7 @@ und öffne die Seite dort:<br />
 Wenn du den Link nicht aktivierst, erhälst du keine Newsletter von uns.<br />
 Deine E-Mail-Adresse wird automatisch aus unserem Newsletter-Verteiler gelöscht.]]></item>
         <item name="wcf.acp.newsletter.optin.invalidToken"><![CDATA[Das angegebene Token ist ungültig.]]></item>
+        <item name="wcf.acp.newsletter.optin.activationPending"><![CDATA[Eine Aktivierungsmail wurde an die von Ihnen angegebene Adresse gesendet.]]></item>
         <item name="wcf.acp.newsletter.optin.activationSuccess"><![CDATA[Der Newsletterempfang wurde erfolgreich bestätigt.]]></item>
         <!-- /newsletter optin process -->
     </category>

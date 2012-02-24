@@ -27,5 +27,18 @@
             <canbedisabled>1</canbedisabled>
             <active>0</active>
         </cronjob>
+        <cronjob>
+            <classpath><![CDATA[lib/system/cronjob/CleanGuestSubscriberCronjob.class.php]]></classpath>
+            <description><![CDATA[Cleans unactivated guest subscribers.]]></description>
+            <startminute>0</startminute>
+            <starthour>0</starthour>
+            <startdom>*</startdom>
+            <startmonth>*</startmonth>
+            <startdow>0</startdow>
+            <execmultiple>0</execmultiple>
+            <canbeedited>1</canbeedited>
+            <canbedisabled>1</canbedisabled>
+            <active>1</active>
+        </cronjob>
     </import>
 </data>

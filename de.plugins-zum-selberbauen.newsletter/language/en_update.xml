@@ -13,6 +13,11 @@
         <item name="wcf.acp.newsletter.send"><![CDATA[Send newsletter]]></item>
         <item name="wcf.acp.newsletter.send.success"><![CDATA[Newsletter has been successfully sended.]]></item>
         <item name="wcf.acp.newsletter.date.hour"><![CDATA[Hour:]]></item>
+        <item name="wcf.acp.newsletter.subscriber.username.guest"><![CDATA[Guest]]></item>
+        <item name="wcf.acp.newsletter.optin.hello"><![CDATA[Hello]]></item>
+        <item name="wcf.acp.newsletter.optin.activationPending"><![CDATA[An activation mail has been sent to the given email address.]]></item>
+        <item name="wcf.acp.newsletter.guestSubscription"><![CDATA[Guest subscription]]></item>
+        <item name="wcf.acp.newsletter.subscriber.email.error.notUnique"><![CDATA[This email address is already used.]]></item>
     </category>
     <category name="wcf.user.option">
         <item name="wcf.user.option.newsletter"><![CDATA[Newsletter]]></item>

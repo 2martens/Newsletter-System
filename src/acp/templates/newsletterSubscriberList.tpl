@@ -48,7 +48,7 @@
                         {if $subscriber.additionalButtons|isset}{@$subscriber.additionalButtons}{/if}
                     </td>
                     <td class="columnSubscriberID">{@$subscriberID}</td>
-                    <td class="columnUsername">{$subscriber.username}</td>
+                    <td class="columnUsername">{if $subscriber.userID == 0}{lang}wcf.acp.newsletter.subscriber.username.guest{/lang}{else}<a href="index.php?form=UserEdit&userID={$subscriber.userID}{@SID_ARG_2ND}">{$subscriber.username}</a>{/if}</td>
                     <td class="columnEmail">{$subscriber.email}</td>
                     {if $subscriber.additionalColumns|isset}{@$subscriber.additionalColumns}{/if}
                 </tr>

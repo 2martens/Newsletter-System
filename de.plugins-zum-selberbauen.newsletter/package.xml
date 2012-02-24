@@ -8,7 +8,7 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.0.4</version>
+        <version>1.1.0 Beta 1</version>
         <date>2012-03-05</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
@@ -58,6 +58,7 @@
 
         <templates>templates.tar</templates>
         <acptemplates>acptemplates.tar</acptemplates>
+        <sql>update.sql</sql>
         
         <cronjobs>cronjobs.xml</cronjobs>
         <eventlistener>eventlistener_update.xml</eventlistener>
