@@ -8,7 +8,7 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.1.0 Beta 5</version>
+        <version>1.1.0 Beta 6</version>
         <date>2012-03-05</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
@@ -53,8 +53,8 @@
         <admindefault></admindefault>
     </instructions>
     
-    <instructions type="update" fromversion="1.1.0 Beta 3">
-        <files>files.tar</files>
+    <instructions type="update" fromversion="1.1.0 Beta 5">
+        <acpmenu>acpmenu.xml</acpmenu>
     </instructions>
     
     <instructions type="update" fromversion="1.0.3 pl 1">
@@ -68,6 +68,7 @@
         <eventlistener>eventlistener_update.xml</eventlistener>
         <useroptions>useroptions_update.xml</useroptions>
         <options>options_update.xml</options>
+        <acpmenu>acpmenu.xml</acpmenu>
         
         <!-- languages -->
         <languages languagecode="de">language/de_update.xml</languages>
