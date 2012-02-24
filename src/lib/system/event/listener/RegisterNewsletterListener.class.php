@@ -91,9 +91,9 @@ class RegisterNewsletterListener implements EventListener {
     protected function saved($eventObj) {
         $editor = $eventObj->user->getEditor();
         $options = array(
-            'acceptNewsletter' => $this->acceptNewsletter,
-            'acceptNewsletterAsEmail' => $this->acceptNewsletterAsEmail,
-            'acceptNewsletterAsPM' => $this->acceptNewsletterAsPM
+            'acceptNewsletter' => intval($this->acceptNewsletter),
+            'acceptNewsletterAsEmail' => intval($this->acceptNewsletterAsEmail),
+            'acceptNewsletterAsPM' => intval($this->acceptNewsletterAsPM)
         );
         $editor->updateOptions($options);
         $this->sendValidationEmail($eventObj);
