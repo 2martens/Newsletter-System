@@ -26,6 +26,12 @@ class NewsletterListPage extends SortablePage {
     protected $result = '';
     
     /**
+     * If true, the newsletter has been successfully sent.
+     * @var boolean
+     */
+    protected $success = false;
+    
+    /**
      * Contains the newsletter list.
      * @var array
      */
@@ -46,6 +52,7 @@ class NewsletterListPage extends SortablePage {
     public function readParameters() {
         parent::readParameters();
         if (isset($_REQUEST['result'])) $this->result = StringUtil::trim($_REQUEST['result']);
+        if (isset($_REQUEST['success'])) $this->success = true;
     }
     
 	/**
@@ -86,7 +93,8 @@ class NewsletterListPage extends SortablePage {
         parent::assignVariables();
         WCF::getTPL()->assign(array(
             'newsletters' => $this->currentNewsletterList,
-            'result' => $this->result
+            'result' => $this->result,
+            'success' => $this->success
         ));
     }
     
