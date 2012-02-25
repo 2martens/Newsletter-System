@@ -88,7 +88,7 @@
 									<select name="hour">
 										<option value="">{lang}wcf.acp.newsletter.date.hour{/lang}</option>
 										{foreach from=$dateOptions.hour item=hourNr}
-											<option value="{@$hourNr}"{if $hour == $hourNr} selected="selected"{/if}>{@$dayNr}</option>
+											<option value="{@$hourNr}"{if $hour == $hourNr} selected="selected"{/if}>{@$hourNr}</option>
 										{/foreach}
 									</select>
 								</div>

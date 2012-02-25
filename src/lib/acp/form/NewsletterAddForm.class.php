@@ -71,7 +71,7 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
     public function readData() {
         parent::readData();
         
-        for ($h = 0; $h <= 24; $h++) {
+        for ($h = 0; $h <= 23; $h++) {
             $this->dateOptions['hour'][$h] = ($h < 10 ? '0'.  (string) $h: (string) $h);
         }
         for ($d = 1; $d <= 31; $d++) {
