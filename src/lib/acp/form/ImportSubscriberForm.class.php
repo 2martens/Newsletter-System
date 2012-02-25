@@ -177,7 +177,7 @@ class ImportSubscriberForm extends ACPForm {
 		    $data .= escapeString($email)."')";
 		    $insertValues .= $data;
 		}
-		$sql .= $insertValues .= "')";
+		$sql .= $insertValues;
 		WCF::getDB()->sendQuery($sql);
 		
 		WCF::getTPL()->assign('success', true);

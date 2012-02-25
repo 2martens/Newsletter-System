@@ -40,6 +40,11 @@ class NewsletterRegisterGuestForm extends AbstractForm {
     protected $activationTable = 'newsletter_guest_activation';
     
     /**
+     * @see AbstractPage::$templateName
+     */
+    public $templateName = 'registerNewsletter';
+    
+    /**
      * @see Form::readFormParameters()
      */
     public function readFormParameters() {

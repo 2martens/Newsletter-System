@@ -117,7 +117,7 @@ class SendNewsletterAction extends AbstractAction {
                     $email = $subscriber['email'];
                     $mail = new Mail($email, $newsletter['subject'], $content,
                     MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
-                    $mail->addBCC(MAIL_ADMIN_ADDRESS);
+                    //$mail->addBCC(MAIL_ADMIN_ADDRESS); would result in x mails
                     $mail->setContentType('text/html');
                     $mail->send();
                 }
