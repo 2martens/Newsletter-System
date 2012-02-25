@@ -18,6 +18,17 @@
         <item name="wcf.acp.newsletter.optin.activationPending"><![CDATA[Eine Aktivierungsmail wurde an die von Ihnen angegebene Adresse gesendet.]]></item>
         <item name="wcf.acp.newsletter.guestSubscription"><![CDATA[Gastabonnement]]></item>
         <item name="wcf.acp.newsletter.subscriber.email.error.notUnique"><![CDATA[Diese E-Mail-Adresse ist bereits vergeben.]]></item>
+        
+        <!-- newsletter import subscriber -->
+        <item name="wcf.acp.newsletter.importSubscriber"><![CDATA[Abonnenten importieren]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.delimeter"><![CDATA[Trennzeichen]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.delimeter.description"><![CDATA[Geben Sie hier das Trennzeichen zwischen den einzelnen Einträgen an.]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source"><![CDATA[Quelle auswählen]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.upload"><![CDATA[Datei vom lokalen Computer hochladen]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.upload.description"><![CDATA[Geben Sie eine csv-Datei von Ihrem lokalen Rechner an.]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.download"><![CDATA[Direkten Pfad zur Datei angeben]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.download.description"><![CDATA[Geben Sie den direkten Pfad zur Datei an. Dabei kann es sich um die Internet Adresse der Datei oder alternativ den Pfad zur Datei im Dateisystem handeln.]]></item>
+        <!-- /newsletter import subscriber -->
     </category>
     <category name="wcf.user.option">
         <item name="wcf.user.option.newsletter"><![CDATA[Newsletter]]></item>
@@ -26,5 +37,9 @@
         <item name="wcf.user.option.acceptNewsletterAsEmail.error.notChecked"><![CDATA[Sie müssen mindestens eine Versandart auswählen.]]></item>
         <item name="wcf.user.option.acceptNewsletterAsPM"><![CDATA[als PN]]></item>
         <item name="wcf.user.option.acceptNewsletterAsPM.description"><![CDATA[Wählen Sie hier aus, ob Sie den Newsletter als PN empfangen möchten.]]></item>
+    </category>
+    <category name="wcf.acp.group">
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canImportSubscriber"><![CDATA[Kann Abonnenten importieren]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canImportSubscriber.description"><![CDATA[Mitglieder dieser Benutzergruppe können Abonnenten importieren.]]></item>
     </category>
 </language>

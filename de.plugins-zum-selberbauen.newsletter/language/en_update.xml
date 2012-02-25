@@ -7,7 +7,25 @@
         <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob.description"><![CDATA[Click here to activate the hourly cronjob for sending newsletters.]]></item>
     </category>
     <category name="wcf.acp.menu">
+        <!-- content.* -->
+        <item name="wcf.acp.menu.link.content.newslettersystem"><![CDATA[Newsletter System]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.description"><![CDATA[]]></item>
+        <!-- /content.* -->
+        <!-- newslettersystem.general.* -->
         <item name="wcf.acp.menu.link.content.newslettersystem.importSubscriber"><![CDATA[Import subscribers]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.importSubscriber.description"><![CDATA[Import subscribers]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.subscriberList"><![CDATA[List subscribers]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.subscriberList.description"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.newsletterList"><![CDATA[List newsletters]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.newsletterList.description"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.writeNewsletter"><![CDATA[Add newsletter]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.writeNewsletter.description"><![CDATA[]]></item>
+        <!-- /newslettersystem.general.* -->
+        
+        <!-- newslettersystem.about.* -->
+        <item name="wcf.acp.menu.link.content.newslettersystem.info"><![CDATA[About Newsletter System]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.info.description"><![CDATA[]]></item>
+        <!-- /newslettersystem.about.* -->
     </category>
     <category name="wcf.acp.newsletter">
         <item name="wcf.acp.newsletter.send"><![CDATA[Send newsletter]]></item>
@@ -18,6 +36,17 @@
         <item name="wcf.acp.newsletter.optin.activationPending"><![CDATA[An activation mail has been sent to the given email address.]]></item>
         <item name="wcf.acp.newsletter.guestSubscription"><![CDATA[Guest subscription]]></item>
         <item name="wcf.acp.newsletter.subscriber.email.error.notUnique"><![CDATA[This email address is already used.]]></item>
+        
+        <!-- newsletter import subscriber -->
+        <item name="wcf.acp.newsletter.importSubscriber"><![CDATA[Import subscribers]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.delimeter"><![CDATA[Delimeter]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.delimeter.description"><![CDATA[Please insert here the delimeter of the csv file.]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source"><![CDATA[Select file source]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.upload"><![CDATA[Upload file from your local computer]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.upload.description"><![CDATA[Enter the csv file to be uploaded from your computer here.]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.download"><![CDATA[Enter the path of the file located on your server]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.download.description"><![CDATA[Enter a direct path to the csv file here. An internet address can be used or alternatively the path to the csv file using the server's file system.]]></item>
+        <!-- /newsletter import subscriber -->
     </category>
     <category name="wcf.user.option">
         <item name="wcf.user.option.newsletter"><![CDATA[Newsletter]]></item>
@@ -26,5 +55,21 @@
         <item name="wcf.user.option.acceptNewsletterAsEmail.error.notChecked"><![CDATA[You have to select at least one delivery option.]]></item>
         <item name="wcf.user.option.acceptNewsletterAsPM"><![CDATA[as PM]]></item>
         <item name="wcf.user.option.acceptNewsletterAsPM.description"><![CDATA[Select this option if you want to receive the newsletter as pm.]]></item>
+    </category>
+    <category name="wcf.acp.group">
+        <item name="wcf.acp.group.option.category.admin.content.newslettersystem"><![CDATA[Newsletter System]]></item>
+        <item name="wcf.acp.group.option.category.admin.content.newslettersystem.description"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeSubscriberOverview"><![CDATA[Can see subscriber overview]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeSubscriberOverview.description"><![CDATA[Members of this usergroup can see the subscriber overview.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditSubscribers"><![CDATA[Can edit subscribers]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditSubscribers.description"><![CDATA[Members of this usergroup can edit subscribers.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeNewsletterOverview"><![CDATA[Can see newsletter overview]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeNewsletterOverview.description"><![CDATA[Members of this usergroup can see the newsletter overview.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canWriteNewsletter"><![CDATA[Can write newsletter]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canWriteNewsletter.description"><![CDATA[Members of this usergroup can write newsletters.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditNewsletter"><![CDATA[Can edit newsletter]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditNewsletter.description"><![CDATA[Members of this usergroup can edit newsletters.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canImportSubscriber"><![CDATA[Can import subscribers]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canImportSubscriber.description"><![CDATA[Members of this usergroup can import subscribers.]]></item>
     </category>
 </language>

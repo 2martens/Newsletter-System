@@ -46,6 +46,12 @@ class ImportSubscriberForm extends ACPForm {
 	 * @var string
 	 */
 	protected $delimeter = '';
+	
+	/**
+	 * Contains the newsletter subscriber database table.
+	 * @var string
+	 */
+	protected $databaseTable = 'newsletter_subscriber';
     
     /**
      * @see Form::readFormParameters()

@@ -90,6 +90,8 @@
         <item name="wcf.acp.group.option.admin.content.newslettersystem.canWriteNewsletter.description"><![CDATA[Mitglieder dieser Benutzergruppe können einen Newsletter schreiben.]]></item>
         <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditNewsletter"><![CDATA[Kann Newsletter bearbeiten]]></item>
         <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditNewsletter.description"><![CDATA[Mitglieder dieser Benutzergruppe können Newslettereinträge bearbeiten.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canImportSubscriber"><![CDATA[Kann Abonnenten importieren]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canImportSubscriber.description"><![CDATA[Mitglieder dieser Benutzergruppe können Abonnenten importieren.]]></item>
     </category>
     <category name="wcf.acp.newsletter">
         <!-- general -->
@@ -164,6 +166,17 @@
         <item name="wcf.acp.newsletter.subscriber.email"><![CDATA[E-Mail]]></item>
         <item name="wcf.acp.newsletter.subscriber.emailShort"><![CDATA[E-Mail]]></item>
         <!-- /newsletter subscriber list page -->
+        
+        <!-- newsletter import subscriber -->
+        <item name="wcf.acp.newsletter.importSubscriber"><![CDATA[Abonnenten importieren]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.delimeter"><![CDATA[Trennzeichen]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.delimeter.description"><![CDATA[Geben Sie hier das Trennzeichen zwischen den einzelnen Einträgen an.]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source"><![CDATA[Quelle auswählen]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.upload"><![CDATA[Datei vom lokalen Computer hochladen]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.upload.description"><![CDATA[Geben Sie eine csv-Datei von Ihrem lokalen Rechner an.]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.download"><![CDATA[Direkten Pfad zur Datei angeben]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.download.description"><![CDATA[Geben Sie den direkten Pfad zur Datei an. Dabei kann es sich um die Internet Adresse der Datei oder alternativ den Pfad zur Datei im Dateisystem handeln.]]></item>
+        <!-- /newsletter import subscriber -->
         
         <!-- newsletter optin process -->
         <item name="wcf.acp.newsletter.optin.subject"><![CDATA[Newsletter-Bestätigung]]></item>

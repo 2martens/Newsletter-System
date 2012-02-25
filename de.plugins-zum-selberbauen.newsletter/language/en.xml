@@ -50,7 +50,7 @@
     </category>
     <category name="wcf.acp.menu">
         <!-- content.* -->
-        <item name="wcf.acp.menu.link.content.newslettersystem"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem"><![CDATA[Newsletter System]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.description"><![CDATA[]]></item>
         <!-- /content.* -->
         
@@ -63,32 +63,35 @@
         
         <!-- newslettersystem.general.* -->
         <item name="wcf.acp.menu.link.content.newslettersystem.importSubscriber"><![CDATA[Import subscriber]]></item>
-        <item name="wcf.acp.menu.link.content.newslettersystem.subscriberList"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.importSubscriber.description"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.subscriberList"><![CDATA[List subscribers]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.subscriberList.description"><![CDATA[]]></item>
-        <item name="wcf.acp.menu.link.content.newslettersystem.newsletterList"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.newsletterList"><![CDATA[List newsletters]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.newsletterList.description"><![CDATA[]]></item>
-        <item name="wcf.acp.menu.link.content.newslettersystem.writeNewsletter"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.writeNewsletter"><![CDATA[Add newsletter]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.writeNewsletter.description"><![CDATA[]]></item>
         <!-- /newslettersystem.general.* -->
         
         <!-- newslettersystem.about.* -->
-        <item name="wcf.acp.menu.link.content.newslettersystem.info"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.info"><![CDATA[About Newsletter System]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.info.description"><![CDATA[]]></item>
         <!-- /newslettersystem.about.* -->
     </category>
     <category name="wcf.acp.group">
-        <item name="wcf.acp.group.option.category.admin.content.newslettersystem"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.category.admin.content.newslettersystem"><![CDATA[Newsletter System]]></item>
         <item name="wcf.acp.group.option.category.admin.content.newslettersystem.description"><![CDATA[]]></item>
-        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeSubscriberOverview"><![CDATA[]]></item>
-        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeSubscriberOverview.description"><![CDATA[]]></item>
-        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditSubscribers"><![CDATA[]]></item>
-        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditSubscribers.description"><![CDATA[]]></item>
-        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeNewsletterOverview"><![CDATA[]]></item>
-        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeNewsletterOverview.description"><![CDATA[]]></item>
-        <item name="wcf.acp.group.option.admin.content.newslettersystem.canWriteNewsletter"><![CDATA[]]></item>
-        <item name="wcf.acp.group.option.admin.content.newslettersystem.canWriteNewsletter.description"><![CDATA[]]></item>
-        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditNewsletter"><![CDATA[]]></item>
-        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditNewsletter.description"><![CDATA[]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeSubscriberOverview"><![CDATA[Can see subscriber overview]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeSubscriberOverview.description"><![CDATA[Members of this usergroup can see the subscriber overview.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditSubscribers"><![CDATA[Can edit subscribers]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditSubscribers.description"><![CDATA[Members of this usergroup can edit subscribers.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeNewsletterOverview"><![CDATA[Can see newsletter overview]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeNewsletterOverview.description"><![CDATA[Members of this usergroup can see the newsletter overview.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canWriteNewsletter"><![CDATA[Can write newsletter]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canWriteNewsletter.description"><![CDATA[Members of this usergroup can write newsletters.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditNewsletter"><![CDATA[Can edit newsletter]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditNewsletter.description"><![CDATA[Members of this usergroup can edit newsletters.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canImportSubscriber"><![CDATA[Can import subscribers]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canImportSubscriber.description"><![CDATA[Members of this usergroup can import subscribers.]]></item>
     </category>
     <category name="wcf.acp.newsletter">
         <!-- general -->
@@ -163,6 +166,17 @@
         <item name="wcf.acp.newsletter.subscriber.email"><![CDATA[E-Mail]]></item>
         <item name="wcf.acp.newsletter.subscriber.emailShort"><![CDATA[E-Mail]]></item>
         <!-- /newsletter subscriber list page -->
+        
+        <!-- newsletter import subscriber -->
+        <item name="wcf.acp.newsletter.importSubscriber"><![CDATA[Import subscribers]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.delimeter"><![CDATA[Delimeter]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.delimeter.description"><![CDATA[Please insert here the delimeter of the csv file.]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source"><![CDATA[Select file source]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.upload"><![CDATA[Upload file from your local computer]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.upload.description"><![CDATA[Enter the csv file to be uploaded from your computer here.]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.download"><![CDATA[Enter the path of the file located on your server]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.download.description"><![CDATA[Enter a direct path to the csv file here. An internet address can be used or alternatively the path to the csv file using the server's file system.]]></item>
+        <!-- /newsletter import subscriber -->
         
         <!-- newsletter optin process -->
         <item name="wcf.acp.newsletter.optin.subject"><![CDATA[Newsletter activation]]></item>

@@ -102,7 +102,7 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
         $date = (string) $this->dateValues['year'].'-'.
             (string) $this->dateValues['month'].'-'.
             (string) $this->dateValues['day'].
-            ($this->hourly ? ' '.(string) $this->dateValues['hour'] : '');
+            (MESSAGE_NEWSLETTERSYSTEM_GENERAL_HOURLYCRONJOB ? ' '.(string) $this->dateValues['hour'] : '');
         //convert date to timestamp
         $unixTime = strtotime($date);
         $newsletter = NewsletterEditor::create($unixTime,
