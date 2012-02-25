@@ -81,7 +81,7 @@ class SendNewsletterAction extends AbstractAction {
         }
         $this->sendNewsletters();
         if ($this->newsletterID) {
-            HeaderUtil::redirect('index.php?page=NewsletterList&success&packageID='.PACKAGE_ID.SID_ARG_2ND);
+            HeaderUtil::redirect('index.php?page=NewsletterList&success&packageID='.PACKAGE_ID.SID_ARG_2ND_NOT_ENCODED);
             exit;
         }
     }
