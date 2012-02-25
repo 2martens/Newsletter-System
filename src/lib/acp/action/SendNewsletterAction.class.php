@@ -114,10 +114,10 @@ class SendNewsletterAction extends AbstractAction {
                 $recipient = null;
                 if ($subscriber['userID']) $recipient = new User($subscriber['userID']);
                 // {$username} stands for the username of the specific subscriber
-                $content = str_replace('{$username}', $subscriber['username'], $content);
+                $tmpContent = str_replace('{$username}', $subscriber['username'], $content);
                 if (is_null($recipient) || $recipient->getUserOption('acceptNewsletterAsEmail')) {
                     $email = $subscriber['email'];
-                    $mail = new Mail($email, $newsletter['subject'], $content,
+                    $mail = new Mail($email, $newsletter['subject'], $tmpContent,
                     MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
                     //$mail->addBCC(MAIL_ADMIN_ADDRESS); would result in x mails
                     $mail->setContentType('text/html');
