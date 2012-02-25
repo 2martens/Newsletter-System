@@ -51,7 +51,7 @@ class NewsletterEditForm extends NewsletterAddForm {
         $this->subject = $newsletter->subject;
         $this->text = $newsletter->text;
         $time = $newsletter->deliveryTime;
-        $dateArray = explode('-', DateUtil::formatDate('%Y-%m-%d'.(MESSAGE_NEWSLETTERSYSTEM_GENEERAL_HOURLYCRONJOB ? ' %H' : ''), $time, false, true));
+        $dateArray = explode('-', DateUtil::formatDate('%Y-%m-%d'.(MESSAGE_NEWSLETTERSYSTEM_GENERAL_HOURLYCRONJOB ? ' %H' : ''), $time, false, true));
         $this->dateValues = array(
             'hour' => $dateArray[3],
             'day' => $dateArray[2],
