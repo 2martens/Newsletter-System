@@ -169,6 +169,7 @@
         
         <!-- newsletter import subscriber -->
         <item name="wcf.acp.newsletter.importSubscriber"><![CDATA[Import subscribers]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.success"><![CDATA[The subscribers have been successfully imported.]]></item>
         <item name="wcf.acp.newsletter.importSubscriber.delimeter"><![CDATA[Delimeter]]></item>
         <item name="wcf.acp.newsletter.importSubscriber.delimeter.description"><![CDATA[Please insert here the delimeter of the csv file.]]></item>
         <item name="wcf.acp.newsletter.importSubscriber.source"><![CDATA[Select file source]]></item>

@@ -21,6 +21,7 @@
         
         <!-- newsletter import subscriber -->
         <item name="wcf.acp.newsletter.importSubscriber"><![CDATA[Abonnenten importieren]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.success"><![CDATA[Die Abonnenten wurden erfolgreich importiert.]]></item>
         <item name="wcf.acp.newsletter.importSubscriber.delimeter"><![CDATA[Trennzeichen]]></item>
         <item name="wcf.acp.newsletter.importSubscriber.delimeter.description"><![CDATA[Gib hier das Trennzeichen zwischen den einzelnen Einträgen an.]]></item>
         <item name="wcf.acp.newsletter.importSubscriber.source"><![CDATA[Quelle auswählen]]></item>

@@ -180,6 +180,8 @@ class ImportSubscriberForm extends ACPForm {
 		$sql .= $insertValues;
 		WCF::getDB()->sendQuery($sql);
 		
+		WCF::getCache()->clear(WCF_DIR.'cache/', 'cache.newsletter-subscriber-'.PACKAGE_ID.'.php');
+		
 		WCF::getTPL()->assign('success', true);
 		$this->saved();
 	}

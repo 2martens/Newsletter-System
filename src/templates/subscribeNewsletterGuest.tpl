@@ -1,4 +1,4 @@
-<form action="index.php?action=NewsletterRegisterGuest" method="get">
+<form action="index.php?action=NewsletterRegisterGuest" method="post">
     <div class="border content">
         <div class="container-1">
             <fieldset>

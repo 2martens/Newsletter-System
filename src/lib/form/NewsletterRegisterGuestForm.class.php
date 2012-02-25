@@ -42,7 +42,7 @@ class NewsletterRegisterGuestForm extends AbstractForm {
     /**
      * @see AbstractPage::$templateName
      */
-    public $templateName = 'registerNewsletter';
+    public $templateName = 'subscribeNewsletterGuest';
     
     /**
      * @see Form::readFormParameters()
