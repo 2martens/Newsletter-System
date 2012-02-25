@@ -1,6 +1,6 @@
 {include file="documentHeader"}
 <head>
-	<title>{lang}{PAGE_TITLE}{/lang}</title>
+	<title>{lang}wcf.acp.newsletter.guestSubscription{/lang} - {lang}{PAGE_TITLE}{/lang}</title>
 	
 	{include file='headInclude' sandbox=false}
 </head>
