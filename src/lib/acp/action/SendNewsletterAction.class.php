@@ -136,7 +136,7 @@ class SendNewsletterAction extends AbstractAction {
                         'enableBBCodes' => $newsletter['enableBBCodes']
                     );
                     $tmpText = str_replace('{$username}', $subscriber['username'], $text);
-                    $pm = PMEditor::create(false, $recipientArray, array(), $newsletter['subject'], $text, $admin->userID, $admin->username, $options);
+                    $pm = PMEditor::create(false, $recipientArray, array(), $newsletter['subject'], $tmpText, $admin->userID, $admin->username, $options);
                 }
             }
         }
