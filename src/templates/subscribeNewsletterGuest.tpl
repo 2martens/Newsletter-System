@@ -10,11 +10,18 @@
 
 <div id="main">
 
+	<div class="mainHeadline">
+		<img src="{icon}emailL.png{/icon}" alt="" />
+		<div class="headlineContainer">
+			<h2>{lang}wcf.acp.newsletter.guestSubscription{/lang}</h2>
+		</div>
+	</div>
+	
 	{if $errorField}
 		<p class="error">{lang}wcf.global.form.error{/lang}</p>
 	{/if}
 
-	<form action="index.php?action=NewsletterRegisterGuest" method="post">
+	<form action="index.php?form=NewsletterRegisterGuest" method="post">
     <div class="border content">
         <div class="container-1">
             <fieldset>

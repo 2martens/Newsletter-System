@@ -55,6 +55,7 @@
     
     <instructions type="update" fromversion="1.1.0 Beta 12">
         <files>files.tar</files>
+        <templates>templates.tar</templates>
     </instructions>
     
     <instructions type="update" fromversion="1.0.3 pl 1">
