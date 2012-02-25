@@ -25,7 +25,7 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
      * Contains the read date values.
      * @var array<int>
      */
-    protected $dateValues = array('hour' => array(), 'day' => 0, 'month' => 0, 'year' => 0);
+    protected $dateValues = array('hour' => 0, 'day' => 0, 'month' => 0, 'year' => 0);
     
     /**
      * Contains the options to be chosen in the form.
