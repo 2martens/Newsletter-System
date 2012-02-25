@@ -163,10 +163,10 @@ class ImportSubscriberForm extends ACPForm {
 		foreach ($emails as $email) {
 		    if (!empty($insertValues)) $insertValues .= ', ';
 		    $data = '(';
-		    $sql = 'SELECT userID, COUNT(userID) AS count
+		    $sqlInner = 'SELECT userID, COUNT(userID) AS count
 		    		FROM wcf'.WCF_N."_user
 		    		WHERE email = '".escapeString($email)."'";
-		    $row = WCF::getDB()->getFirstRow($sql);
+		    $row = WCF::getDB()->getFirstRow($sqlInner);
 		    if ($row['count']) {
 		        $user = new User($row['userID']);
 		        $data .= $row['userID'].", '".escapeString($user->username)."', '";
