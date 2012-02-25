@@ -110,7 +110,7 @@ class NewsletterRegisterGuestForm extends AbstractForm {
         $mail->setContentType('text/html');
         $mail->send();
         
-        $this->executed();
+        $this->saved();
         WCF::getTPL()->assign(array(
         	'message' => WCF::getLanguage()->get('wcf.acp.newsletter.optin.activationPending'),
             'url' => PAGE_URL.'/index.php?page=Index'.SID_ARG_2ND
