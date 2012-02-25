@@ -1,4 +1,20 @@
-<form action="index.php?action=NewsletterRegisterGuest" method="post">
+{include file="documentHeader"}
+<head>
+	<title>{lang}{PAGE_TITLE}{/lang}</title>
+	
+	{include file='headInclude' sandbox=false}
+</head>
+<body{if $templateName|isset} id="tpl{$templateName|ucfirst}"{/if}>
+
+{include file='header' sandbox=false}
+
+<div id="main">
+
+	{if $errorField}
+		<p class="error">{lang}wcf.global.form.error{/lang}</p>
+	{/if}
+
+	<form action="index.php?action=NewsletterRegisterGuest" method="post">
     <div class="border content">
         <div class="container-1">
             <fieldset>
@@ -20,7 +36,7 @@
                 </div>
                 <div class="formElement" id="checkboxDiv">
                     <div class="formFieldLabel">
-                        <label for="checkbox">{lang}wcf.acp.newsletter.subscriber.email{/lang}</label>
+                        <label for="checkbox">{lang}wcf.user.option.acceptNewsletter{/lang}</label>
                     </div>
                     <div class="formField">
                         <input type="checkbox" id="checkbox" name="checkbox" value="{$checkbox}" />
@@ -34,4 +50,9 @@
         <input type="reset" name="reset" accesskey="r" value="{lang}wcf.global.button.reset{/lang}" tabindex="{counter name='tabindex'}" />
         {@SID_INPUT_TAG}
     </div>
-</form>
+	</form>
+</div>
+
+{include file='footer' sandbox=false}
+</body>
+</html>

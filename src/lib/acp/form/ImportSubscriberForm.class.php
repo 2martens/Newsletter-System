@@ -161,6 +161,13 @@ class ImportSubscriberForm extends ACPForm {
 				VALUES ';
 		$insertValues = '';
 		foreach ($emails as $email) {
+		    //no duplicate entries
+		    $checkSql = 'SELECT COUNT(subscriberID) AS count
+		    			FROM wcf'.WCF_N.'_'.$this->databaseTable."
+		    			WHERE email = '".escapeString($email)."'";
+		    $row = WCF::getDB()->getFirstRow($checkSql);
+		    if ($row['count']) continue;
+		    
 		    if (!empty($insertValues)) $insertValues .= ', ';
 		    $data = '(';
 		    $sqlInner = 'SELECT userID, COUNT(userID) AS count

@@ -119,6 +119,9 @@ class NewsletterRegisterGuestForm extends AbstractForm {
         exit;
     }
     
+    /**
+     * @see Page::assignVariables()
+     */
     public function assignVariables() {
         parent::assignVariables();
         WCF::getTPL()->assign(array(
