@@ -81,7 +81,7 @@ class SendNewsletterAction extends AbstractAction {
         }
         $this->sendNewsletters();
         if ($this->newsletterID) {
-            HeaderUtil::redirect('index.php?page=NewsletterList&success'.SID_ARG_2ND);
+            HeaderUtil::redirect('index.php?page=NewsletterList&success&packageID='.PACKAGE_ID.SID_ARG_2ND);
             exit;
         }
     }
@@ -92,7 +92,7 @@ class SendNewsletterAction extends AbstractAction {
     protected function sendNewsletters() {
         $templateName = 'newsletterMail';
         
-        //Sends mail to all subscribers. They're listes as bcc to protect their privacy.
+        //Sends mail to all subscribers.
         foreach ($this->outstandingNewsletters as $id => $newsletter) {
             $text = $newsletter['text'];
             //workaround to make sure that the template is found
@@ -111,10 +111,11 @@ class SendNewsletterAction extends AbstractAction {
             //sending one mail per subscriber
             //is longer, but safer
             foreach ($this->subscribersList as $subscriber) {
-                $recipient = new User($subscriber['userID']);
+                $recipient = null;
+                if ($subscriber['userID']) $recipient = new User($subscriber['userID']);
                 // {$username} stands for the username of the specific subscriber
                 $content = str_replace('{$username}', $subscriber['username'], $content);
-                if ($recipient->getUserOption('acceptNewsletterAsEmail')) {
+                if (is_null($recipient) || $recipient->getUserOption('acceptNewsletterAsEmail')) {
                     $email = $subscriber['email'];
                     $mail = new Mail($email, $newsletter['subject'], $content,
                     MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
@@ -122,7 +123,7 @@ class SendNewsletterAction extends AbstractAction {
                     $mail->setContentType('text/html');
                     $mail->send();
                 }
-                if ($recipient->getUserOption('acceptNewsletterAsPM')) {
+                if (!is_null($recipient) && $recipient->getUserOption('acceptNewsletterAsPM')) {
                     $recipientArray = array();
                     $recipientArray[] = array(
                         'userID' => $subscriber['userID'],
