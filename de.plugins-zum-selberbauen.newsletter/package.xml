@@ -8,7 +8,7 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.1.0 Beta 22</version>
+        <version>1.1.0 Beta 23</version>
         <date>2012-03-05</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
@@ -53,9 +53,8 @@
         <admindefault></admindefault>
     </instructions>
     
-    <instructions type="update" fromversion="1.1.0 Beta 21">
+    <instructions type="update" fromversion="1.1.0 Beta 22">
         <files>files.tar</files>
-        <acptemplates>acptemplates.tar</acptemplates>
     </instructions>
     
     <instructions type="update" fromversion="1.0.3 pl 1">
