@@ -3,6 +3,7 @@
 require_once(WCF_DIR.'lib/action/AbstractAction.class.php');
 require_once(WCF_DIR.'lib/data/mail/Mail.class.php');
 require_once(WCF_DIR.'lib/data/user/User.class.php');
+require_once(WCF_DIR.'lib/data/message/pm/PMEditor.class.php');
 
 /**
  * Sends a specified newsletter.
