@@ -114,8 +114,8 @@ class SendNewsletterAction extends AbstractAction {
                 $recipient = null;
                 if ($subscriber['userID']) $recipient = new User($subscriber['userID']);
                 // {$username} stands for the username of the specific subscriber
-                $tmpContent = str_replace('{$username}', $subscriber['username'], $content);
                 if (is_null($recipient) || $recipient->getUserOption('acceptNewsletterAsEmail')) {
+                    $tmpContent = str_replace('{$username}', $subscriber['username'], $content);
                     $email = $subscriber['email'];
                     $mail = new Mail($email, $newsletter['subject'], $tmpContent,
                     MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
@@ -135,6 +135,7 @@ class SendNewsletterAction extends AbstractAction {
                         'enableHtml' => $newsletter['enableHtml'],
                         'enableBBCodes' => $newsletter['enableBBCodes']
                     );
+                    $tmpText = str_replace('{$username}', $subscriber['username'], $text);
                     $pm = PMEditor::create(false, $recipientArray, array(), $newsletter['subject'], $text, $admin->userID, $admin->username, $options);
                 }
             }
