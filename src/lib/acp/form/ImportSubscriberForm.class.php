@@ -160,6 +160,7 @@ class ImportSubscriberForm extends ACPForm {
 				(userID, username, email)
 				VALUES ';
 		$insertValues = '';
+		$processImport = false;
 		foreach ($emails as $email) {
 		    //no duplicate entries
 		    $checkSql = 'SELECT COUNT(subscriberID) AS count
@@ -183,9 +184,11 @@ class ImportSubscriberForm extends ACPForm {
 		    }
 		    $data .= escapeString($email)."')";
 		    $insertValues .= $data;
+		    $processImport = true;
 		}
 		$sql .= $insertValues;
-		WCF::getDB()->sendQuery($sql);
+		//only do this if there is an email to work with
+		if ($processImport) WCF::getDB()->sendQuery($sql);
 		
 		WCF::getCache()->clear(WCF_DIR.'cache/', 'cache.newsletter-subscriber-'.PACKAGE_ID.'.php');
 		
