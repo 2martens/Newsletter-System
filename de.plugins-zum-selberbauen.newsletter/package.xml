@@ -9,7 +9,7 @@
         <standalone>0</standalone>
         <isunique>1</isunique>
         <version>1.1.0 Beta 24</version>
-        <date>2012-03-05</date>
+        <date>2012-03-03</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
     
@@ -55,7 +55,7 @@
     
     <instructions type="update" fromversion="1.1.0 Beta 23">
         <files>files.tar</files>
-        <useroptions>useroptions_update_beta23-24.xml</useroptions>
+        <useroptions>useroptions_update.xml</useroptions>
     </instructions>
     
     <instructions type="update" fromversion="1.0.3 pl 1">
