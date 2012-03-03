@@ -3,6 +3,7 @@
 require_once(WCF_DIR.'lib/action/AbstractAction.class.php');
 require_once(WCF_DIR.'lib/data/mail/Mail.class.php');
 require_once(WCF_DIR.'lib/data/user/User.class.php');
+require_once(WCF_DIR.'lib/data/message/newsletter/ViewableNewsletter.class.php');
 require_once(WCF_DIR.'lib/data/message/pm/PMEditor.class.php');
 
 /**
@@ -95,6 +96,7 @@ class SendNewsletterAction extends AbstractAction {
         //Sends mail to all subscribers.
         foreach ($this->outstandingNewsletters as $id => $newsletter) {
             $text = $newsletter['text'];
+            
             //workaround to make sure that the template is found
             $templatePaths = array(
                 WCF_DIR.'templates/',
@@ -102,9 +104,11 @@ class SendNewsletterAction extends AbstractAction {
             );
             WCF::getTPL()->setTemplatePaths($templatePaths);
             
+            $newsletterObj = new ViewableNewsletter($id);
+            $emailText = $newsletterObj->getFormattedMessage();
             WCF::getTPL()->assign(array(
                 'subject' => $newsletter['subject'],
-            	'text' => $text
+            	'text' => $emailText
             ));
             $content = WCF::getTPL()->fetch($templateName);
             
@@ -115,6 +119,8 @@ class SendNewsletterAction extends AbstractAction {
                 if ($subscriber['userID']) $recipient = new User($subscriber['userID']);
                 // {$username} stands for the username of the specific subscriber
                 if (is_null($recipient) || $recipient->getUserOption('acceptNewsletterAsEmail')) {
+                    $newsletter = new ViewableNewsletter($row['newsletterID']);
+                    $text = $newsletter->getFormattedMessage();
                     $tmpContent = str_replace('{$username}', $subscriber['username'], $content);
                     $email = $subscriber['email'];
                     $mail = new Mail($email, $newsletter['subject'], $tmpContent,
