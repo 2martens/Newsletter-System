@@ -9,18 +9,6 @@
                 <options>module_newslettersystem</options>
                 <enableoptions>acceptNewsletterAsEmail,acceptNewsletterAsPM</enableoptions>
             </option>
-            <option name="acceptNewsletterAsEmail">
-                <categoryname>settings.communication.mail</categoryname>
-                <optiontype>boolean</optiontype>
-                <defaultvalue>1</defaultvalue>
-                <options>module_newslettersystem</options>
-            </option>
-            <option name="acceptNewsletterAsPM">
-                <categoryname>settings.communication.mail</categoryname>
-                <optiontype>boolean</optiontype>
-                <defaultvalue>0</defaultvalue>
-                <options>module_newslettersystem</options>
-            </option>
         </options>
     </import>
 </data>

@@ -81,6 +81,11 @@ class RegisterNewsletterListener implements EventListener {
         if (!$this->acceptNewsletterAsEmail && !$this->acceptNewsletterAsPM && $this->acceptNewsletter) {
             throw new UserInputException('acceptNewsletterAsEmail', 'notChecked');
         }
+        
+        //if you do not accept newsletter in general it makes no sense to save the following options as true
+        if (!$this->acceptNewsletter) {
+            $this->acceptNewsletterAsEmail = $this->acceptNewsletterAsPM = false;
+        }
     }
     
     /**
