@@ -119,8 +119,6 @@ class SendNewsletterAction extends AbstractAction {
                 if ($subscriber['userID']) $recipient = new User($subscriber['userID']);
                 // {$username} stands for the username of the specific subscriber
                 if (is_null($recipient) || $recipient->getUserOption('acceptNewsletterAsEmail')) {
-                    $newsletter = new ViewableNewsletter($row['newsletterID']);
-                    $text = $newsletter->getFormattedMessage();
                     $tmpContent = str_replace('{$username}', $subscriber['username'], $content);
                     $email = $subscriber['email'];
                     $mail = new Mail($email, $newsletter['subject'], $tmpContent,
