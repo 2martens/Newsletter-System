@@ -42,6 +42,22 @@ class UserProfileEditNewsletterListener implements EventListener {
         
         if ($optionGeneral['optionValue'] && !$existCount['count'] && ($optionEmail['optionValue'] || $optionPM['optionValue'])) $this->sendValidationEmail();
         elseif (!$optionGeneral['optionValue']) $this->deleteSubscriber();
+        elseif ($optionGeneral['optionValue'] && !$optionEmail['optionValue'] && !$optionPM['optionValue'] && $existCount['count']) {
+            $editor = WCF::getUser()->getEditor();
+            $options = array(
+                'acceptNewsletter' => 0
+            );
+            $editor->updateOptions($options);
+            $this->deleteSubscriber();
+        }
+        elseif ($optionGeneral['optionValue'] && !$existCount['count']) {
+            $editor = WCF::getUser()->getEditor();
+            $options = array(
+                'acceptNewsletter' => 0
+            );
+            $editor->updateOptions($options);
+            $this->deleteSubscriber();
+        }
         else return;
         
         WCF::getCache()->clear(WCF_DIR.'cache/', 'cache.newsletter-subscriber-'.PACKAGE_ID.'.php', true);

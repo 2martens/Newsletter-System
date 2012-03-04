@@ -43,7 +43,7 @@ class RegisterNewsletterListener implements EventListener {
      * If true, the user wants to get newsletters via email.
      * @var boolean
      */
-    protected $acceptNewsletterAsEmail = false;
+    protected $acceptNewsletterAsEmail = true;
     
     /**
      * If true, the user wants to get newsletters via pm.
@@ -78,6 +78,7 @@ class RegisterNewsletterListener implements EventListener {
      * @throws UserInputException
      */
     protected function validate($eventObj) {
+        $this->readFormParameters($eventObj);
         if (!$this->acceptNewsletterAsEmail && !$this->acceptNewsletterAsPM && $this->acceptNewsletter) {
             throw new UserInputException('acceptNewsletterAsEmail', 'notChecked');
         }
@@ -94,6 +95,8 @@ class RegisterNewsletterListener implements EventListener {
      * @param object $eventObj
      */
     protected function saved($eventObj) {
+        $this->validate($eventObj);
+        if (!$this->acceptNewsletter) return;
         $editor = $eventObj->user->getEditor();
         $options = array(
             'acceptNewsletter' => intval($this->acceptNewsletter),
@@ -110,6 +113,7 @@ class RegisterNewsletterListener implements EventListener {
      * @param object $eventObj
      */
     protected function assignVariables($eventObj) {
+        $this->readFormParameters($eventObj);
         WCF::getTPL()->assign(array(
         	'acceptNewsletter' => $this->acceptNewsletter,
             'acceptNewsletterAsEmail' => $this->acceptNewsletterAsEmail,

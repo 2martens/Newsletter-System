@@ -2,6 +2,14 @@
 <data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/eventlistener.xsd">
     <import>
         <eventlistener>
+            <eventclassname>UserDeleteAction</eventclassname>
+            <eventname>executed</eventname>
+            <listenerclassfile>lib/system/event/listener/UserDeleteNewsletterListener.class.php</listenerclassfile>
+            <environment>admin</environment>
+            <inherit>0</inherit>
+        </eventlistener>
+    
+        <eventlistener>
             <eventclassname>UserProfileEditForm</eventclassname>
             <eventname>saved</eventname>
             <listenerclassfile>lib/system/event/listener/UserProfileEditNewsletterListener.class.php</listenerclassfile>
@@ -17,20 +25,6 @@
             <inherit>0</inherit>
         </eventlistener>
         
-        <eventlistener>
-            <eventclassname>RegisterForm</eventclassname>
-            <eventname>readFormParameters</eventname>
-            <listenerclassfile>lib/system/event/listener/RegisterNewsletterListener.class.php</listenerclassfile>
-            <environment>user</environment>
-            <inherit>0</inherit>
-        </eventlistener>
-        <eventlistener>
-            <eventclassname>RegisterForm</eventclassname>
-            <eventname>validate</eventname>
-            <listenerclassfile>lib/system/event/listener/RegisterNewsletterListener.class.php</listenerclassfile>
-            <environment>user</environment>
-            <inherit>0</inherit>
-        </eventlistener>
         <eventlistener>
             <eventclassname>RegisterForm</eventclassname>
             <eventname>saved</eventname>

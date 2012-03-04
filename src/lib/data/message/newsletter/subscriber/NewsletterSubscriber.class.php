@@ -15,6 +15,12 @@ require_once(WCF_DIR.'lib/data/DatabaseObject.class.php');
 class NewsletterSubscriber extends DatabaseObject {
     
     /**
+     * Contains the subscriber database table name.
+     * @var string
+     */
+    protected $subscriberTable = 'newsletter_subscriber';
+    
+    /**
      * Creates a new NewsletterSubscriber object.
      *
      * @param int $subscriberID

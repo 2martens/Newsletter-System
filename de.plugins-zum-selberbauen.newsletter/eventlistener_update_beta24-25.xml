@@ -8,28 +8,21 @@
             <environment>admin</environment>
             <inherit>0</inherit>
         </eventlistener>
-        
-        <eventlistener>
-            <eventclassname>AccountManagementForm</eventclassname>
-            <eventname>saved</eventname>
-            <listenerclassfile>lib/system/event/listener/AccountManagementNewsletterListener.class.php</listenerclassfile>
-            <environment>user</environment>
-            <inherit>0</inherit>
-        </eventlistener>
-        
-        <eventlistener>
-            <eventclassname>RegisterForm</eventclassname>
-            <eventname>saved</eventname>
-            <listenerclassfile>lib/system/event/listener/RegisterNewsletterListener.class.php</listenerclassfile>
-            <environment>user</environment>
-            <inherit>0</inherit>
-        </eventlistener>
-        <eventlistener>
-            <eventclassname>RegisterForm</eventclassname>
-            <eventname>assignVariables</eventname>
-            <listenerclassfile>lib/system/event/listener/RegisterNewsletterListener.class.php</listenerclassfile>
-            <environment>user</environment>
-            <inherit>0</inherit>
-        </eventlistener>
     </import>
+    <delete>
+        <eventlistener>
+            <eventclassname>RegisterForm</eventclassname>
+            <eventname>readFormParameters</eventname>
+            <listenerclassfile>lib/system/event/listener/RegisterNewsletterListener.class.php</listenerclassfile>
+            <environment>user</environment>
+            <inherit>0</inherit>
+        </eventlistener>
+        <eventlistener>
+            <eventclassname>RegisterForm</eventclassname>
+            <eventname>validate</eventname>
+            <listenerclassfile>lib/system/event/listener/RegisterNewsletterListener.class.php</listenerclassfile>
+            <environment>user</environment>
+            <inherit>0</inherit>
+        </eventlistener>
+    </delete>
 </data>
