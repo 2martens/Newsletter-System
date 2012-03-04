@@ -61,30 +61,26 @@ class RegisterNewsletterListener implements EventListener {
     
     /**
      * Read form parameters.
-     *
-     * @param object $eventObj
      */
-    protected function readFormParameters($eventObj) {
-        if (isset($_POST['acceptNewsletter'])) $this->acceptNewsletter = (bool) intval($_POST['acceptNewsletter']);
-        if (isset($_POST['acceptNewsletterAsEmail'])) $this->acceptNewsletterAsEmail = (bool) intval($_POST['acceptNewsletterAsEmail']);
-        if (isset($_POST['acceptNewsletterAsPM'])) $this->acceptNewsletterAsPM = (bool) intval($_POST['acceptNewsletterAsPM']);
+    protected function readFormParameters() {
+        if (isset($_POST['acceptNewsletter'])) $this->acceptNewsletter = true;
+        if (isset($_POST['acceptNewsletterAsEmail'])) $this->acceptNewsletterAsEmail = true;
+        elseif (count($_POST) && !isset($_POST['acceptNewsletterAsEmail'])) $this->acceptNewsletterAsEmail = false;
+        
+        if (isset($_POST['acceptNewsletterAsPM'])) $this->acceptNewsletterAsPM = true;
     }
     
     /**
      * Validates the input.
      *
-     * @param object $eventObj
-     *
      * @throws UserInputException
      */
-    protected function validate($eventObj) {
-        $this->readFormParameters($eventObj);
-        if (!$this->acceptNewsletterAsEmail && !$this->acceptNewsletterAsPM && $this->acceptNewsletter) {
-            throw new UserInputException('acceptNewsletterAsEmail', 'notChecked');
-        }
-        
-        //if you do not accept newsletter in general it makes no sense to save the following options as true
-        if (!$this->acceptNewsletter) {
+    protected function validate() {
+        $this->readFormParameters();
+        if ($this->acceptNewsletter && !$this->acceptNewsletterAsEmail && !$this->acceptNewsletterAsPM) {
+			$this->acceptNewsletter = $this->acceptNewsletterAsEmail = $this->acceptNewsletterAsPM = false;
+		}
+		elseif (!$this->acceptNewsletter) {
             $this->acceptNewsletterAsEmail = $this->acceptNewsletterAsPM = false;
         }
     }
@@ -95,8 +91,7 @@ class RegisterNewsletterListener implements EventListener {
      * @param object $eventObj
      */
     protected function saved($eventObj) {
-        $this->validate($eventObj);
-        if (!$this->acceptNewsletter) return;
+        $this->validate();
         $editor = $eventObj->user->getEditor();
         $options = array(
             'acceptNewsletter' => intval($this->acceptNewsletter),
@@ -104,7 +99,9 @@ class RegisterNewsletterListener implements EventListener {
             'acceptNewsletterAsPM' => intval($this->acceptNewsletterAsPM)
         );
         $editor->updateOptions($options);
-        $this->sendValidationEmail($eventObj);
+        if ($this->acceptNewsletter) {
+            $this->sendValidationEmail($eventObj);
+        }
     }
     
     /**
@@ -113,7 +110,7 @@ class RegisterNewsletterListener implements EventListener {
      * @param object $eventObj
      */
     protected function assignVariables($eventObj) {
-        $this->readFormParameters($eventObj);
+        $this->readFormParameters();
         WCF::getTPL()->assign(array(
         	'acceptNewsletter' => $this->acceptNewsletter,
             'acceptNewsletterAsEmail' => $this->acceptNewsletterAsEmail,
