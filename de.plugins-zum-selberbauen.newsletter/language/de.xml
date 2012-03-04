@@ -82,14 +82,16 @@
         <item name="wcf.acp.group.option.category.admin.content.newslettersystem.description"><![CDATA[]]></item>
         <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeSubscriberOverview"><![CDATA[Kann Abonnentenliste sehen]]></item>
         <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeSubscriberOverview.description"><![CDATA[Mitglieder dieser Benutzergruppe können eine Liste der Abonnenten sehen.]]></item>
-        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditSubscribers"><![CDATA[Kann Abonnenten bearbeiten]]></item>
-        <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditSubscribers.description"><![CDATA[Mitglieder dieser Benutzergruppe können Abonnenteneinträge bearbeiten.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canDeleteSubscribers"><![CDATA[Kann Abonnenten löschen]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canDeleteSubscribers.description"><![CDATA[Mitglieder dieser Benutzergruppe können Abonnenten löschen.]]></item>
         <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeNewsletterOverview"><![CDATA[Kann Newsletterliste sehen]]></item>
         <item name="wcf.acp.group.option.admin.content.newslettersystem.canSeeNewsletterOverview.description"><![CDATA[Mitglieder dieser Benutzergruppe können eine Liste der Newsletter sehen.]]></item>
         <item name="wcf.acp.group.option.admin.content.newslettersystem.canWriteNewsletter"><![CDATA[Kann Newsletter schreiben]]></item>
         <item name="wcf.acp.group.option.admin.content.newslettersystem.canWriteNewsletter.description"><![CDATA[Mitglieder dieser Benutzergruppe können einen Newsletter schreiben.]]></item>
         <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditNewsletter"><![CDATA[Kann Newsletter bearbeiten]]></item>
         <item name="wcf.acp.group.option.admin.content.newslettersystem.canEditNewsletter.description"><![CDATA[Mitglieder dieser Benutzergruppe können Newslettereinträge bearbeiten.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSendNewsletter"><![CDATA[Kann Newsletter versenden]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSendNewsletter.description"><![CDATA[Mitglieder dieser Benutzergruppe können Newsletter versenden.]]></item>
         <item name="wcf.acp.group.option.admin.content.newslettersystem.canImportSubscriber"><![CDATA[Kann Abonnenten importieren]]></item>
         <item name="wcf.acp.group.option.admin.content.newslettersystem.canImportSubscriber.description"><![CDATA[Mitglieder dieser Benutzergruppe können Abonnenten importieren.]]></item>
     </category>

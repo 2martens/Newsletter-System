@@ -58,7 +58,9 @@
             {foreach from=$newsletters key=newsletterID item=newsletter}
                 <tr class="{cycle values="container-1,container-2"}">
                     <td class="columnIcon">
-                        <a href="index.php?action=SendNewsletter&amp;id={@$newsletterID}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/cronjobExecuteS.png" alt="" title="{lang}wcf.acp.newsletter.send{/lang}" /></a>
+                        {if $this->user->getPermission('admin.content.newslettersystem.canSendNewsletter')}
+                        	<a href="index.php?action=SendNewsletter&amp;id={@$newsletterID}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/cronjobExecuteS.png" alt="" title="{lang}wcf.acp.newsletter.send{/lang}" /></a>
+                        {/if}
                         {if $this->user->getPermission('admin.content.newslettersystem.canEditNewsletter')}
                             <a href="index.php?form=NewsletterEdit&amp;newsletterID={@$newsletterID}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/editS.png" alt="" title="{lang}wcf.acp.newsletter.edit{/lang}" /></a>
                             <a onclick="return confirm('{lang}wcf.acp.newsletter.delete.sure{/lang}')" href="index.php?action=NewsletterDelete&amp;newsletterID={@$newsletterID}&amp;packageID={@PACKAGE_ID}&amp;t={@SECURITY_TOKEN}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/deleteS.png" alt="" title="{lang}wcf.acp.newsletter.delete{/lang}" /></a>
