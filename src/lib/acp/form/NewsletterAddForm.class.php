@@ -1,6 +1,7 @@
 <?php
 //wcf imports
 require_once(WCF_DIR.'lib/acp/form/WysiwygCacheloaderForm.class.php');
+require_once(WCF_DIR.'lib/data/mail/Mail.class.php');
 require_once(WCF_DIR.'lib/data/message/newsletter/NewsletterEditor.class.php');
 require_once(WCF_DIR.'lib/data/message/newsletter/ViewableNewsletter.class.php');
 require_once(WCF_DIR.'lib/data/user/User.class.php');
@@ -155,7 +156,7 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
         $admin = new User(MESSAGE_NEWSLETTERSYSTEM_GENERAL_ADMIN);
         $tmpContent = str_replace('{$username}', $admin->username, $content);
         $email = $admin->email;
-        $mail = new Mail($email, $newsletter['subject'], $tmpContent,
+        $mail = new Mail($email, $newsletter->subject, $tmpContent,
         MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
         $mail->setContentType('text/html');
         $mail->send();
