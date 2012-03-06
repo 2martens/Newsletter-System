@@ -28,7 +28,7 @@ class NewsletterEditForm extends NewsletterAddForm {
     protected $newsletterID = 0;
 
     /**
-     * @see AbstractPage::readParameters()
+     * @see Page::readParameters()
      */
     public function readParameters() {
         parent::readParameters();
@@ -36,7 +36,7 @@ class NewsletterEditForm extends NewsletterAddForm {
     }
 
     /**
-     * @see NewsletterAddForm::readFormParameters()
+     * @see Form::readFormParameters()
      */
     public function readFormParameters() {
         parent::readFormParameters();
@@ -44,7 +44,7 @@ class NewsletterEditForm extends NewsletterAddForm {
     }
     
     /**
-     * @see NewsletterAddForm::readData()
+     * @see Page::readData()
      */
     public function readData() {
         $newsletter = new NewsletterEditor($this->newsletterID);
@@ -62,7 +62,7 @@ class NewsletterEditForm extends NewsletterAddForm {
     }
 
     /**
-     * @see NewsletterAddForm::save()
+     * @see Form::save()
      */
     public function save() {
         MessageForm::save();
@@ -78,6 +78,8 @@ class NewsletterEditForm extends NewsletterAddForm {
             $unixTime, $this->subject, $this->text, $this->enableSmilies,
             $this->enableHtml, $this->enableBBCodes);
         $this->saved();
+        
+        if ($this->sendTestmail) $this->sendTestmail($newsletter);
         $this->success = true;
         
         //resetting cache
@@ -86,7 +88,7 @@ class NewsletterEditForm extends NewsletterAddForm {
     }
     
     /**
-     * @see NewsletterAddForm::assignVariables()
+     * @see Page::assignVariables()
      */
     public function assignVariables() {
         parent::assignVariables();

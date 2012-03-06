@@ -2,6 +2,8 @@
 //wcf imports
 require_once(WCF_DIR.'lib/acp/form/WysiwygCacheloaderForm.class.php');
 require_once(WCF_DIR.'lib/data/message/newsletter/NewsletterEditor.class.php');
+require_once(WCF_DIR.'lib/data/message/newsletter/ViewableNewsletter.class.php');
+require_once(WCF_DIR.'lib/data/user/User.class.php');
 require_once(WCF_DIR.'lib/system/style/StyleManager.class.php');
 
 /**
@@ -46,7 +48,13 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
     protected $success = false;
     
     /**
-     * @see CaptchaForm::readParameters()
+     * If true, a testmail is sent.
+     * @var boolean
+     */
+    protected $sendTestmail = false;
+    
+    /**
+     * @see Page::readParameters()
      */
     public function readParameters() {
         parent::readParameters();
@@ -55,7 +63,7 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
     }
     
     /**
-     * @see AbstractForm::readFormParameters()
+     * @see Form::readFormParameters()
      */
     public function readFormParameters() {
         parent::readFormParameters();
@@ -63,10 +71,11 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
         if (isset($_POST['day'])) $this->dateValues['day'] = intval($_POST['day']);
         if (isset($_POST['month'])) $this->dateValues['month'] = intval($_POST['month']);
         if (isset($_POST['year'])) $this->dateValues['year'] = intval($_POST['year']);
+        if (isset($_POST['test'])) $this->sendTestmail = true;
     }
     
     /**
-     * @see AbstractForm::readData()
+     * @see Page::readData()
      */
     public function readData() {
         parent::readData();
@@ -86,7 +95,7 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
     }
     
     /**
-     * @see AbstractForm::validate()
+     * @see Form::validate()
      */
     public function validate() {
         parent::validate();
@@ -94,7 +103,7 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
     }
     
     /**
-     * @see AbstractForm::save()
+     * @see Form::save()
      */
     public function save() {
         parent::save();
@@ -108,8 +117,8 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
         $newsletter = NewsletterEditor::create($unixTime,
                     $this->subject, $this->text, $this->enableSmilies,
                     $this->enableHtml, $this->enableBBCodes);
-        
         $this->saved();
+        if ($this->sendTestmail) $this->sendTestmail($newsletter);
         
         //resetting cache
         $cacheName = 'newsletter-'.PACKAGE_ID;
@@ -119,7 +128,47 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
     }
     
     /**
-     * @see AbstractForm::assignVariables()
+     * Sends a testmail of the given newsletter.
+     *
+     * @param Newsletter $newsletter
+     */
+    protected function sendTestmail(Newsletter $newsletter) {
+        $newsletterID = $newsletter->newsletterID;
+        
+        //workaround to make sure that the template is found
+        $templatePaths = array(
+            WCF_DIR.'templates/',
+            WCF_DIR.'acp/templates/'
+        );
+        WCF::getTPL()->setTemplatePaths($templatePaths);
+        
+        $newsletterObj = new ViewableNewsletter($newsletterID);
+        $emailText = $newsletterObj->getFormattedMessage();
+        
+        WCF::getTPL()->assign(array(
+            'subject' => $newsletter->subject,
+        	'text' => $emailText
+        ));
+        $templateName = 'newsletterMail';
+        $content = WCF::getTPL()->fetch($templateName);
+        
+        $admin = new User(MESSAGE_NEWSLETTERSYSTEM_GENERAL_ADMIN);
+        $tmpContent = str_replace('{$username}', $admin->username, $content);
+        $email = $admin->email;
+        $mail = new Mail($email, $newsletter['subject'], $tmpContent,
+        MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
+        $mail->setContentType('text/html');
+        $mail->send();
+        
+        //resetting cache
+        $cacheName = 'newsletter-'.PACKAGE_ID;
+        WCF::getCache()->clear(WCF_DIR.'cache/', 'cache.'.$cacheName.'.php');
+        HeaderUtil::redirect('index.php?form=NewsletterEdit&newsletterID='.$newsletterID.'&packageID='.PACKAGE_ID.SID_ARG_2ND_NOT_ENCODED);
+        exit;
+    }
+    
+    /**
+     * @see Page::assignVariables()
      */
     public function assignVariables() {
         parent::assignVariables();
@@ -137,7 +186,7 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
     }
     
     /**
-     * @see MessageForm::show()
+     * @see Page::show()
      */
     public function show() {
         if (!empty($this->activeMenuItem)) WCFACP::getMenu()->setActiveMenuItem($this->activeMenuItem);
@@ -146,6 +195,7 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
     
     /**
      * Validates the subject.
+     *
      * @throws UserInputException
      */
     protected function validateSubject() {
@@ -157,6 +207,7 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
     
     /**
      * Validates the text.
+     *
      * @throws UserInputException
      */
     protected function validateText() {
@@ -167,6 +218,7 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
     
     /**
      * Validates the date.
+     *
      * @throws UserInputException
      */
     protected function validateDate() {

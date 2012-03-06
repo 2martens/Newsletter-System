@@ -141,6 +141,7 @@
         <item name="wcf.acp.newsletter.message"><![CDATA[Nachricht]]></item>
         <item name="wcf.acp.newsletter.text"><![CDATA[Textinhalt]]></item>
         <item name="wcf.acp.newsletter.text.description"><![CDATA[Gib hier den Inhalt des Newsletters an.]]></item>
+        <item name="wcf.acp.newsletter.test"><![CDATA[Testmail versenden]]></item>
         <!-- /newsletterAdd form -->
         
         <!-- newsletter list page -->

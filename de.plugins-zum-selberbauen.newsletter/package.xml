@@ -8,8 +8,8 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.1.0 Beta 25</version>
-        <date>2012-03-04</date>
+        <version>1.1.0 Beta 26</version>
+        <date>2012-03-06</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
     
@@ -53,9 +53,14 @@
         <admindefault></admindefault>
     </instructions>
     
-    <instructions type="update" fromversion="1.1.0 Beta 24">
+    <instructions type="update" fromversion="1.1.0 Beta 25">
+        <acptemplates>acptemplates.tar</acptemplates>
+        <groupoptions>groupoptions.xml</groupoptions>
         <files>files.tar</files>
-        <eventlistener>eventlistener_update_beta24-25.xml</eventlistener>
+        <!-- languages -->
+        <languages languagecode="de">language/de_update.xml</languages>
+        <languages languagecode="de-informal">language/de-informal_update.xml</languages>
+        <languages languagecode="en">language/en_update.xml</languages>
     </instructions>
     
     <instructions type="update" fromversion="1.0.3 pl 1">

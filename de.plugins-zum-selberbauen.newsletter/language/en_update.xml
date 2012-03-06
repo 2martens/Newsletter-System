@@ -30,6 +30,7 @@
     <category name="wcf.acp.newsletter">
         <item name="wcf.acp.newsletter.send"><![CDATA[Send newsletter]]></item>
         <item name="wcf.acp.newsletter.send.success"><![CDATA[Newsletter has been successfully sended.]]></item>
+        <item name="wcf.acp.newsletter.test"><![CDATA[Send testmail]]></item>
         <item name="wcf.acp.newsletter.date.hour"><![CDATA[Hour:]]></item>
         <item name="wcf.acp.newsletter.subscriber.username.guest"><![CDATA[Guest]]></item>
         <item name="wcf.acp.newsletter.optin.hello"><![CDATA[Hello]]></item>

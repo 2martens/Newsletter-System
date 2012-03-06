@@ -131,6 +131,7 @@
     
     <div class="formSubmit">
         <input type="submit" name="send" accesskey="s" value="{lang}wcf.global.button.submit{/lang}" tabindex="{counter name='tabindex'}" />
+        <input type="submit" name="test" acceskey="t" value="{lang}wcf.acp.newsletter.test{/lang}" tabindex="{counter name='tabindex'}" />
 		<input type="reset" name="reset" accesskey="r" value="{lang}wcf.global.button.reset{/lang}" tabindex="{counter name='tabindex'}" />
 		<input type="hidden" name="packageID" value="{@PACKAGE_ID}" />
         {@SID_INPUT_TAG}
