@@ -54,6 +54,7 @@
     </instructions>
     
     <instructions type="update" fromversion="1.1.0 Beta 26">
+        <!-- does nothing -->
     </instructions>
     
     <instructions type="update" fromversion="1.0.3 pl 1">
