@@ -42,13 +42,13 @@
             {foreach from=$subscribers key=subscriberID item=subscriber}
                 <tr class="{cycle values="container-1,container-2"}">
                     <td class="columnIcon">
-                        {if $this->user->getPermission('admin.content.newslettersystem.canEditSubscribers')}
+                        {if $this->user->getPermission('admin.content.newslettersystem.canDeleteSubscribers')}
                             <a onclick="return confirm('{lang}wcf.acp.newsletter.subscriber.delete.sure{/lang}')" href="index.php?action=NewsletterSubscriberDelete&amp;subscriberID={@$subscriberID}&amp;packageID={@PACKAGE_ID}&amp;t={@SECURITY_TOKEN}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/deleteS.png" alt="" title="{lang}wcf.acp.newsletter.subscriber.delete{/lang}" /></a>
                         {/if}
                         {if $subscriber.additionalButtons|isset}{@$subscriber.additionalButtons}{/if}
                     </td>
                     <td class="columnSubscriberID">{@$subscriberID}</td>
-                    <td class="columnUsername">{$subscriber.username}</td>
+                    <td class="columnUsername">{if $subscriber.userID == 0}{lang}wcf.acp.newsletter.subscriber.username.guest{/lang}{else}<a href="index.php?form=UserEdit&userID={$subscriber.userID}{@SID_ARG_2ND}">{$subscriber.username}</a>{/if}</td>
                     <td class="columnEmail">{$subscriber.email}</td>
                     {if $subscriber.additionalColumns|isset}{@$subscriber.additionalColumns}{/if}
                 </tr>

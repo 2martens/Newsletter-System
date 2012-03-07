@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language languagecode="de" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd">
+    <category name="wcf.acp.option">
+        <item name="wcf.acp.option.message_newslettersystem_general_admin"><![CDATA[Administrator ID]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_admin.description"><![CDATA[Geben Sie hier die UserID des Administrators ein.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob"><![CDATA[Stündlicher Cronjob]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob.description"><![CDATA[Klicken Sie hier, um die stundengenaue Versendung von Newslettern zu aktivieren.]]></item>
+    </category>
+    <category name="wcf.acp.menu">
+        <item name="wcf.acp.menu.link.content.newslettersystem.importSubscriber"><![CDATA[Abonnenten importieren]]></item>
+    </category>
+    <category name="wcf.acp.newsletter">
+        <item name="wcf.acp.newsletter.send"><![CDATA[Newsletter senden]]></item>
+        <item name="wcf.acp.newsletter.send.success"><![CDATA[Newsletter wurde erfolgreich gesendet.]]></item>
+        <item name="wcf.acp.newsletter.test"><![CDATA[Testmail versenden]]></item>
+        <item name="wcf.acp.newsletter.date.hour"><![CDATA[Stunde:]]></item>
+        <item name="wcf.acp.newsletter.subscriber.username.guest"><![CDATA[Gast]]></item>
+        <item name="wcf.acp.newsletter.optin.hello"><![CDATA[Hallo]]></item>
+        <item name="wcf.acp.newsletter.optin.activationPending"><![CDATA[Eine Aktivierungsmail wurde an die von Ihnen angegebene Adresse gesendet.]]></item>
+        <item name="wcf.acp.newsletter.guestSubscription"><![CDATA[Gastabonnement]]></item>
+        <item name="wcf.acp.newsletter.subscriber.email.error.notUnique"><![CDATA[Diese E-Mail-Adresse ist bereits vergeben.]]></item>
+        
+        <!-- newsletter import subscriber -->
+        <item name="wcf.acp.newsletter.importSubscriber"><![CDATA[Abonnenten importieren]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.success"><![CDATA[Die Abonnenten wurden erfolgreich importiert.]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.delimeter"><![CDATA[Trennzeichen]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.delimeter.description"><![CDATA[Geben Sie hier das Trennzeichen zwischen den einzelnen Einträgen an.]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source"><![CDATA[Quelle auswählen]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.upload"><![CDATA[Datei vom lokalen Computer hochladen]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.upload.description"><![CDATA[Geben Sie eine csv-Datei von Ihrem lokalen Rechner an.]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.download"><![CDATA[Direkten Pfad zur Datei angeben]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.source.download.description"><![CDATA[Geben Sie den direkten Pfad zur Datei an. Dabei kann es sich um die Internet Adresse der Datei oder alternativ den Pfad zur Datei im Dateisystem handeln.]]></item>
+        <!-- /newsletter import subscriber -->
+    </category>
+    <category name="wcf.user.option">
+        <item name="wcf.user.option.newsletter"><![CDATA[Newsletter]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsEmail"><![CDATA[als Email]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsEmail.description"><![CDATA[Wählen Sie hier aus, ob Sie den Newsletter als Email empfangen möchten.]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsEmail.error.notChecked"><![CDATA[Sie müssen mindestens eine Versandart auswählen.]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsPM"><![CDATA[als PN]]></item>
+        <item name="wcf.user.option.acceptNewsletterAsPM.description"><![CDATA[Wählen Sie hier aus, ob Sie den Newsletter als PN empfangen möchten.]]></item>
+    </category>
+    <category name="wcf.acp.group">
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canImportSubscriber"><![CDATA[Kann Abonnenten importieren]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canImportSubscriber.description"><![CDATA[Mitglieder dieser Benutzergruppe können Abonnenten importieren.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSendNewsletter"><![CDATA[Kann Newsletter versenden]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canSendNewsletter.description"><![CDATA[Mitglieder dieser Benutzergruppe können Newsletter versenden.]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canDeleteSubscribers"><![CDATA[Kann Abonnenten löschen]]></item>
+        <item name="wcf.acp.group.option.admin.content.newslettersystem.canDeleteSubscribers.description"><![CDATA[Mitglieder dieser Benutzergruppe können Abonnenten löschen.]]></item>
+    </category>
+</language>

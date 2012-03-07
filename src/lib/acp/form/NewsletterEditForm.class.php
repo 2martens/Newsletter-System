@@ -28,7 +28,7 @@ class NewsletterEditForm extends NewsletterAddForm {
     protected $newsletterID = 0;
 
     /**
-     * @see AbstractPage::readParameters()
+     * @see Page::readParameters()
      */
     public function readParameters() {
         parent::readParameters();
@@ -36,7 +36,7 @@ class NewsletterEditForm extends NewsletterAddForm {
     }
 
     /**
-     * @see NewsletterAddForm::readFormParameters()
+     * @see Form::readFormParameters()
      */
     public function readFormParameters() {
         parent::readFormParameters();
@@ -44,31 +44,33 @@ class NewsletterEditForm extends NewsletterAddForm {
     }
     
     /**
-     * @see NewsletterAddForm::readData()
+     * @see Page::readData()
      */
     public function readData() {
         $newsletter = new NewsletterEditor($this->newsletterID);
         $this->subject = $newsletter->subject;
         $this->text = $newsletter->text;
         $time = $newsletter->deliveryTime;
-        $dateArray = explode('-', DateUtil::formatDate('%Y-%m-%d', $time, false, true));
-        $this->dateValues = array(
-            'day' => $dateArray[2],
-            'month' => $dateArray[1],
-            'year' => $dateArray[0]
-        );
+        $dateArray = explode('-', DateUtil::formatDate('%Y-%m-%d'.(MESSAGE_NEWSLETTERSYSTEM_GENERAL_HOURLYCRONJOB ? '-%H' : ''), $time, false, true));
+        $this->dateValues['day'] = $dateArray[2];
+        $this->dateValues['month'] = $dateArray[1];
+        $this->dateValues['year'] = $dateArray[0];
+        if (MESSAGE_NEWSLETTERSYSTEM_GENERAL_HOURLYCRONJOB) {
+            $this->dateValues['hour'] = $dateArray[3];
+        }
         parent::readData();
     }
 
     /**
-     * @see NewsletterAddForm::save()
+     * @see Form::save()
      */
     public function save() {
         MessageForm::save();
         //create date
         $date = (string) $this->dateValues['year'].'-'.
         (string) $this->dateValues['month'].'-'.
-        (string) $this->dateValues['day'];
+        (string) $this->dateValues['day'].
+        (MESSAGE_NEWSLETTERSYSTEM_GENERAL_HOURLYCRONJOB ? ' '.(string) $this->dateValues['hour'].':00:00' : '');
         //convert date to timestamp
         $unixTime = strtotime($date);
         $newsletter = new NewsletterEditor($this->newsletterID);
@@ -76,23 +78,17 @@ class NewsletterEditForm extends NewsletterAddForm {
             $unixTime, $this->subject, $this->text, $this->enableSmilies,
             $this->enableHtml, $this->enableBBCodes);
         $this->saved();
+        
+        if ($this->sendTestmail) $this->sendTestmail($newsletter);
         $this->success = true;
         
         //resetting cache
         $cacheName = 'newsletter-'.PACKAGE_ID;
-        $cacheResource = array(
-			'cache' => $cacheName,
-			'file' => WCF_DIR.'cache/cache.'.$cacheName.'.php',
-			'className' => 'CacheBuilderNewsletter',
-			'classFile' => WCF_DIR.'lib/system/cache/CacheBuilderNewsletter.class.php',
-			'minLifetime' => 0,
-			'maxLifetime' => 0
-		);
-        WCF::getCache()->rebuild($cacheResource);
+        WCF::getCache()->clear(WCF_DIR.'cache/', 'cache.'.$cacheName.'.php');
     }
     
     /**
-     * @see NewsletterAddForm::assignVariables()
+     * @see Page::assignVariables()
      */
     public function assignVariables() {
         parent::assignVariables();

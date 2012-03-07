@@ -83,6 +83,16 @@
 										{/foreach}
 									</select>
 								</div>
+								{if MESSAGE_NEWSLETTERSYSTEM_GENERAL_HOURLYCRONJOB}
+								<div class="floatedElement">
+									<select name="hour">
+										<option value="">{lang}wcf.acp.newsletter.date.hour{/lang}</option>
+										{foreach from=$dateOptions.hour item=hourNr}
+											<option value="{@$hourNr}"{if $hour == $hourNr} selected="selected"{/if}>{@$hourNr}</option>
+										{/foreach}
+									</select>
+								</div>
+								{/if}
 								{if $errorField == 'date'}
 									<p class="innerError">
 										{if $errorType == 'notValidated'}{lang}wcf.acp.newsletter.date.error.notValidated{/lang}{/if}
@@ -121,6 +131,7 @@
     
     <div class="formSubmit">
         <input type="submit" name="send" accesskey="s" value="{lang}wcf.global.button.submit{/lang}" tabindex="{counter name='tabindex'}" />
+        <input type="submit" name="test" acceskey="t" value="{lang}wcf.acp.newsletter.test{/lang}" tabindex="{counter name='tabindex'}" />
 		<input type="reset" name="reset" accesskey="r" value="{lang}wcf.global.button.reset{/lang}" tabindex="{counter name='tabindex'}" />
 		<input type="hidden" name="packageID" value="{@PACKAGE_ID}" />
         {@SID_INPUT_TAG}

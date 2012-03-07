@@ -1,5 +1,8 @@
-ALTER TABLE `wcf1_newsletter`
-    ADD COLUMN `enableSmilies` TINYINT(1) NOT NULL DEFAULT 1 AFTER `deliveryTime`,
-    ADD COLUMN `enableHtml` TINYINT(1) NOT NULL DEFAULT 0 AFTER `enableSmilies`,
-    ADD COLUMN `enableBBCodes` TINYINT(1) NOT NULL DEFAULT 1 AFTER `enableHtml`;
-    
+DROP TABLE IF EXISTS wcf1_newsletter_guest_activation;
+CREATE TABLE wcf1_newsletter_guest_activation (
+    subscriberID INT(10) NOT NULL PRIMARY KEY,
+    token VARCHAR(255) NOT NULL DEFAULT '',
+    activated TINYINT(1) NOT NULL DEFAULT 0
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+ALTER TABLE wcf1_newsletter_subscriber DROP INDEX userID;

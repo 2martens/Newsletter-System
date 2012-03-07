@@ -8,8 +8,8 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.0.3 pl 1</version>
-        <date>2012-02-15</date>
+        <version>1.1.0</version>
+        <date>2012-03-07</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
     
@@ -46,18 +46,34 @@
         <sql>install.sql</sql>
         
         <!-- languages -->
-        <languages languagecode="de">de.xml</languages>
-        <languages languagecode="de-informal">de-informal.xml</languages>
-        <languages languagecode="en">en.xml</languages>
+        <languages languagecode="de">language/de.xml</languages>
+        <languages languagecode="de-informal">language/de-informal.xml</languages>
+        <languages languagecode="en">language/en.xml</languages>
         
         <admindefault></admindefault>
     </instructions>
     
-    <instructions type="update" fromversion="1.0.3">
-        <files>files.tar</files>
+    <instructions type="update" fromversion="1.1.0 Beta 26">
+        <!-- does nothing -->
     </instructions>
     
-    <instructions type="update" fromversion="1.0.2">
+    <instructions type="update" fromversion="1.0.3 pl 1">
         <files>files.tar</files>
+
+        <templates>templates.tar</templates>
+        <acptemplates>acptemplates.tar</acptemplates>
+        <sql>update.sql</sql>
+        
+        <cronjobs>cronjobs_update.xml</cronjobs>
+        <eventlistener>eventlistener_update.xml</eventlistener>
+        <useroptions>useroptions_update.xml</useroptions>
+        <options>options_update.xml</options>
+        <acpmenu>acpmenu.xml</acpmenu>
+        <groupoptions>groupoptions.xml</groupoptions>
+        
+        <!-- languages -->
+        <languages languagecode="de">language/de_update.xml</languages>
+        <languages languagecode="de-informal">language/de-informal_update.xml</languages>
+        <languages languagecode="en">language/en_update.xml</languages>
     </instructions>
 </package>
