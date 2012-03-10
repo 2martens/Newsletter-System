@@ -2,7 +2,18 @@
 //wcf imports
 require_once(WCF_DIR.'lib/action/AbstractSecureAction.class.php');
 require_once(WCF_DIR.'lib/data/message/newsletter/subscriber/NewsletterSubscriber.class.php');
+require_once(WCF_DIR.'lib/data/user/UserEditor.class.php');
 
+/**
+ * Deletes a subscriber.
+ *
+ * @author Jim Martens
+ * @copyright 2012 Jim Martens
+ * @license http://opensource.org/licenses/lgpl-license.php GNU Lesser General Public License
+ * @package de.plugins-zum-selberbauen.newsletter
+ * @subpackage acp.action
+ * @category Community Framework
+ */
 class NewsletterSubscriberDeleteAction extends AbstractSecureAction {
     /**
      * Contains the id of the specific subscriber.
@@ -41,10 +52,6 @@ class NewsletterSubscriberDeleteAction extends AbstractSecureAction {
      */
     public function execute() {
         parent::execute();
-        $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->subscriberTable.'
-        		WHERE subscriberID = '.$this->subscriberID;
-        WCF::getDB()->sendQuery($sql);
-        
         $subscriber = new NewsletterSubscriber($this->subscriberID);
         
         //deletes user subscribers
@@ -52,8 +59,19 @@ class NewsletterSubscriberDeleteAction extends AbstractSecureAction {
         		WHERE userID = '.intval($subscriber->userID);
         WCF::getDB()->sendQuery($sql);
         
+        //resets user setting
+        $user = new UserEditor($subscriber->userID);
+        $options = array(
+            'acceptNewsletter' => 0
+        );
+        $user->updateOptions($options);
+        
         //deletes guest subscribers
         $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->guestActivationTable.'
+        		WHERE subscriberID = '.$this->subscriberID;
+        WCF::getDB()->sendQuery($sql);
+        
+        $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->subscriberTable.'
         		WHERE subscriberID = '.$this->subscriberID;
         WCF::getDB()->sendQuery($sql);
         
