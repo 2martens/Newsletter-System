@@ -48,6 +48,9 @@
     onloadEvents.push(function() {
     	document.getElementById('acceptNewsletterAsEmail').disabled = true;
     	document.getElementById('acceptNewsletterAsPM').disabled = true;
+    	if (document.getElementById('acceptNewsletter').checked == false && document.getElementById('acceptNewsletterAsPM').checked == false) {
+    		document.getElementById('acceptNewsletterAsEmail').checked = true;
+    	}
     });
     function checkOptions(object) {
     	if (object.checked == true) {
