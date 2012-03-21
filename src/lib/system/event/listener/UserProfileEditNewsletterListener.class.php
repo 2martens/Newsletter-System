@@ -40,9 +40,13 @@ class UserProfileEditNewsletterListener implements EventListener {
         		WHERE userID = '.intval(WCF::getUser()->userID);
         $existCount = WCF::getDB()->getFirstRow($sql);
         
-        if ($optionGeneral['optionValue'] && !$existCount['count'] && ($optionEmail['optionValue'] || $optionPM['optionValue'])) $this->sendValidationEmail();
-        elseif (!$optionGeneral['optionValue']) $this->deleteSubscriber();
-        elseif ($optionGeneral['optionValue'] && !$optionEmail['optionValue'] && !$optionPM['optionValue'] && $existCount['count']) {
+        $sql = 'SELECT COUNT(userID) AS count
+        		FROM wcf'.WCF_N.'_'.$this->activationTable.'
+        		WHERE userID = '.intval(WCF::getUser()->userID);
+        $activationCount = WCF::getDB()->getFirstRow($sql);
+        
+        if ($optionGeneral['optionValue'] && !$existCount['count'] && ($optionEmail['optionValue'] || $optionPM['optionValue']) && !$activationCount['count']) $this->sendValidationEmail();
+        elseif (!$optionGeneral['optionValue']) {
             $editor = WCF::getUser()->getEditor();
             $options = array(
                 'acceptNewsletter' => 0
@@ -50,7 +54,8 @@ class UserProfileEditNewsletterListener implements EventListener {
             $editor->updateOptions($options);
             $this->deleteSubscriber();
         }
-        elseif ($optionGeneral['optionValue'] && !$existCount['count']) {
+        elseif ($optionGeneral['optionValue'] && $existCount['count'] && !$optionEmail['optionValue'] && !$optionPM['optionValue']) {
+            echo 'three';
             $editor = WCF::getUser()->getEditor();
             $options = array(
                 'acceptNewsletter' => 0
@@ -58,7 +63,16 @@ class UserProfileEditNewsletterListener implements EventListener {
             $editor->updateOptions($options);
             $this->deleteSubscriber();
         }
-        else return;
+        elseif ($optionGeneral['optionValue'] && !$existCount['count'] && !$optionEmail['optionValue'] && !$optionPM['optionValue']) {
+            echo 'four';
+            $editor = WCF::getUser()->getEditor();
+            $options = array(
+                'acceptNewsletter' => 0
+            );
+            $editor->updateOptions($options);
+            $this->deleteSubscriber();
+        }
+        else {};
         
         WCF::getCache()->clear(WCF_DIR.'cache/', 'cache.newsletter-subscriber-'.PACKAGE_ID.'.php', true);
     }
@@ -67,6 +81,7 @@ class UserProfileEditNewsletterListener implements EventListener {
      * Sends a validation email.
      */
     protected function sendValidationEmail() {
+        echo 'one';
         //save activation token into database
         $token = StringUtil::getRandomID();
         $sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->activationTable.'
@@ -94,7 +109,7 @@ class UserProfileEditNewsletterListener implements EventListener {
     }
     
     /**
-     * Deletes this user from the subscriber table.
+     * Deletes this user from the subscriber and activation table.
      */
     protected function deleteSubscriber() {
         $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->subscriberTable.'
