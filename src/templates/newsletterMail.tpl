@@ -13,7 +13,7 @@
 	<p>{@$text}</p>
 	<hr noshade size="1" />
 	<span>{@MESSAGE_NEWSLETTERSYSTEM_GENERAL_LEGALNOTICE}</span><br /><br />
-	<span><a href="{@PAGE_URL}/index.php?action=NewsletterUnsubscribe&id={$subscriberID}&t={$token}">{lang}wcf.acp.newsletter.unsubscribe{/lang}</a></span>
+	<span><a href="{@PAGE_URL}/index.php?action=NewsletterUnsubscribe&id={subscriberID}&t={token}">{lang}wcf.acp.newsletter.unsubscribe{/lang}</a></span>
 	{if 'MAIL_SIGNATURE'|defined && MAIL_SIGNATURE != ''}<hr noshade size="1" />{/if}
 </div>
 </body>
