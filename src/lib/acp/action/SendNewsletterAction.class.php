@@ -126,8 +126,8 @@ class SendNewsletterAction extends AbstractAction {
                 // {$username} stands for the username of the specific subscriber
                 if (is_null($recipient) || $recipient->getUserOption('acceptNewsletterAsEmail')) {
                     $tmpContent = str_replace('{$username}', $subscriber['username'], $content);
-                    $tmpContent = str_replace('{subscriberID}', $subscriber['subscriberID'], $tmpContent);
-                    $tmpContent = str_replace('{token}', $this->unsubscribeTokens[$subscriber['subscriberID']]['token'], $tmpContent);
+                    $tmpContent = str_replace('subscriberID', $subscriber['subscriberID'], $tmpContent);
+                    $tmpContent = str_replace('token', $this->unsubscribeTokens[$subscriber['subscriberID']]['token'], $tmpContent);
                     $email = $subscriber['email'];
                     $mail = new Mail($email, $newsletter['subject'], $tmpContent,
                     MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
