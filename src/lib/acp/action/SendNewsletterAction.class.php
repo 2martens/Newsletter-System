@@ -26,7 +26,7 @@ class SendNewsletterAction extends AbstractAction {
     
     /**
      * Contains a list of all newsletters.
-     * @var string
+     * @var array
      */
     protected $newsletterList = array();
     
@@ -41,6 +41,12 @@ class SendNewsletterAction extends AbstractAction {
      * @var array
      */
     protected $subscribersList = array();
+    
+    /**
+     * Contains a list of all unsubscribe tokens.
+     * @var array
+     */
+    protected $unsubscribeTokens = array();
     
     /**
      * If true, the action was called by the hourly cronjob.
@@ -120,6 +126,8 @@ class SendNewsletterAction extends AbstractAction {
                 // {$username} stands for the username of the specific subscriber
                 if (is_null($recipient) || $recipient->getUserOption('acceptNewsletterAsEmail')) {
                     $tmpContent = str_replace('{$username}', $subscriber['username'], $content);
+                    $tmpContent = str_replace('{$subscriberID}', $subscriber['subscriberID'], $tmpContent);
+                    $tmpContent = str_replace('{$token}', $this->unsubscribeTokens[$subscriber['subscriberID']]['token'], $tmpContent);
                     $email = $subscriber['email'];
                     $mail = new Mail($email, $newsletter['subject'], $tmpContent,
                     MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
@@ -168,6 +176,7 @@ class SendNewsletterAction extends AbstractAction {
         
         //get options
         $this->subscribersList = WCF::getCache()->get($cacheName, 'subscribers');
+        $this->unsubscribeTokens = WCF::getCache()->get($cacheName, 'unsubscribeTokens');
     }
     
     /**

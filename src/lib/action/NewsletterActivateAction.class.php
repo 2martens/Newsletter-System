@@ -38,6 +38,12 @@ class NewsletterActivateAction extends AbstractAction {
      * @var string
      */
     protected $subscriberTable = 'newsletter_subscriber';
+    
+    /**
+     * Contains the unsubscription database table.
+     * @var string
+     */
+    protected $unsubscriptionTable = 'newsletter_unsubscription';
        
     /**
      * @see Action::readParameters()
@@ -72,12 +78,23 @@ class NewsletterActivateAction extends AbstractAction {
         
         $user = new User($this->userID);
         
+        //create a new subscriber
         $sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->subscriberTable.'
         		(userID, username, email)
         			VALUES
         		('.$this->userID.", '".
                 escapeString($user->username)."', '".
                 escapeString($user->email)."')";
+        WCF::getDB()->sendQuery($sql);
+        
+        $subscriberID = WCF::getDB()->getInsertID();
+        
+        //inserts an unsubscribe token for the subscriber
+        $sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->unsubscriptionTable.'
+        			(subscriberID, token)
+        		VALUES
+        			('.intval($subscriberID).", '".
+                        escapeString(StringUtil::getRandomID())."')";
         WCF::getDB()->sendQuery($sql);
         
         //clears cache

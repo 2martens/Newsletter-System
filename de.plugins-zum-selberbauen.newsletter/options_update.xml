@@ -3,22 +3,13 @@
     <import>
         <options>
             <!-- newsletter options -->
-            <option name="message_newslettersystem_general_admin">
+            <option name="message_newslettersystem_general_legalNotice">
                 <categoryname>message.newslettersystem.general</categoryname>
-                <optiontype>integer</optiontype>
-                <defaultvalue>1</defaultvalue>
-                <showorder>3</showorder>
-            </option>
-            <option name="message_newslettersystem_general_hourlyCronjob">
-                <categoryname>message.newslettersystem.general</categoryname>
-                <optiontype>boolean</optiontype>
-                <defaultvalue>0</defaultvalue>
-                <showorder>4</showorder>
+                <optiontype>text</optiontype>
+                <defaultvalue><![CDATA[wcf.acp.option.message_newslettersystem_general_legalNotice.default]]></defaultvalue>
+                <showorder>5</showorder>
             </option>
             <!-- /newsletter options -->
         </options>
     </import>
-    <delete>
-        <option name="message_newslettersystem_general_login"></option>
-    </delete>
 </data>

@@ -28,6 +28,12 @@ class UserProfileEditNewsletterListener implements EventListener {
     protected $activationTable = 'newsletter_activation';
     
     /**
+     * Contains the unsubscription database table.
+     * @var string
+     */
+    protected $unsubscriptionTable = 'newsletter_unsubscription';
+    
+    /**
      * @see EventListener::execute()
      */
     public function execute($eventObj, $className, $eventName) {
@@ -109,6 +115,15 @@ class UserProfileEditNewsletterListener implements EventListener {
      * Deletes this user from the subscriber and activation table.
      */
     protected function deleteSubscriber() {
+        $sql = 'SELECT subscriberID
+        		FROM wcf'.WCF_N.'_'.$this->subscriberTable.'
+        		WHERE userID = '.intval(WCF::getUser()->userID);
+        $row = WCF::getDB()->getFirstRow($sql);
+        
+        $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->unsubscriptionTable.'
+        		WHERE subscriberID = '.intval($row['subscriberID']);
+        WCF::getDB()->sendQuery($sql);
+        
         $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->subscriberTable.'
         		WHERE userID = '.intval(WCF::getUser()->userID);
         WCF::getDB()->sendQuery($sql);
