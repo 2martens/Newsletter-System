@@ -10,5 +10,8 @@
         <!-- unsubscription -->
         <item name="wcf.acp.newsletter.unsubscription.success"><![CDATA[Das Newsletterabonnement wurde erfolgreich gekündigt.]]></item>
         <!-- /unsubscription -->
+        <!-- general -->
+        <item name="wcf.acp.newsletter.optin.guest.checkbox.error.notAgreed"><![CDATA[Sie müssen dem Versand eines Newsletters zustimmen.]]></item>
+        <!-- /general -->
     </category>
 </language>
