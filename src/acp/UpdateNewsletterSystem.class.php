@@ -10,6 +10,11 @@
  * @category Community Framework
  */
 class UpdateNewsletterSystem {
+    /**
+     * Contains the unsubscription database table.
+     * @var string
+     */
+    protected $unsubscriptionTable = 'newsletter_unsubscription';
     
     /**
      * Creates a new UpdateNewsletterSystem object.
