@@ -117,10 +117,15 @@ class SendNewsletterAction extends AbstractAction {
             	'text' => $emailText
             ));
             $content = WCF::getTPL()->fetch($templateName);
-            
+            $i = 0;
+            usleep(1);
             //sending one mail per subscriber
             //is longer, but safer
             foreach ($this->subscribersList as $subscriber) {
+                //sleep 2 seconds after 10 sent mails
+                if (fmod($i, 10) == 0) {
+                    usleep(2000000);
+                }
                 $recipient = null;
                 if ($subscriber['userID']) $recipient = new User($subscriber['userID']);
                 // {$username} stands for the username of the specific subscriber
@@ -150,6 +155,7 @@ class SendNewsletterAction extends AbstractAction {
                     $tmpText = str_replace('{$username}', $subscriber['username'], $text);
                     $pm = PMEditor::create(false, $recipientArray, array(), $newsletter['subject'], $tmpText, $admin->userID, $admin->username, $options);
                 }
+                $i++;
             }
         }
     }
