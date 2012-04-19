@@ -43,10 +43,10 @@ class UpdateNewsletterSystem {
             }
         }
         
-        $sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->unsubscriptionTable.'
+        $sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->unsubscriptionTable."
         			(subscriberID, token)
         		VALUES
-        			(a, b)';
+        			(a, 'b')";
         foreach ($subscribersList as $subscriberID => $subscriber) {
             //inserts an unsubscribe token for the subscriber
             $tmpSql = str_replace('a', $subscriberID, $sql);
