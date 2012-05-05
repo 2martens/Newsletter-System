@@ -8,8 +8,8 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.2.0 RC 1</version>
-        <date>2012-05-01</date>
+        <version>1.2.0</version>
+        <date>2012-05-05</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
     
@@ -24,6 +24,10 @@
         <requiredpackage minversion="1.0.0" file="requirements/de.plugins-zum-selberbauen.admingroupoptions.tar.gz">de.plugins-zum-selberbauen.admingroupoptions</requiredpackage>
         <requiredpackage minversion="1.1.0 pl 3" file="requirements/com.woltlab.community.acp.wysiwyg.tar.gz">com.woltlab.community.acp.wysiwyg</requiredpackage>
     </requiredpackages>
+    
+    <optionalpackages>
+        <optionalpackage file="optionals/de.plugins-zum-selberbauen.newsletterBox.tar.gz">de.plugins-zum-selberbauen.newsletterBox</optionalpackage>
+    </optionalpackages>
     
     <excludedpackages>
         <excludedpackage>de.byte.newsletter</excludedpackage>
@@ -71,4 +75,5 @@
     <instructions type="update" fromversion="1.2.0 Beta 4*">
         
     </instructions>
+    <instructions type="update" fromversion="1.2.0 RC 1"></instructions>
 </package>
