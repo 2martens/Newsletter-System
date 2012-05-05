@@ -20,6 +20,9 @@
         <item name="wcf.acp.option.message_newslettersystem_general_admin.description"><![CDATA[Please insert here the user ID of the administrator.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob"><![CDATA[Hourly Cronjob]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob.description"><![CDATA[Click here to activate the hourly cronjob for sending newsletters.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice"><![CDATA[Legal Notice]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.description"><![CDATA[Please insert here the legal notice.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.default"><![CDATA[Example: Max Mustermann, Examplestreet 1, D-11111 Examplecity]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber"><![CDATA[Sort order]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber.description"><![CDATA[Please insert here the default sort order for the subscribers list.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber"><![CDATA[Sort field]]></item>
@@ -98,10 +101,15 @@
     <category name="wcf.acp.newsletter">
         <!-- general -->
         <item name="wcf.acp.newsletter.cronjob.description"><![CDATA[Sends all outstanding newsletter for the current day.]]></item>
-        <item name="wcf.acp.newsletter.unsubscribe"><![CDATA[Unsubscribe from the newsletter.]]></item>
         <item name="wcf.acp.newsletter.guestSubscription"><![CDATA[Guest subscription]]></item>
         <item name="wcf.acp.newsletter.subscriber.email.error.notUnique"><![CDATA[This email address is already used.]]></item>
+        <item name="wcf.acp.newsletter.optin.guest.checkbox.error.notAgreed"><![CDATA[You have to accept newsletter subscription.]]></item>
         <!-- /general -->
+        
+        <!-- unsubscription -->
+        <item name="wcf.acp.newsletter.unsubscribe"><![CDATA[Unsubscribe from the newsletter.]]></item>
+        <item name="wcf.acp.newsletter.unsubscription.success"><![CDATA[The newsletter subscription has been successfully removed.]]></item>
+        <!-- /unsubscription -->
         
         <!-- about page -->
         <item name="wcf.acp.newsletter.about"><![CDATA[About Newsletter-System]]></item>

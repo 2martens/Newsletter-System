@@ -49,7 +49,6 @@ class NewsletterEditor extends Newsletter {
     /**
      * Creates a new newsletter with the given parameters.
      *
-     * @param int $userID
      * @param int $deliveryTime (timestamp)
      * @param string $subject
      * @param string $text

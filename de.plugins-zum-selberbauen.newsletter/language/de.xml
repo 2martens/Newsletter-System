@@ -21,6 +21,9 @@
         <item name="wcf.acp.option.message_newslettersystem_general_admin.description"><![CDATA[Geben Sie hier die UserID des Administrators ein.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob"><![CDATA[Stündlicher Cronjob]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob.description"><![CDATA[Klicken Sie hier, um die stundengenaue Versendung von Newslettern zu aktivieren.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice"><![CDATA[Impressumsangabe]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.description"><![CDATA[Geben Sie hier die einzeilige Impressumsangabe ein.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.default"><![CDATA[Max Mustermann, Musterstraße 1, D-11111 Musterhausen]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber"><![CDATA[Sortierreihenfolge]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber.description"><![CDATA[Geben Sie hier die Sortierreihenfolge für die Abonnentenliste an.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber"><![CDATA[Sortierfeld]]></item>
@@ -98,10 +101,15 @@
     <category name="wcf.acp.newsletter">
         <!-- general -->
         <item name="wcf.acp.newsletter.cronjob.description"><![CDATA[Versendet alle Newsletter, die für den betreffenden Tag anstehen.]]></item>
-        <item name="wcf.acp.newsletter.unsubscribe"><![CDATA[Abonnement des Newsletters kündigen]]></item>
         <item name="wcf.acp.newsletter.guestSubscription"><![CDATA[Gastabonnement]]></item>
         <item name="wcf.acp.newsletter.subscriber.email.error.notUnique"><![CDATA[Diese E-Mail-Adresse ist bereits vergeben.]]></item>
+        <item name="wcf.acp.newsletter.optin.guest.checkbox.error.notAgreed"><![CDATA[Sie müssen dem Versand eines Newsletters zustimmen.]]></item>
         <!-- /general -->
+        
+        <!-- unsubscription -->
+        <item name="wcf.acp.newsletter.unsubscribe"><![CDATA[Abonnement des Newsletters kündigen]]></item>
+        <item name="wcf.acp.newsletter.unsubscription.success"><![CDATA[Das Newsletterabonnement wurde erfolgreich gekündigt.]]></item>
+        <!-- /unsubscription -->
         
         <!-- about page -->
         <item name="wcf.acp.newsletter.about"><![CDATA[Über Newsletter-System]]></item>

@@ -15,7 +15,7 @@ require_once(WCF_DIR.'lib/action/AbstractAction.class.php');
 class NewsletterGuestActivateAction extends AbstractAction {
     
     /**
-     * Contains the activation database table.
+     * Contains the guest activation database table.
      * @var string
      */
     protected $activationTable = 'newsletter_guest_activation';
@@ -25,6 +25,12 @@ class NewsletterGuestActivateAction extends AbstractAction {
      * @var string
      */
     protected $subscriberTable = 'newsletter_subscriber';
+    
+    /**
+     * Contains the unsubscription database table.
+     * @var string
+     */
+    protected $unsubscriptionTable = 'newsletter_unsubscription';
     
     /**
      * Contains the subscriber id.
@@ -56,7 +62,8 @@ class NewsletterGuestActivateAction extends AbstractAction {
         //validates the given token to avoid misusing
         $sql = 'SELECT COUNT(token) AS count
         		FROM wcf'.WCF_N.'_'.$this->activationTable.'
-        		WHERE subscriberID = '.$this->subscriberID;
+        		WHERE subscriberID = '.$this->subscriberID."
+        			AND token = '".escapeString($this->token)."'";
         $row = WCF::getDB()->getFirstRow($sql);
         if ($row['count'] != 1) {
             $message = WCF::getLanguage()->get('wcf.acp.newsletter.optin.invalidToken');
@@ -69,6 +76,13 @@ class NewsletterGuestActivateAction extends AbstractAction {
         		WHERE subscriberID = ".$this->subscriberID;
         WCF::getDB()->sendQuery($sql);
         
+        //adds an unsubscribe token
+        $sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->unsubscriptionTable.'
+        			(subscriberID, token)
+        		VALUES
+        			('.intval($this->subscriberID).", '".
+                    escapeString(StringUtil::getRandomID())."')";
+        WCF::getDB()->sendQuery($sql);
         
         $this->executed();
         WCF::getTPL()->assign(array(

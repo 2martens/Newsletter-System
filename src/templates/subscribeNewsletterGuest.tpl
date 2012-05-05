@@ -41,12 +41,17 @@
                         {/if}
                     </div>
                 </div>
-                <div class="formElement" id="checkboxDiv">
+                <div class="formElement{if $errorField == 'checkbox'} formError{/if}" id="checkboxDiv">
                     <div class="formFieldLabel">
                         <label for="checkbox">{lang}wcf.user.option.acceptNewsletter{/lang}</label>
                     </div>
                     <div class="formField">
-                        <input type="checkbox" id="checkbox" name="checkbox" value="{$checkbox}" />
+                        <input type="checkbox" id="checkbox" name="checkbox" value="1"{if $checkbox} checked="checked"{/if} />
+                    	{if $errorField == 'checkbox'}
+                    		<p class="innerError">
+                    			{if $errorType == 'notAgreed'}{lang}wcf.acp.newsletter.optin.guest.checkbox.error.notAgreed{/lang}{/if}
+                    		</p>
+                    	{/if}
                     </div>
                 </div>
             </fieldset>

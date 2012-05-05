@@ -69,6 +69,10 @@ class NewsletterRegisterGuestForm extends AbstractForm {
         if ($row['count']) {
             throw new UserInputException('email', 'notUnique');
         }
+        
+        if (!$this->checkbox) {
+            throw new UserInputException('checkbox', 'notAgreed');
+        }
     }
     
     /**

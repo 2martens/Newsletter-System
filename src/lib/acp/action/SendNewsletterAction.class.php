@@ -26,7 +26,7 @@ class SendNewsletterAction extends AbstractAction {
     
     /**
      * Contains a list of all newsletters.
-     * @var string
+     * @var array
      */
     protected $newsletterList = array();
     
@@ -41,6 +41,12 @@ class SendNewsletterAction extends AbstractAction {
      * @var array
      */
     protected $subscribersList = array();
+    
+    /**
+     * Contains a list of all unsubscribe tokens.
+     * @var array
+     */
+    protected $unsubscribeTokens = array();
     
     /**
      * If true, the action was called by the hourly cronjob.
@@ -111,15 +117,22 @@ class SendNewsletterAction extends AbstractAction {
             	'text' => $emailText
             ));
             $content = WCF::getTPL()->fetch($templateName);
-            
+            $i = 0;
+            usleep(1);
             //sending one mail per subscriber
             //is longer, but safer
             foreach ($this->subscribersList as $subscriber) {
+                //sleep 2 seconds after 10 sent mails
+                if (fmod($i, 10) == 0) {
+                    usleep(2000000);
+                }
                 $recipient = null;
                 if ($subscriber['userID']) $recipient = new User($subscriber['userID']);
                 // {$username} stands for the username of the specific subscriber
                 if (is_null($recipient) || $recipient->getUserOption('acceptNewsletterAsEmail')) {
                     $tmpContent = str_replace('{$username}', $subscriber['username'], $content);
+                    $tmpContent = str_replace('subscriberID', $subscriber['subscriberID'], $tmpContent);
+                    $tmpContent = str_replace('token', $this->unsubscribeTokens[$subscriber['subscriberID']]['token'], $tmpContent);
                     $email = $subscriber['email'];
                     $mail = new Mail($email, $newsletter['subject'], $tmpContent,
                     MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
@@ -142,6 +155,7 @@ class SendNewsletterAction extends AbstractAction {
                     $tmpText = str_replace('{$username}', $subscriber['username'], $text);
                     $pm = PMEditor::create(false, $recipientArray, array(), $newsletter['subject'], $tmpText, $admin->userID, $admin->username, $options);
                 }
+                $i++;
             }
         }
     }
@@ -168,6 +182,7 @@ class SendNewsletterAction extends AbstractAction {
         
         //get options
         $this->subscribersList = WCF::getCache()->get($cacheName, 'subscribers');
+        $this->unsubscribeTokens = WCF::getCache()->get($cacheName, 'unsubscribeTokens');
     }
     
     /**
