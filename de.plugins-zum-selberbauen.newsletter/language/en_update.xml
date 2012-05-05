@@ -9,5 +9,8 @@
         <!-- unsubscription -->
         <item name="wcf.acp.newsletter.unsubscription.success"><![CDATA[The newsletter subscription has been successfully removed.]]></item>
         <!-- /unsubscription -->
+        <!-- general -->
+        <item name="wcf.acp.newsletter.optin.guest.checkbox.error.notAgreed"><![CDATA[You have to accept newsletter subscription.]]></item>
+        <!-- /general -->
     </category>
 </language>

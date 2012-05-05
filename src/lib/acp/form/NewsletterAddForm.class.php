@@ -155,6 +155,8 @@ class NewsletterAddForm extends WysiwygCacheloaderForm {
         
         $admin = new User(MESSAGE_NEWSLETTERSYSTEM_GENERAL_ADMIN);
         $tmpContent = str_replace('{$username}', $admin->username, $content);
+        $tmpContent = str_replace('subscriberID', 1, $tmpContent);
+        $tmpContent = str_replace('token', 'test', $tmpContent);
         $email = $admin->email;
         $mail = new Mail($email, $newsletter->subject, $tmpContent,
         MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);

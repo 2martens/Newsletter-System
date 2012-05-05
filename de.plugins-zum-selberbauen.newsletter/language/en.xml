@@ -103,6 +103,7 @@
         <item name="wcf.acp.newsletter.cronjob.description"><![CDATA[Sends all outstanding newsletter for the current day.]]></item>
         <item name="wcf.acp.newsletter.guestSubscription"><![CDATA[Guest subscription]]></item>
         <item name="wcf.acp.newsletter.subscriber.email.error.notUnique"><![CDATA[This email address is already used.]]></item>
+        <item name="wcf.acp.newsletter.optin.guest.checkbox.error.notAgreed"><![CDATA[You have to accept newsletter subscription.]]></item>
         <!-- /general -->
         
         <!-- unsubscription -->

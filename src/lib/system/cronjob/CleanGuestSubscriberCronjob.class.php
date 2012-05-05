@@ -32,10 +32,9 @@ class CleanGuestSubscriberCronjob implements Cronjob {
     public function execute($data) {
         $sql = 'SELECT activation.subscriberID
         		FROM wcf'.WCF_N.'_'.$this->activationTable.' activation
-        		LEFT JOIN wcf'.WCF_N.'_'.$this->subscriberTable." subscriber
+        		LEFT JOIN wcf'.WCF_N.'_'.$this->subscriberTable.' subscriber
         			ON (subscriber.subscriberID = activation.subscriberID)
-        		WHERE activation.activated = 0
-        			AND subscriber.email = ''";
+        		WHERE activation.activated = 0';
         $result = WCF::getDB()->sendQuery($sql);
         
         $subscriberIDs = array();
