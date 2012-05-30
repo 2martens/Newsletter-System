@@ -8,7 +8,7 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.2.1 Beta 3</version>
+        <version>1.2.1</version>
         <date>2012-05-30</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
@@ -62,7 +62,6 @@
         <files>files.tar</files>
     </instructions>
     <instructions type="update" fromversion="1.2.1 Beta *">
-        <!-- .tars -->
-        <files>files.tar</files>
+        
     </instructions>
 </package>
