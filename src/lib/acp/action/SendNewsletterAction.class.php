@@ -64,8 +64,8 @@ class SendNewsletterAction extends AbstractAction {
     public function __construct($hourly = false) {
         $this->hourly = $hourly;
         //makes sure that bbcodes cache resource exists
-        CacheHandler::addResource('bbcodes', WCF_DIR.'cache/cache.bbcodes.php', WCF_DIR.'lib/system/cache/CacheBuilderBBCodes.class.php');
-        CacheHandler::addResource('smileys', WCF_DIR.'cache/cache.smileys.php', WCF_DIR.'lib/system/cache/CacheBuilderSmileys.class.php');
+        WCF::getCache()->addResource('bbcodes', WCF_DIR.'cache/cache.bbcodes.php', WCF_DIR.'lib/system/cache/CacheBuilderBBCodes.class.php');
+        WCF::getCache()->addResource('smileys', WCF_DIR.'cache/cache.smileys.php', WCF_DIR.'lib/system/cache/CacheBuilderSmileys.class.php');
         parent::__construct();
     }
     
