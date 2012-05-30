@@ -57,7 +57,11 @@
         <admindefault></admindefault>
     </instructions>
     
-    <instructions type="update" fromversion="1.2.0*">
+    <instructions type="update" fromversion="1.2.0">
+        <!-- .tars -->
+        <files>files.tar</files>
+    </instructions>
+    <instructions type="update" fromversion="1.2.1 Beta 1">
         <!-- .tars -->
         <files>files.tar</files>
     </instructions>
