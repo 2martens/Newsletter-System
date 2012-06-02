@@ -19,7 +19,7 @@ class NewsletterActivateAction extends AbstractAction {
      * Contains the user id.
      * @var int
      */
-    protected $userID = 0;
+    public $userID = 0;
     
     /**
      * Contains the activation token.
