@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <language languagecode="en" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd">
-    <category name="wcf.acp.option">
-        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice"><![CDATA[Legal Notice]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.description"><![CDATA[Please insert here the legal notice.]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.default"><![CDATA[Example: Max Mustermann, Examplestreet 1, D-11111 Examplecity]]></item>
-    </category>
     <category name="wcf.acp.newsletter">
-        <!-- unsubscription -->
-        <item name="wcf.acp.newsletter.unsubscription.success"><![CDATA[The newsletter subscription has been successfully removed.]]></item>
-        <!-- /unsubscription -->
-        <!-- general -->
-        <item name="wcf.acp.newsletter.optin.guest.checkbox.error.notAgreed"><![CDATA[You have to accept newsletter subscription.]]></item>
-        <!-- /general -->
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail"><![CDATA[Send validation email again]]></item>
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.success"><![CDATA[Validation email has been sent successfully.]]></item>
     </category>
 </language>

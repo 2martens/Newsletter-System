@@ -133,6 +133,8 @@
         <item name="wcf.acp.newsletter.subscriber.delete"><![CDATA[Abonnent löschen]]></item>
         <item name="wcf.acp.newsletter.subscriber.delete.sure"><![CDATA[Sind Sie sicher, dass Sie den Abonnenten löschen möchten?]]></item>
         <item name="wcf.acp.newsletter.subscriber.delete.success"><![CDATA[Abonnent wurde erfolgreich gelöscht.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail"><![CDATA[Validierungsemail erneut senden]]></item>
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.success"><![CDATA[Validierungsemail wurde erfolgreich erneut versendet.]]></item>
         <!-- /actions -->
         
         <!-- newsletterAdd form -->

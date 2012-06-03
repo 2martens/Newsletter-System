@@ -8,8 +8,8 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.2.1</version>
-        <date>2012-05-30</date>
+        <version>1.2.2 Beta 1</version>
+        <date>2012-06-03</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
     
@@ -27,6 +27,7 @@
     
     <optionalpackages>
         <optionalpackage file="optionals/de.plugins-zum-selberbauen.newsletterBox.tar.gz">de.plugins-zum-selberbauen.newsletterBox</optionalpackage>
+        <optionalpackage file="optionals/de.plugins-zum-selberbauen.newsletterCredit.tar.gz">de.plugins-zum-selberbauen.newsletterCredit</optionalpackage>
     </optionalpackages>
     
     <excludedpackages>
@@ -57,11 +58,15 @@
         <admindefault></admindefault>
     </instructions>
     
-    <instructions type="update" fromversion="1.2.0">
+    <instructions type="update" fromversion="1.2.1">
         <!-- .tars -->
         <files>files.tar</files>
-    </instructions>
-    <instructions type="update" fromversion="1.2.1 Beta *">
+        <acptemplates>acptemplates.tar</acptemplates>
+        
+        <!-- languages -->
+        <languages languagecode="de">language/de_update.xml</languages>
+        <languages languagecode="de-informal">language/de-informal_update.xml</languages>
+        <languages languagecode="en">language/en_update.xml</languages>
         
     </instructions>
 </package>
