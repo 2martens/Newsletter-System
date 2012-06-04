@@ -3,5 +3,10 @@
     <category name="wcf.acp.newsletter">
         <item name="wcf.acp.newsletter.subscriber.sendValidationEmail"><![CDATA[Send validation email again]]></item>
         <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.success"><![CDATA[Validation email has been sent successfully.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.username.description"><![CDATA[Please insert here the the user to who the validation email will be sent.]]></item>
+    </category>
+    <category name="wcf.acp.menu">
+        <item name="wcf.acp.menu.link.content.newslettersystem.sendValidationEmail"><![CDATA[Send validation email again]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.sendValidationEmail.description"><![CDATA[]]></item>
     </category>
 </language>

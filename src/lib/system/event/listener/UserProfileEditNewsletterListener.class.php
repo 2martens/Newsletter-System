@@ -52,7 +52,11 @@ class UserProfileEditNewsletterListener implements EventListener {
         
         if ($optionGeneral['optionValue'] && !$existCount['count'] &&
             ($optionEmail['optionValue'] || $optionPM['optionValue']) &&
-            !$activationCount['count']) NewsletterUtil::sendUserValidationEmail();
+            !$activationCount['count']) {
+                
+            
+            NewsletterUtil::sendUserValidationEmail();
+        }
         elseif (!$optionGeneral['optionValue']) {
             $editor = WCF::getUser()->getEditor();
             $options = array(

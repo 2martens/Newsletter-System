@@ -78,25 +78,31 @@ class NewsletterActivateAction extends AbstractAction {
         
         $user = new User($this->userID);
         
-        //create a new subscriber
-        $sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->subscriberTable.'
-        		(userID, username, email)
+        //checks if the subscriber already exists
+        $sqlCheck = 'SELECT COUNT(subscriberID) AS count
+        			FROM wcf'.WCF_N.'_'.$this->subscriberTable.'
+        			WHERE userID = '.$this->userID;
+        $row = WCF::getDB()->getFirstRow($sqlCheck);
+        if (!intval($row['count'])) {
+            //create a new subscriber
+            $sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->subscriberTable.'
+        			(userID, username, email)
+        				VALUES
+        			('.$this->userID.", '".
+                    escapeString($user->username)."', '".
+                    escapeString($user->email)."')";
+            WCF::getDB()->sendQuery($sql);
+        
+            $subscriberID = WCF::getDB()->getInsertID();
+        
+            //inserts an unsubscribe token for the subscriber
+            $sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->unsubscriptionTable.'
+        				(subscriberID, token)
         			VALUES
-        		('.$this->userID.", '".
-                escapeString($user->username)."', '".
-                escapeString($user->email)."')";
-        WCF::getDB()->sendQuery($sql);
-        
-        $subscriberID = WCF::getDB()->getInsertID();
-        
-        //inserts an unsubscribe token for the subscriber
-        $sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->unsubscriptionTable.'
-        			(subscriberID, token)
-        		VALUES
-        			('.intval($subscriberID).", '".
-                        escapeString(StringUtil::getRandomID())."')";
-        WCF::getDB()->sendQuery($sql);
-        
+        				('.intval($subscriberID).", '".
+                            escapeString(StringUtil::getRandomID())."')";
+            WCF::getDB()->sendQuery($sql);
+        }
         //clears cache
         WCF::getCache()->clear(WCF_DIR.'cache/', 'cache.newsletter-subscriber-'.PACKAGE_ID.'.php', true);
         

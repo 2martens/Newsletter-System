@@ -13,7 +13,7 @@
     <p class="success">{lang}wcf.acp.newsletter.subscriber.delete.success{/lang}</p>
 {/if}
 
-{if $success|isset}
+{if $success}
     <p class="success">{lang}wcf.acp.newsletter.subscriber.sendValidationEmail.success{/lang}</p>
 {/if}
 
