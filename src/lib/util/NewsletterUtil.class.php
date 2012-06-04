@@ -68,7 +68,7 @@ class NewsletterUtil {
      *
      * @param NewsletterSubscriber $subscriber
      */
-    public static function sendUserValidationEmail(NewsletterSubscriber $subscriber) {
+    public static function sendGuestValidationEmail(NewsletterSubscriber $subscriber) {
         
         //save activation token into database
         $token = StringUtil::getRandomID();
