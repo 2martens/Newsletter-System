@@ -43,7 +43,7 @@ class NewsletterSendValidationEmailAction extends AbstractSecureAction {
             NewsletterUtil::sendGuestValidationEmail($subscriber);
         }
         $this->executed();
-        HeaderUtil::redirect('index.php?page=NewsletterSubscriberList&successEmail=success&packageID='.PACKAGE_ID.SID_ARG_2ND_NOT_ENCODED);
+        HeaderUtil::redirect('index.php?page=NewsletterSubscriberList&success=success&packageID='.PACKAGE_ID.SID_ARG_2ND_NOT_ENCODED);
         exit;
     }
 }

@@ -26,6 +26,12 @@ class NewsletterSubscriberListPage extends SortablePage {
     protected $result = '';
     
     /**
+     * Contains the result of resending the validation email.
+     * @var string
+     */
+    protected $success = '';
+    
+    /**
      * Contains the subscribers list.
      * @var array
      */
@@ -46,6 +52,7 @@ class NewsletterSubscriberListPage extends SortablePage {
     public function readParameters() {
         parent::readParameters();
         if (isset($_REQUEST['result'])) $this->result = StringUtil::trim($_REQUEST['result']);
+        if (isset($_REQUEST['success'])) $this->success = StringUtil::trim($_REQUEST['success']);
     }
     
     /**
@@ -85,7 +92,8 @@ class NewsletterSubscriberListPage extends SortablePage {
         parent::assignVariables();
         WCF::getTPL()->assign(array(
             'subscribers' => $this->currentSubscribersList,
-            'result' => $this->result
+            'result' => $this->result,
+            'success' => $this->success
         ));
     }
     
