@@ -28,6 +28,11 @@ class SendValidationEmailForm extends ACPForm {
     public $user = null;
     
     /**
+     * @see ACPForm::$activeMenuItem
+     */
+    public $activeMenuItem = 'wcf.acp.menu.link.content.newslettersystem.sendValidationEmail';
+    
+    /**
      * @see Form::readFormParameters()
      */
     public function readFormParameters() {
