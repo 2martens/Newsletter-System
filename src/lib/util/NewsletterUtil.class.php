@@ -37,6 +37,17 @@ class NewsletterUtil {
         if (null === $user) {
             $user = WCF::getUser();
         }
+        
+        //check if an activation has already been started
+        $sqlCheck = 'SELECT COUNT(token) AS count
+        			FROM wcf'.WCF_N.'_'.self::$activationTable.'
+        			WHERE userID = '.intval($user->userID);
+        $row = WCF::getDB()->getFirstRow($sqlCheck);
+        if (intval($row['count'])) {
+            $sqlDelete = 'DELETE FROM wcf'.WCF_N.'_'.self::$activationTable.'
+            			WHERE userID = '.intval($user->userID);
+            WCF::getDB()->sendQuery($sqlDelete);
+        }
         //save activation token into database
         $token = StringUtil::getRandomID();
         $sql = 'INSERT INTO wcf'.WCF_N.'_'.self::$activationTable.'
@@ -70,6 +81,16 @@ class NewsletterUtil {
      */
     public static function sendGuestValidationEmail(NewsletterSubscriber $subscriber) {
         
+        //check if an activation has already been started
+        $sqlCheck = 'SELECT COUNT(token) AS count
+        			FROM wcf'.WCF_N.'_'.self::$activationGuestTable.'
+        			WHERE subscriberID = '.intval($subscriber->subscriberID);
+        $row = WCF::getDB()->getFirstRow($sqlCheck);
+        if (intval($row['count'])) {
+            $sqlDelete = 'DELETE FROM wcf'.WCF_N.'_'.self::$activationGuestTable.'
+            			WHERE subscriberID = '.intval($subscriber->subscriberID);
+            WCF::getDB()->sendQuery($sqlDelete);
+        }
         //save activation token into database
         $token = StringUtil::getRandomID();
         $sql = 'INSERT INTO wcf'.WCF_N.'_'.self::$activationGuestTable.'
