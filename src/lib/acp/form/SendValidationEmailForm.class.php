@@ -33,6 +33,11 @@ class SendValidationEmailForm extends ACPForm {
     public $activeMenuItem = 'wcf.acp.menu.link.content.newslettersystem.sendValidationEmail';
     
     /**
+     * @see AbstractPage::$templateName
+     */
+    public $templateName = 'sendValidationEmail';
+    
+    /**
      * @see Form::readFormParameters()
      */
     public function readFormParameters() {
@@ -76,7 +81,9 @@ class SendValidationEmailForm extends ACPForm {
      */
     public function assignVariables() {
         parent::assignVariables();
-        WCF::getTPL()->assign('username', $this->username);
+        WCF::getTPL()->assign(array(
+        	'username' => $this->username
+        ));
     }
     
 }

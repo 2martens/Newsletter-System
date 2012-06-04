@@ -11,7 +11,7 @@
     <p class="error">{lang}wcf.global.form.error{/lang}</p>
 {/if}
 
-{if $success}
+{if $success|isset}
     <p class="success">{lang}wcf.acp.newsletter.subscriber.sendValidationEmail.success{/lang}</p>
 {/if}
 
