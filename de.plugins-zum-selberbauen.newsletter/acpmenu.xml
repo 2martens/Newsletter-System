@@ -23,16 +23,23 @@
                     <permissions>admin.content.newslettersystem.canSeeSubscriberOverview</permissions>
                     <icon>icon/membersM.png</icon>
                 </acpmenuitem>
-                <acpmenuitem name="wcf.acp.menu.link.content.newslettersystem.newsletterList">
+                <acpmenuitem name="wcf.acp.menu.link.content.newslettersystem.sendValidationEmail">
                     <parent>wcf.acp.menu.link.content.newslettersystem.general</parent>
                     <showorder>3</showorder>
+                    <link>index.php?form=SendValidationEmail</link>
+                    <permissions>admin.content.newslettersystem.canSeeSubscriberOverview</permissions>
+                    <icon>icon/pmNewM.png</icon>
+                </acpmenuitem>
+                <acpmenuitem name="wcf.acp.menu.link.content.newslettersystem.newsletterList">
+                    <parent>wcf.acp.menu.link.content.newslettersystem.general</parent>
+                    <showorder>4</showorder>
                     <link>index.php?page=NewsletterList</link>
                     <permissions>admin.content.newslettersystem.canSeeNewsletterOverview</permissions>
                     <icon>icon/messageM.png</icon>
                 </acpmenuitem>
                 <acpmenuitem name="wcf.acp.menu.link.content.newslettersystem.writeNewsletter">
                     <parent>wcf.acp.menu.link.content.newslettersystem.general</parent>
-                    <showorder>4</showorder>
+                    <showorder>5</showorder>
                     <link>index.php?form=NewsletterAdd</link>
                     <permissions>admin.content.newslettersystem.canWriteNewsletter</permissions>
                     <icon>icon/messageAddM.png</icon>

@@ -13,6 +13,10 @@
     <p class="success">{lang}wcf.acp.newsletter.subscriber.delete.success{/lang}</p>
 {/if}
 
+{if $success|isset && $success == "success"}
+    <p class="success">{lang}wcf.acp.newsletter.subscriber.sendValidationEmail.success{/lang}</p>
+{/if}
+
 <div class="contentHeader">
     {pages print=true assign=pagesLinks link="index.php?page=NewsletterSubscriberList&pageNo=%d&sortField=$sortField&sortOrder=$sortOrder&packageID="|concat:PACKAGE_ID:SID_ARG_2ND_NOT_ENCODED}
 </div>
@@ -42,6 +46,7 @@
             {foreach from=$subscribers key=subscriberID item=subscriber}
                 <tr class="{cycle values="container-1,container-2"}">
                     <td class="columnIcon">
+                        <a href="index.php?action=NewsletterSendValidationEmail&amp;subscriberID={@$subscriberID}&amp;packageID={@PACKAGE_ID}&amp;t={@SECURITY_TOKEN}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/cronjobExecuteS.png" alt="" title="{lang}wcf.acp.newsletter.subscriber.sendValidationEmail{/lang}" /></a>
                         {if $this->user->getPermission('admin.content.newslettersystem.canDeleteSubscribers')}
                             <a onclick="return confirm('{lang}wcf.acp.newsletter.subscriber.delete.sure{/lang}')" href="index.php?action=NewsletterSubscriberDelete&amp;subscriberID={@$subscriberID}&amp;packageID={@PACKAGE_ID}&amp;t={@SECURITY_TOKEN}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/deleteS.png" alt="" title="{lang}wcf.acp.newsletter.subscriber.delete{/lang}" /></a>
                         {/if}

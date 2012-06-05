@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <language languagecode="de" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd">
-    <category name="wcf.acp.option">
-        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice"><![CDATA[Impressumsangabe]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.description"><![CDATA[Geben Sie hier die einzeilige Impressumsangabe ein.]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.default"><![CDATA[Max Mustermann, Musterstraße 1, D-11111 Musterhausen]]></item>
-    </category>
-    
     <category name="wcf.acp.newsletter">
-        <!-- unsubscription -->
-        <item name="wcf.acp.newsletter.unsubscription.success"><![CDATA[Das Newsletterabonnement wurde erfolgreich gekündigt.]]></item>
-        <!-- /unsubscription -->
-        <!-- general -->
-        <item name="wcf.acp.newsletter.optin.guest.checkbox.error.notAgreed"><![CDATA[Sie müssen dem Versand eines Newsletters zustimmen.]]></item>
-        <!-- /general -->
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail"><![CDATA[Validierungsemail erneut senden]]></item>
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.success"><![CDATA[Validierungsemail wurde erfolgreich erneut versendet.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.username.description"><![CDATA[Geben Sie hier den Benutzer an, an den die Validierungsemail verschickt werden soll.]]></item>
+    </category>
+    <category name="wcf.acp.menu">
+        <item name="wcf.acp.menu.link.content.newslettersystem.sendValidationEmail"><![CDATA[Validierungs-Email erneut versenden]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.sendValidationEmail.description"><![CDATA[]]></item>
     </category>
 </language>

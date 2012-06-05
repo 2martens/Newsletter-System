@@ -69,6 +69,8 @@
         <item name="wcf.acp.menu.link.content.newslettersystem.importSubscriber"><![CDATA[Abonnenten importieren]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.subscriberList"><![CDATA[Abonnenten auflisten]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.subscriberList.description"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.sendValidationEmail"><![CDATA[Validierungs-Email erneut versenden]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.sendValidationEmail.description"><![CDATA[]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.newsletterList"><![CDATA[Newsletter auflisten]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.newsletterList.description"><![CDATA[]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.writeNewsletter"><![CDATA[Newsletter schreiben]]></item>
@@ -104,6 +106,7 @@
         <item name="wcf.acp.newsletter.guestSubscription"><![CDATA[Gastabonnement]]></item>
         <item name="wcf.acp.newsletter.subscriber.email.error.notUnique"><![CDATA[Diese E-Mail-Adresse ist bereits vergeben.]]></item>
         <item name="wcf.acp.newsletter.optin.guest.checkbox.error.notAgreed"><![CDATA[Sie müssen dem Versand eines Newsletters zustimmen.]]></item>
+        <item name="wcf.acp.newsletter.sendValidationEmail.username.description"><![CDATA[]]></item>
         <!-- /general -->
         
         <!-- unsubscription -->
@@ -133,6 +136,9 @@
         <item name="wcf.acp.newsletter.subscriber.delete"><![CDATA[Abonnent löschen]]></item>
         <item name="wcf.acp.newsletter.subscriber.delete.sure"><![CDATA[Sind Sie sicher, dass Sie den Abonnenten löschen möchten?]]></item>
         <item name="wcf.acp.newsletter.subscriber.delete.success"><![CDATA[Abonnent wurde erfolgreich gelöscht.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail"><![CDATA[Validierungsemail erneut senden]]></item>
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.success"><![CDATA[Validierungsemail wurde erfolgreich erneut versendet.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.username.description"><![CDATA[Geben Sie hier den Benutzer an, an den die Validierungsemail verschickt werden soll.]]></item>
         <!-- /actions -->
         
         <!-- newsletterAdd form -->

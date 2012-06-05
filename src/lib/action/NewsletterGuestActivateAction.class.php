@@ -76,14 +76,20 @@ class NewsletterGuestActivateAction extends AbstractAction {
         		WHERE subscriberID = ".$this->subscriberID;
         WCF::getDB()->sendQuery($sql);
         
-        //adds an unsubscribe token
-        $sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->unsubscriptionTable.'
-        			(subscriberID, token)
-        		VALUES
-        			('.intval($this->subscriberID).", '".
-                    escapeString(StringUtil::getRandomID())."')";
-        WCF::getDB()->sendQuery($sql);
-        
+        //checks if there is already a unsubscribe token
+        $sqlCheck = 'SELECT COUNT(token) AS count
+        			FROM wcf'.WCF_N.'_'.$this->unsubscriptionTable.'
+        			WHERE subscriberID = '.intval($this->subscriberID);
+        $row = WCF::getDB()->getFirstRow($sqlCheck);
+        if (!intval($row['count']))	{
+            //adds an unsubscribe token
+            $sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->unsubscriptionTable.'
+        				(subscriberID, token)
+        			VALUES
+        				('.intval($this->subscriberID).", '".
+                        escapeString(StringUtil::getRandomID())."')";
+            WCF::getDB()->sendQuery($sql);
+        }
         $this->executed();
         WCF::getTPL()->assign(array(
         	'message' => WCF::getLanguage()->get('wcf.acp.newsletter.optin.activationSuccess'),

@@ -69,6 +69,8 @@
         <item name="wcf.acp.menu.link.content.newslettersystem.importSubscriber.description"><![CDATA[]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.subscriberList"><![CDATA[List subscribers]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.subscriberList.description"><![CDATA[]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.sendValidationEmail"><![CDATA[Send validation email again]]></item>
+        <item name="wcf.acp.menu.link.content.newslettersystem.sendValidationEmail.description"><![CDATA[]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.newsletterList"><![CDATA[List newsletters]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.newsletterList.description"><![CDATA[]]></item>
         <item name="wcf.acp.menu.link.content.newslettersystem.writeNewsletter"><![CDATA[Add newsletter]]></item>
@@ -133,6 +135,9 @@
         <item name="wcf.acp.newsletter.subscriber.delete"><![CDATA[Delete subscriber]]></item>
         <item name="wcf.acp.newsletter.subscriber.delete.sure"><![CDATA[Are you sure that you want to delete the subscriber?]]></item>
         <item name="wcf.acp.newsletter.subscriber.delete.success"><![CDATA[Subscriber has been successfully deleted.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail"><![CDATA[Send validation email again]]></item>
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.success"><![CDATA[Validation email has been sent successfully.]]></item>
+        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.username.description"><![CDATA[Please insert here the the user to who the validation email will be sent.]]></item>
         <!-- /actions -->
         
         <!-- newsletterAdd form -->
