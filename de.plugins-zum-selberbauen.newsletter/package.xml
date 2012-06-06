@@ -8,8 +8,8 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.2.2 Beta 11</version>
-        <date>2012-06-04</date>
+        <version>1.2.2</version>
+        <date>2012-06-05</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
     
@@ -71,8 +71,6 @@
         <languages languagecode="de-informal">language/de-informal_update.xml</languages>
         <languages languagecode="en">language/en_update.xml</languages>
     </instructions>
-    <instructions type="update" fromversion="1.2.2 Beta 10">
-        <files>files.tar</files>
-        <acptemplates>acptemplates.tar</acptemplates>
+    <instructions type="update" fromversion="1.2.2 Beta 11">
     </instructions>
 </package>
