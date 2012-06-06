@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <language languagecode="de" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd">
     <category name="wcf.acp.newsletter">
-        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail"><![CDATA[Validierungsemail erneut senden]]></item>
-        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.success"><![CDATA[Validierungsemail wurde erfolgreich erneut versendet.]]></item>
-        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.username.description"><![CDATA[Geben Sie hier den Benutzer an, an den die Validierungsemail verschickt werden soll.]]></item>
+        <item name="wcf.acp.newsletter.legalNotice"><![CDATA[Impressum]]></item>
     </category>
-    <category name="wcf.acp.menu">
-        <item name="wcf.acp.menu.link.content.newslettersystem.sendValidationEmail"><![CDATA[Validierungs-Email erneut versenden]]></item>
-        <item name="wcf.acp.menu.link.content.newslettersystem.sendValidationEmail.description"><![CDATA[]]></item>
+    <category name="wcf.acp.option">
+        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.description"><![CDATA[Geben Sie hier Ihr Impressum an.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.default"><![CDATA[Wenn das WoltLab-Impressum bereits installiert ist und nicht auf ein externes Impressum verlinkt wird, werden die dort gemachten Angaben benutzt.]]></item>
     </category>
 </language>

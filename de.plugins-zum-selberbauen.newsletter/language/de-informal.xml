@@ -21,8 +21,8 @@
         <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob"><![CDATA[Stündlicher Cronjob]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob.description"><![CDATA[Klicke hier, um die stundengenaue Versendung von Newslettern zu aktivieren.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_legalNotice"><![CDATA[Impressumsangabe]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.description"><![CDATA[Gib hier die einzeilige Impressumsangabe ein.]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.default"><![CDATA[Max Mustermann, Musterstraße 1, D-11111 Musterhausen]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.description"><![CDATA[Gib hier dein Impressum an.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.default"><![CDATA[Wenn das WoltLab-Impressum bereits installiert ist und nicht auf ein externes Impressum verlinkt wird, werden die dort gemachten Angaben benutzt.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber"><![CDATA[Sortierreihenfolge]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber.description"><![CDATA[Gib hier die Sortierreihenfolge für die Abonnentenliste an.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber"><![CDATA[Sortierfeld]]></item>
@@ -105,6 +105,7 @@
         <item name="wcf.acp.newsletter.guestSubscription"><![CDATA[Gastabonnement]]></item>
         <item name="wcf.acp.newsletter.subscriber.email.error.notUnique"><![CDATA[Diese E-Mail-Adresse ist bereits vergeben.]]></item>
         <item name="wcf.acp.newsletter.optin.guest.checkbox.error.notAgreed"><![CDATA[Du musst dem Versand eines Newsletters zustimmen.]]></item>
+        <item name="wcf.acp.newsletter.legalNotice"><![CDATA[Impressum]]></item>
         <!-- /general -->
         
         <!-- unsubscription -->

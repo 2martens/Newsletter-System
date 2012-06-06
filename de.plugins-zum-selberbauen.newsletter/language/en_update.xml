@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <language languagecode="en" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd">
     <category name="wcf.acp.newsletter">
-        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail"><![CDATA[Send validation email again]]></item>
-        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.success"><![CDATA[Validation email has been sent successfully.]]></item>
-        <item name="wcf.acp.newsletter.subscriber.sendValidationEmail.username.description"><![CDATA[Please insert here the the user to who the validation email will be sent.]]></item>
+        <item name="wcf.acp.newsletter.legalNotice"><![CDATA[Legal notice]]></item>
     </category>
-    <category name="wcf.acp.menu">
-        <item name="wcf.acp.menu.link.content.newslettersystem.sendValidationEmail"><![CDATA[Send validation email again]]></item>
-        <item name="wcf.acp.menu.link.content.newslettersystem.sendValidationEmail.description"><![CDATA[]]></item>
+    <category name="wcf.acp.option">
+        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.default"><![CDATA[If the WoltLab legal notice is installed this field isn't used but the fields of the WoltLab legal notice.]]></item>
     </category>
 </language>

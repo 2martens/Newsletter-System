@@ -70,9 +70,13 @@ class NewsletterGuestActivateAction extends AbstractAction {
             throw new NamedUserException($message);
         }
         
+        //get ip address and convert it into a long
+        $ipAddress = ip2long(StringUtil::trim($_SERVER['REMOTE_ADDR']));
+        
         //validates the user as a subscriber
         $sql = 'UPDATE wcf'.WCF_N.'_'.$this->activationTable."
-        		SET token = '', activated = 1
+        		SET token = '', datetime = ".TIME_NOW.",
+        		ip = ".$ipAddress.", activated = 1
         		WHERE subscriberID = ".$this->subscriberID;
         WCF::getDB()->sendQuery($sql);
         
