@@ -68,7 +68,7 @@ class NewsletterUtil {
             'subject' => $subject,
             'content' => $content
         ));
-        WCF::getTPL()->setTemplatePaths(array(WCF_DIR.'templates/', WCF_DIR.'acp/templates/'));
+        //WCF::getTPL()->setTemplatePaths(array(WCF_DIR.'templates/', WCF_DIR.'acp/templates/'));
         $output = WCF::getTPL()->fetch('validationEmail');
         $mail = new Mail($user->email, $subject, $output, MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
         $mail->setContentType('text/html');
@@ -112,7 +112,7 @@ class NewsletterUtil {
             'subject' => $subject,
             'content' => $content
         ));
-        WCF::getTPL()->setTemplatePaths(array(WCF_DIR.'templates/', WCF_DIR.'acp/templates/'));
+        //WCF::getTPL()->setTemplatePaths(array(WCF_DIR.'templates/', WCF_DIR.'acp/templates/'));
         $output = WCF::getTPL()->fetch('validationEmail');
         $mail = new Mail($subscriber->email, $subject, $output, MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
         $mail->setContentType('text/html');
