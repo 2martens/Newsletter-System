@@ -55,7 +55,8 @@ class SendValidationEmailForm extends ACPForm {
         }
         $sql = 'SELECT userID, COUNT(userID) AS count
         		FROM wcf'.WCF_N."_user
-        		WHERE username = '".escapeString($this->username)."'";
+        		WHERE username = '".escapeString($this->username)."'
+        		GROUP BY userID";
         $row = WCF::getDB()->getFirstRow($sql);
         if (!$row['count']) {
             throw new UserInputException('username', 'notValid');

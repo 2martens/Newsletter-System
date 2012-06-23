@@ -60,7 +60,7 @@
             </option>
             <option name="message_newslettersystem_general_legalNotice">
                 <categoryname>message.newslettersystem.general</categoryname>
-                <optiontype>text</optiontype>
+                <optiontype>textarea</optiontype>
                 <defaultvalue><![CDATA[wcf.acp.option.message_newslettersystem_general_legalNotice.default]]></defaultvalue>
                 <showorder>5</showorder>
             </option>

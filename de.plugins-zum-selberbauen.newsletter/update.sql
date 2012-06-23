@@ -1,5 +1,2 @@
-DROP TABLE IF EXISTS wcf1_newsletter_unsubscription;
-CREATE TABLE wcf1_newsletter_unsubscription (
-    subscriberID INT(10) NOT NULL PRIMARY KEY,
-    token VARCHAR(255) NOT NULL DEFAULT ''
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+ALTER TABLE wcf1_newsletter_activation ADD COLUMN datetime INT(10) NOT NULL DEFAULT 0, ADD COLUMN ip INT(10) UNSIGNED NOT NULL DEFAULT 0;
+ALTER TABLE wcf1_newsletter_guest_activation ADD COLUMN datetime INT(10) NOT NULL DEFAULT 0, ADD COLUMN ip INT(10) UNSIGNED NOT NULL DEFAULT 0;
