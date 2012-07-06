@@ -52,6 +52,24 @@ class ImportSubscriberForm extends ACPForm {
 	 * @var string
 	 */
 	protected $databaseTable = 'newsletter_subscriber';
+	
+	/**
+	 * Contains the newsletter unsubscription database table.
+	 * @var string
+	 */
+	protected $unsubscriptionTable = 'newsletter_unsubscription';
+	
+	/**
+	 * Contains the newsletter activation database table.
+	 * @var string
+	 */
+	protected $activationTable = 'newsletter_activation';
+	
+	/**
+	 * Contains the newsletter guest activation database table.
+	 * @var string
+	 */
+	protected $guestActivationTable = 'newsletter_guest_activation';
     
     /**
      * @see Form::readFormParameters()
@@ -153,6 +171,11 @@ class ImportSubscriberForm extends ACPForm {
 		}
 		if (empty($content)) return;
 		
+		//add cache resource and get subscribers
+		$cacheName = 'newsletter-subscriber-'.PACKAGE_ID;
+		WCF::getCache()->addResource($cacheName, WCF_DIR.'cache/cache.'.$cacheName.'.php', WCF_DIR.'lib/system/cache/CacheBuilderNewsletterSubscriber.class.php');
+		$subscribersList = WCF::getCache()->get($cacheName, 'subscribers');
+		
 		//contains all new emails
 		$emails = explode($this->delimeter, $content);
 		
@@ -189,6 +212,69 @@ class ImportSubscriberForm extends ACPForm {
 		$sql .= $insertValues;
 		//only do this if there is an email to work with
 		if ($processImport) WCF::getDB()->sendQuery($sql);
+		
+		//get all subscribers
+		$sql = 'SELECT subscriberID, userID
+		        FROM wcf'.WCF_N.'_'.$this->databaseTable;
+		$result = WCF::getDB()->sendQuery($sql);
+		
+		//prepare for new unsubscription tokens
+		$sqlUnsubscribe = 'INSERT INTO wcf'.WCF_N.'_'.$this->unsubscriptionTable.'
+		            (subscriberID, token)
+		        VALUES ';
+		$unsubscribeInsertValues = '';
+		
+		//prepare for activation
+		$sqlActivation = 'INSERT INTO wcf'.WCF_N.'_'.$this->activationTable.'
+		            (userID, datetime, activated)
+		        VALUES ';
+		$activateInsertValues = '';
+		
+		//prepare for guest activation
+		$sqlGuestActivation = 'INSERT INTO wcf'.WCF_N.'_'.$this->guestActivationTable.'
+		            (subscriberID, datetime, activated)
+		        VALUES ';
+		$guestActivateInsertValues = '';
+		
+		//getting the new subscribers
+		$newSubscribers = array();
+		while ($row = WCF::getDB()->fetchArray($result)) {
+		    if (array_key_exists($row['subscriberID'], $subscribersList)) continue;
+		    $newSubscribers[$row['subscriberID']] = $row['userID'];
+		}
+		
+		//add unsubscribe tokens for each new subscriber
+		//and prove validation
+		foreach ($newSubscribers as $subscriberID => $userID) {
+		    if (!empty($unsubscribeInsertValues)) $unsubscribeInsertValues .= ', ';
+		    
+		    $data = '('.$subscriberID.", '".escapeString(StringUtil::getRandomID())."')";
+		    $unsubscribeInsertValues .= $data;
+		    
+		    if ($userID) {
+		        if (!empty($activateInsertValues)) $activateInsertValues .= ', ';
+		        $data = '('.$userID.', '.TIME_NOW.', 1)';
+		        $activateInsertValues .= $data;
+		    }
+		    else {
+		        if (!empty($guestActivateInsertValues)) $guestActivateInsertValues .= ', ';
+		        $data = '('.$subscriberID.', '.TIME_NOW.', 1)';
+		        $guestActivateInsertValues .= $data;
+		    }
+		    
+		}
+		if (!empty($unsubscribeInsertValues)) {
+		    $sqlUnsubscribe .= $unsubscribeInsertValues;
+		    WCF::getDB()->sendQuery($sqlUnsubscribe);
+		}
+		if (!empty($activateInsertValues)) {
+		    $sqlActivation .= $activateInsertValues;
+		    WCF::getDB()->sendQuery($sqlActivation);
+		}
+		if (!empty($guestActivateInsertValues)) {
+		    $sqlGuestActivation .= $guestActivateInsertValues;
+		    WCF::getDB()->sendQuery($sqlGuestActivation);
+		}
 		
 		WCF::getCache()->clear(WCF_DIR.'cache/', 'cache.newsletter-subscriber-'.PACKAGE_ID.'.php');
 		
