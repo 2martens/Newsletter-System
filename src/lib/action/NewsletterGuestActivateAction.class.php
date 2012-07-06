@@ -75,9 +75,9 @@ class NewsletterGuestActivateAction extends AbstractAction {
         
         //validates the user as a subscriber
         $sql = 'UPDATE wcf'.WCF_N.'_'.$this->activationTable."
-        		SET token = '', datetime = ".TIME_NOW.",
-        		ip = ".$ipAddress.", activated = 1
-        		WHERE subscriberID = ".$this->subscriberID;
+        		SET token = '', datetime = ".TIME_NOW.',
+        		ip = '.$ipAddress.', activated = 1
+        		WHERE subscriberID = '.$this->subscriberID;
         WCF::getDB()->sendQuery($sql);
         
         //checks if there is already a unsubscribe token

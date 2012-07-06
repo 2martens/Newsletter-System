@@ -3,11 +3,67 @@
     <import>
         <options>
             <!-- newsletter options -->
+            <option name="message_newslettersystem_general_legalNotice_activated">
+                <categoryname>message.newslettersystem.general</categoryname>
+                <optiontype>boolean</optiontype>
+                <defaultvalue>1</defaultvalue>
+                <showorder>5</showorder>
+                <enableoptions><![CDATA[message_newslettersystem_general_legalNotice]]></enableoptions>
+            </option>
             <option name="message_newslettersystem_general_legalNotice">
                 <categoryname>message.newslettersystem.general</categoryname>
                 <optiontype>textarea</optiontype>
                 <defaultvalue><![CDATA[wcf.acp.option.message_newslettersystem_general_legalNotice.default]]></defaultvalue>
-                <showorder>5</showorder>
+                <showorder>6</showorder>
+            </option>
+            <option name="message_newslettersystem_general_bottomline">
+                <categoryname>message.newslettersystem.general</categoryname>
+                <optiontype>text</optiontype>
+                <defaultvalue><![CDATA[]]></defaultvalue>
+                <showorder>7</showorder>
+            </option>
+            <option name="message_newslettersystem_general_sortOrder_subscriber">
+                <categoryname>message.newslettersystem.general</categoryname>
+                <optiontype>select</optiontype>
+                <defaultvalue><![CDATA[ASC]]></defaultvalue>
+                <selectoptions>
+                    <![CDATA[ASC:wcf.global.sortOrder.ascending
+DESC:wcf.global.sortOrder.descending]]>
+                </selectoptions>
+                <showorder>8</showorder>
+            </option>
+            <option name="message_newslettersystem_general_sortField_subscriber">
+                <categoryname>message.newslettersystem.general</categoryname>
+                <optiontype>select</optiontype>
+                <defaultvalue><![CDATA[subscriberID]]></defaultvalue>
+                <selectoptions>
+                    <![CDATA[subscriberID:wcf.acp.option.message_newslettersystem_general_sortField_subscriber.subscriberID
+username:wcf.acp.option.message_newslettersystem_general_sortField_subscriber.username
+email:wcf.acp.option.message_newslettersystem_general_sortField_subscriber.email]]>
+                </selectoptions>
+                <showorder>9</showorder>
+            </option>
+            <option name="message_newslettersystem_general_sortOrder_newsletter">
+                <categoryname>message.newslettersystem.general</categoryname>
+                <optiontype>select</optiontype>
+                <defaultvalue><![CDATA[ASC]]></defaultvalue>
+                <selectoptions>
+                    <![CDATA[ASC:wcf.global.sortOrder.ascending
+DESC:wcf.global.sortOrder.descending]]>
+                </selectoptions>
+                <showorder>10</showorder>
+            </option>
+            <option name="message_newslettersystem_general_sortField_newsletter">
+                <categoryname>message.newslettersystem.general</categoryname>
+                <optiontype>select</optiontype>
+                <defaultvalue><![CDATA[newsletterID]]></defaultvalue>
+                <selectoptions>
+                    <![CDATA[newsletterID:wcf.acp.option.message_newslettersystem_general_sortField_newsletter.newsletterID
+username:wcf.acp.option.message_newslettersystem_general_sortField_newsletter.username
+deliveryTime:wcf.acp.option.message_newslettersystem_general_sortField_newsletter.deliveryTime
+subject:wcf.acp.option.message_newslettersystem_general_sortField_newsletter.subject]]>
+                </selectoptions>
+                <showorder>11</showorder>
             </option>
             <!-- /newsletter options -->
         </options>

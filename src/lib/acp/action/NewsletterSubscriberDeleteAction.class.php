@@ -40,6 +40,12 @@ class NewsletterSubscriberDeleteAction extends AbstractSecureAction {
     protected $guestActivationTable = 'newsletter_guest_activation';
     
     /**
+     * Contains the name of the unsubscription database table.
+     * @var string
+     */
+    protected $unsubscriptionTable = 'newsletter_unsubscription';
+    
+    /**
      * @see AbstractSecureAction::readParameters()
      */
     public function readParameters() {
@@ -69,6 +75,11 @@ class NewsletterSubscriberDeleteAction extends AbstractSecureAction {
         //deletes guest subscribers
         $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->guestActivationTable.'
         		WHERE subscriberID = '.$this->subscriberID;
+        WCF::getDB()->sendQuery($sql);
+        
+        //deletes unsubscribe tokens
+        $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->unsubscriptionTable.'
+                WHERE subscriberID = '.$this->subscriberID;
         WCF::getDB()->sendQuery($sql);
         
         $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->subscriberTable.'

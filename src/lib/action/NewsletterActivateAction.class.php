@@ -75,9 +75,9 @@ class NewsletterActivateAction extends AbstractAction {
         
         //validates the user as a subscriber
         $sql = 'UPDATE wcf'.WCF_N.'_'.$this->activationTable."
-        		SET token = '', datetime = ".TIME_NOW.",
-        		ip = ".$ipAddress.", activated = 1
-        		WHERE userID = ".$this->userID;
+        		SET token = '', datetime = ".TIME_NOW.',
+        		ip = '.$ipAddress.', activated = 1
+        		WHERE userID = '.$this->userID;
         WCF::getDB()->sendQuery($sql);
         
         $user = new User($this->userID);

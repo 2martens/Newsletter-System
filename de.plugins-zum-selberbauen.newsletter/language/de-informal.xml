@@ -20,9 +20,13 @@
         <item name="wcf.acp.option.message_newslettersystem_general_admin.description"><![CDATA[Gib hier die UserID des Administrators an.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob"><![CDATA[Stündlicher Cronjob]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_hourlyCronjob.description"><![CDATA[Klicke hier, um die stundengenaue Versendung von Newslettern zu aktivieren.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice_activated"><![CDATA[Impressum nutzen]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice_activated.description"><![CDATA[Klicke hier um die Impressumsangabe zu nutzen. (empfohlen)]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_legalNotice"><![CDATA[Impressumsangabe]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.description"><![CDATA[Gib hier dein Impressum an.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.default"><![CDATA[Wenn das WoltLab-Impressum bereits installiert ist und nicht auf ein externes Impressum verlinkt wird, werden die dort gemachten Angaben benutzt.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_bottomline"><![CDATA[Fußzeile]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_bottomline.description"><![CDATA[Gib hier eine Fußzeile ein. Wenn nichts eingegeben ist, dann wird die Zeile nicht angezeigt. Du kannst HTML benutzen.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber"><![CDATA[Sortierreihenfolge]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber.description"><![CDATA[Gib hier die Sortierreihenfolge für die Abonnentenliste an.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber"><![CDATA[Sortierfeld]]></item>
@@ -193,6 +197,7 @@
         <item name="wcf.acp.newsletter.importSubscriber.source.upload.description"><![CDATA[Gib eine csv-Datei von deinem lokalen Rechner an.]]></item>
         <item name="wcf.acp.newsletter.importSubscriber.source.download"><![CDATA[Direkten Pfad zur Datei angeben]]></item>
         <item name="wcf.acp.newsletter.importSubscriber.source.download.description"><![CDATA[Gib den direkten Pfad zur csv-Datei an. Dabei kann es sich um die Internet Adresse der csv-Datei oder alternativ den Pfad zur csv-Datei im Dateisystem handeln.]]></item>
+        <item name="wcf.acp.newsletter.importSubscriber.error.notFound"><![CDATA[Die angegebene Datei wurde nicht gefunden.]]></item>
         <!-- /newsletter import subscriber -->
         
         <!-- newsletter optin process -->
