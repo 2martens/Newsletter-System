@@ -8,7 +8,7 @@
         
         <standalone>0</standalone>
         <isunique>1</isunique>
-        <version>1.2.5 Beta 1</version>
+        <version>1.2.5</version>
         <date>2012-07-16</date>
         <plugin>com.woltlab.wcf.form.message</plugin>
     </packageinformation>
