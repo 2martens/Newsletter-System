@@ -9,7 +9,7 @@
             <startdom>*</startdom>
             <startmonth>*</startmonth>
             <startdow>*</startdow>
-            <execmultiple>1</execmultiple>
+            <execmultiple>0</execmultiple>
             <canbeedited>1</canbeedited>
             <canbedisabled>1</canbedisabled>
             <active>1</active>
@@ -22,7 +22,7 @@
             <startdom>*</startdom>
             <startmonth>*</startmonth>
             <startdow>*</startdow>
-            <execmultiple>1</execmultiple>
+            <execmultiple>0</execmultiple>
             <canbeedited>1</canbeedited>
             <canbedisabled>1</canbedisabled>
             <active>0</active>
