@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <language languagecode="en" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd">
     <category name="wcf.acp.option">
-        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice_activated"><![CDATA[Use legal notice]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice_activated.description"><![CDATA[Click here to use the legal notice. (recommended)]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_bottomline"><![CDATA[Bottom line]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_bottomline.description"><![CDATA[Insert here a bottom line. If empty the line won't show up. You can use HTML.]]></item>
-    </category>
-    <category name="wcf.acp.newsletter">
-        <item name="wcf.acp.newsletter.importSubscriber.error.notFound"><![CDATA[The specified file wasn't found.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_bottomline"><![CDATA[Footer]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_bottomline.description"><![CDATA[Insert here a single line footer. If empty the line won't show up. You can use HTML.]]></item>
     </category>
 </language>
