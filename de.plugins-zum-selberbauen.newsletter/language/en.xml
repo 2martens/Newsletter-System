@@ -25,8 +25,8 @@
         <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.default"><![CDATA[If the WoltLab legal notice is installed this field isn't used but the fields of the WoltLab legal notice.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_legalNotice_activated"><![CDATA[Use legal notice]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_legalNotice_activated.description"><![CDATA[Click here to use the legal notice. (recommended)]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_bottomline"><![CDATA[Bottom line]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_bottomline.description"><![CDATA[Insert here a bottom line. If empty the line won't show up. You can use HTML.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_bottomline"><![CDATA[Footer]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_bottomline.description"><![CDATA[Insert here a single line footer. If empty the line won't show up. You can use HTML.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber"><![CDATA[Sort order]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber.description"><![CDATA[Please insert here the default sort order for the subscribers list.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber"><![CDATA[Sort field]]></item>
