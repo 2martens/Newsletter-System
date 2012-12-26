@@ -196,7 +196,8 @@ class ImportSubscriberForm extends ACPForm {
 		    $data = '(';
 		    $sqlInner = 'SELECT userID, COUNT(userID) AS count
 		    		FROM wcf'.WCF_N."_user
-		    		WHERE email = '".escapeString($email)."'";
+		    		WHERE email = '".escapeString($email)."'
+		    		GROUP BY userID";
 		    $row = WCF::getDB()->getFirstRow($sqlInner);
 		    if ($row['count']) {
 		        $user = new User($row['userID']);
