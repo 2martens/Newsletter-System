@@ -73,6 +73,9 @@ class NewsletterActivateAction extends AbstractAction {
         //get ip address and convert it into a long
         $ipAddress = ip2long(StringUtil::trim($_SERVER['REMOTE_ADDR']));
         
+        //prevents database error
+        if (!$ipAddress) $ipAddress = ip2long('127.0.0.1');
+        
         //validates the user as a subscriber
         $sql = 'UPDATE wcf'.WCF_N.'_'.$this->activationTable."
         		SET token = '', datetime = ".TIME_NOW.',
