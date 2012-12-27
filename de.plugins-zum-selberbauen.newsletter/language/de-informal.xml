@@ -27,6 +27,8 @@
         <item name="wcf.acp.option.message_newslettersystem_general_legalNotice.default"><![CDATA[Wenn das WoltLab-Impressum bereits installiert ist und nicht auf ein externes Impressum verlinkt wird, werden die dort gemachten Angaben benutzt.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_bottomline"><![CDATA[Fußzeile]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_bottomline.description"><![CDATA[Gib hier eine Fußzeile ein. Wenn nichts eingegeben ist, dann wird die Zeile nicht angezeigt. Du kannst HTML benutzen.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_nonreceiving_groups"><![CDATA[Benutzergruppen, die keine Newsletter empfangen]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_nonreceiving_groups.description"><![CDATA[Mitglieder dieser Benutzergruppen können keine Newsletter empfangen.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber"><![CDATA[Sortierreihenfolge]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortOrder_subscriber.description"><![CDATA[Gib hier die Sortierreihenfolge für die Abonnentenliste an.]]></item>
         <item name="wcf.acp.option.message_newslettersystem_general_sortField_subscriber"><![CDATA[Sortierfeld]]></item>

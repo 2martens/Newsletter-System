@@ -77,6 +77,12 @@
                 <defaultvalue><![CDATA[]]></defaultvalue>
                 <showorder>7</showorder>
             </option>
+            <option name="message_newslettersystem_general_nonreceiving_groups">
+            	<categoryname>message.newslettersystem.general</categoryname>
+            	<optiontype>groups</optiontype>
+            	<defaultvalue></defaultvalue>
+            	<showorder>8</showorder>
+            </option>
             <option name="message_newslettersystem_general_sortOrder_subscriber">
                 <categoryname>message.newslettersystem.general</categoryname>
                 <optiontype>select</optiontype>
@@ -85,7 +91,7 @@
                     <![CDATA[ASC:wcf.global.sortOrder.ascending
 DESC:wcf.global.sortOrder.descending]]>
                 </selectoptions>
-                <showorder>8</showorder>
+                <showorder>9</showorder>
             </option>
             <option name="message_newslettersystem_general_sortField_subscriber">
                 <categoryname>message.newslettersystem.general</categoryname>
@@ -96,7 +102,7 @@ DESC:wcf.global.sortOrder.descending]]>
 username:wcf.acp.option.message_newslettersystem_general_sortField_subscriber.username
 email:wcf.acp.option.message_newslettersystem_general_sortField_subscriber.email]]>
                 </selectoptions>
-                <showorder>9</showorder>
+                <showorder>10</showorder>
             </option>
             <option name="message_newslettersystem_general_sortOrder_newsletter">
                 <categoryname>message.newslettersystem.general</categoryname>
@@ -106,7 +112,7 @@ email:wcf.acp.option.message_newslettersystem_general_sortField_subscriber.email
                     <![CDATA[ASC:wcf.global.sortOrder.ascending
 DESC:wcf.global.sortOrder.descending]]>
                 </selectoptions>
-                <showorder>10</showorder>
+                <showorder>11</showorder>
             </option>
             <option name="message_newslettersystem_general_sortField_newsletter">
                 <categoryname>message.newslettersystem.general</categoryname>
@@ -118,7 +124,7 @@ username:wcf.acp.option.message_newslettersystem_general_sortField_newsletter.us
 deliveryTime:wcf.acp.option.message_newslettersystem_general_sortField_newsletter.deliveryTime
 subject:wcf.acp.option.message_newslettersystem_general_sortField_newsletter.subject]]>
                 </selectoptions>
-                <showorder>11</showorder>
+                <showorder>12</showorder>
             </option>
             
             <!-- /newsletter options -->

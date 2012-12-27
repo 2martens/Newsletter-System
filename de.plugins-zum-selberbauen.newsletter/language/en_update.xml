@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <language languagecode="en" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd">
     <category name="wcf.acp.option">
-        <item name="wcf.acp.option.message_newslettersystem_general_bottomline"><![CDATA[Footer]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_bottomline.description"><![CDATA[Insert here a single line footer. If empty the line won't show up. You can use HTML.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_nonreceiving_groups"><![CDATA[Usergroups which do not receive newsletters]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_nonreceiving_groups.description"><![CDATA[Members of this usergroups do not receive newsletters.]]></item>
     </category>
 </language>

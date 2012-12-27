@@ -129,13 +129,36 @@ class SendNewsletterAction extends AbstractAction {
                 if (fmod($i, 10) == 0) {
                     usleep(2000000);
                 }
+                $unsubscribeToken = '';
+                if (!isset($this->unsubscribeTokens[$subscriber['subscriberID']])) {
+                	$unsubscribeToken = StringUtil::getRandomID();
+                	$sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->unsubscriptionTable.'
+                			(subscriberID, token)
+                		VALUES
+                			('.intval($subscriberID).", '".
+        						escapeString($unsubscribeToken)."')";
+                	WCF::getDB()->sendQuery($sql);
+                }
+                else {
+                	$unsubscribeToken = $this->unsubscribeTokens[$subscriber['subscriberID']]['token'];
+                }
+                
                 $recipient = null;
-                if ($subscriber['userID']) $recipient = new User($subscriber['userID']);
+                if ($subscriber['userID']) {
+                	$recipient = new User($subscriber['userID']);
+                	
+                	// check for non receiving groups
+                	if (!NewsletterUtil::canReceiveNewsletters($recipient)) {
+                		continue;
+                	}
+                }
+                
+                
                 // {$username} stands for the username of the specific subscriber
                 if (is_null($recipient) || $recipient->getUserOption('acceptNewsletterAsEmail')) {
                     $tmpContent = str_replace('{$username}', $subscriber['username'], $content);
                     $tmpContent = str_replace('subscriberID', $subscriber['subscriberID'], $tmpContent);
-                    $tmpContent = str_replace('token', $this->unsubscribeTokens[$subscriber['subscriberID']]['token'], $tmpContent);
+                    $tmpContent = str_replace('token', $unsubscribeToken, $tmpContent);
                     $email = $subscriber['email'];
                     $mail = new Mail($email, $newsletter['subject'], $tmpContent,
                     MESSAGE_NEWSLETTERSYSTEM_GENERAL_FROM);
@@ -161,6 +184,7 @@ class SendNewsletterAction extends AbstractAction {
                 $i++;
             }
         }
+        WCF::getCache()->clearResource('newsletter-subscriber-'.PACKAGE_ID);
     }
     
     /**

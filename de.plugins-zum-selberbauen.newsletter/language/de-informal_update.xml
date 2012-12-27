@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <language languagecode="de-informal" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd">
     <category name="wcf.acp.option">
-        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice_activated"><![CDATA[Impressum nutzen]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_legalNotice_activated.description"><![CDATA[Klicke hier um die Impressumsangabe zu nutzen. (empfohlen)]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_bottomline"><![CDATA[Fußzeile]]></item>
-        <item name="wcf.acp.option.message_newslettersystem_general_bottomline.description"><![CDATA[Gib hier eine Fußzeile ein. Wenn nichts eingegeben ist, dann wird die Zeile nicht angezeigt. Du kannst HTML benutzen.]]></item>
-    </category>
-    <category name="wcf.acp.newsletter">
-        <item name="wcf.acp.newsletter.importSubscriber.error.notFound"><![CDATA[Die angegebene Datei wurde nicht gefunden.]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_nonreceiving_groups"><![CDATA[Benutzergruppen, die keine Newsletter empfangen]]></item>
+        <item name="wcf.acp.option.message_newslettersystem_general_nonreceiving_groups.description"><![CDATA[Mitglieder dieser Benutzergruppen können keine Newsletter empfangen.]]></item>
     </category>
 </language>
