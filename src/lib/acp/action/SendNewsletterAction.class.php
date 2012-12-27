@@ -184,7 +184,7 @@ class SendNewsletterAction extends AbstractAction {
                 $i++;
             }
         }
-        WCF::getCache()->clearCacheResource('newsletter-subscriber-'.PACKAGE_ID);
+        WCF::getCache()->clearResource('newsletter-subscriber-'.PACKAGE_ID);
     }
     
     /**
