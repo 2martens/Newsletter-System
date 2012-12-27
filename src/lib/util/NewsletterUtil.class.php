@@ -122,4 +122,22 @@ class NewsletterUtil {
         $mail->setContentType('text/html');
         $mail->send();
     }
+    
+    /**
+     * Checks whether the given user can receive newsletters or not.
+     *
+     * @param 	User $user
+     * @return 	True, if the user can receive newsletters, false if not.
+     */
+    public static function canReceiveNewsletters(User $user) {
+    	$nonReceivingGroups = explode(',', MESSAGE_NEWSLETTERSYSTEM_GENERAL_NONRECEIVING_GROUPS);
+    	$groupIDs = $user->getGroupIDs();
+    	
+    	foreach ($groupIDs as $groupID) {
+    		if (in_array($groupID, $nonReceivingGroups)) {
+    			return false;
+    		}
+    	}
+    	return true;
+    }
 }
