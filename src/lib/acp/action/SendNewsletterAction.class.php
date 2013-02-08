@@ -55,6 +55,12 @@ class SendNewsletterAction extends AbstractAction {
     protected $hourly = false;
     
     /**
+     * Contains the unsubscription table name.
+     * @var string
+     */
+    protected $unsubscriptionTable = 'newsletter_unsubscription';
+    
+    /**
      * Creates a new SendNewsletterAction object.
      *
      * @param boolean $hourly
