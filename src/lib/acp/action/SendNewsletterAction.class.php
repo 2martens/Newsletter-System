@@ -141,7 +141,7 @@ class SendNewsletterAction extends AbstractAction {
                 	$sql = 'INSERT INTO wcf'.WCF_N.'_'.$this->unsubscriptionTable.'
                 			(subscriberID, token)
                 		VALUES
-                			('.intval($subscriberID).", '".
+                			('.intval($subscriber['subscriberID']).", '".
         						escapeString($unsubscribeToken)."')";
                 	WCF::getDB()->sendQuery($sql);
                 }
