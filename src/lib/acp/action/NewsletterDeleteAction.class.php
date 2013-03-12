@@ -42,6 +42,9 @@ class NewsletterDeleteAction extends AbstractSecureAction {
         $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->databaseTable.'
         		WHERE newsletterID = '.$this->newsletterID;
         WCF::getDB()->sendQuery($sql);
+        $sql = 'DELETE FROM wcf'.WCF_N.'_'.$this->databaseTable.'_log
+        		WHERE newsletterID = '.$this->newsletterID;
+        WCF::getDB()->sendQuery($sql);
         $this->executed();
         //resetting cache
         $cacheName = 'newsletter-'.PACKAGE_ID;

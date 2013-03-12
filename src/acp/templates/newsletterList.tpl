@@ -17,6 +17,10 @@
 	<p class="success">{lang}wcf.acp.newsletter.send.success{/lang}</p>
 {/if}
 
+{if $successRemaining}
+	<p class="success">{lang}wcf.acp.newsletter.sendRemaining.success{/lang}</p>
+{/if}
+
 <div class="contentHeader">
     {pages print=true assign=pagesLinks link="index.php?page=NewsletterList&pageNo=%d&sortField=$sortField&sortOrder=$sortOrder&packageID="|concat:PACKAGE_ID:SID_ARG_2ND_NOT_ENCODED}
 	{if $this->user->getPermission('admin.content.newslettersystem.canWriteNewsletter')}
@@ -60,6 +64,7 @@
                     <td class="columnIcon">
                         {if $this->user->getPermission('admin.content.newslettersystem.canSendNewsletter')}
                         	<a href="index.php?action=SendNewsletter&amp;id={@$newsletterID}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/cronjobExecuteS.png" alt="" title="{lang}wcf.acp.newsletter.send{/lang}" /></a>
+                        	<a href="index.php?action=SendRemainingMails&amp;id={@$newsletterID}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/pmForwardS.png" alt="" title="{lang}wcf.acp.newsletter.sendRemaining{/lang}" /></a>
                         {/if}
                         {if $this->user->getPermission('admin.content.newslettersystem.canEditNewsletter')}
                             <a href="index.php?form=NewsletterEdit&amp;newsletterID={@$newsletterID}&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}"><img src="{@RELATIVE_WCF_DIR}icon/editS.png" alt="" title="{lang}wcf.acp.newsletter.edit{/lang}" /></a>

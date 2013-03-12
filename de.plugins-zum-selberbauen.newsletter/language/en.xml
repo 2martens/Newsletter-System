@@ -138,8 +138,10 @@
         <item name="wcf.acp.newsletter.delete.sure"><![CDATA[Are you sure that you want to delete the newsletter?]]></item>
         <item name="wcf.acp.newsletter.delete.success"><![CDATA[Newsletter has been successfully deleted.]]></item>
         <item name="wcf.acp.newsletter.send"><![CDATA[Send newsletter]]></item>
-        <item name="wcf.acp.newsletter.send.success"><![CDATA[Newsletter has been successfully sended.]]></item>
-        <item name="wcf.acp.newsletter.subscriber.delete"><![CDATA[Delete subscriber]]></item>
+        <item name="wcf.acp.newsletter.send.success"><![CDATA[Newsletter has been successfully sent.]]></item>
+        <item name="wcf.acp.newsletter.sendRemaining"><![CDATA[Send remaining mails]]></item>
+        <item name="wcf.acp.newsletter.sendRemaining.success"><![CDATA[Remaining mails have been succesfully sent.]]></item>
+   		<item name="wcf.acp.newsletter.subscriber.delete"><![CDATA[Delete subscriber]]></item>
         <item name="wcf.acp.newsletter.subscriber.delete.sure"><![CDATA[Are you sure that you want to delete the subscriber?]]></item>
         <item name="wcf.acp.newsletter.subscriber.delete.success"><![CDATA[Subscriber has been successfully deleted.]]></item>
         <item name="wcf.acp.newsletter.subscriber.sendValidationEmail"><![CDATA[Send validation email again]]></item>

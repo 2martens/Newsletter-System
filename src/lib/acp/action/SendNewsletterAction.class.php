@@ -5,6 +5,7 @@ require_once(WCF_DIR.'lib/data/mail/Mail.class.php');
 require_once(WCF_DIR.'lib/data/user/User.class.php');
 require_once(WCF_DIR.'lib/data/message/newsletter/ViewableNewsletter.class.php');
 require_once(WCF_DIR.'lib/data/message/pm/PMEditor.class.php');
+require_once(WCF_DIR.'lib/system/newsletter/LogManager.class.php');
 
 /**
  * Sends a specified newsletter.
@@ -111,6 +112,7 @@ class SendNewsletterAction extends AbstractAction {
         //Sends mail to all subscribers.
         foreach ($this->outstandingNewsletters as $id => $newsletter) {
             $text = $newsletter['text'];
+            LogManager::getInstance()->setNewsletter($id);
             
             //workaround to make sure that the template is found
             $templatePaths = array(
@@ -161,6 +163,7 @@ class SendNewsletterAction extends AbstractAction {
                 
                 
                 // {$username} stands for the username of the specific subscriber
+                // emails are open to both registered users and guests
                 if (is_null($recipient) || $recipient->getUserOption('acceptNewsletterAsEmail')) {
                     $tmpContent = str_replace('{$username}', $subscriber['username'], $content);
                     $tmpContent = str_replace('subscriberID', $subscriber['subscriberID'], $tmpContent);
@@ -171,7 +174,10 @@ class SendNewsletterAction extends AbstractAction {
                     //$mail->addBCC(MAIL_ADMIN_ADDRESS); would result in x mails
                     $mail->setContentType('text/html');
                     $mail->send();
+                    // logs successful mail
+                    LogManager::getInstance()->addSubscriber($subscriber['subscriberID'], $email);
                 }
+                // subscriber has to be a registered user
                 if (!is_null($recipient) && $recipient->getUserOption('acceptNewsletterAsPM')) {
                     $recipientArray = array();
                     $recipientArray[] = array(
@@ -189,6 +195,7 @@ class SendNewsletterAction extends AbstractAction {
                 }
                 $i++;
             }
+            LogManager::getInstance()->destroyInstance();
         }
         WCF::getCache()->clearResource('newsletter-subscriber-'.PACKAGE_ID);
     }

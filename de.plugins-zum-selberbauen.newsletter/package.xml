@@ -61,6 +61,13 @@
     <instructions type="update" fromversion="1.3.0*">
         <!-- xmls -->
         <useroptions>useroptions_update.xml</useroptions>
+        
+        <sql>update.sql</sql>
+        
+        <!-- languages -->
+        <languages languagecode="de">language/de_update.xml</languages>
+        <languages languagecode="de-informal">language/de-informal_update.xml</languages>
+        <languages languagecode="en">language/en_update.xml</languages>
     </instructions>
     
 </package>
